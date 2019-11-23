@@ -1,0 +1,4 @@
+I'm making this small document to document how to use the controls in this game
+
+Pressing the 1 key will begin a new game, so all functinos relating to starting
+a new game should be mapped to 1

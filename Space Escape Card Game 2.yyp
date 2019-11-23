@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "042c97eb-7285-4ec1-b9bd-7bca51b83760",
+            "Value": {
+                "id": "b2154f7f-3e94-44bb-8830-37d160064252",
+                "resourcePath": "notes\\Debug functions.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "08536d5b-6935-43a6-9aa6-e43d93de9346",
             "Value": {
                 "id": "c17f08ca-4be0-4878-af91-6ad7226e05b7",
@@ -143,6 +151,14 @@
             }
         },
         {
+            "Key": "2de6b2fb-588e-4a9d-923d-c4dc3a04fd81",
+            "Value": {
+                "id": "5fe115f0-67a6-4633-b05f-99642d6e5bd3",
+                "resourcePath": "objects\\o_ui\\o_ui.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2e1908e9-393d-406d-8033-510997f2380b",
             "Value": {
                 "id": "a3487cf8-eab8-48ea-90ce-e53fa42a7e0f",
@@ -167,11 +183,27 @@
             }
         },
         {
+            "Key": "300a84ee-3716-427b-9b57-2ca5dac6986d",
+            "Value": {
+                "id": "5227de88-0453-4127-a7eb-2d2bec4f7509",
+                "resourcePath": "objects\\o_game_setup\\o_game_setup.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "33c517f8-403f-4b79-9acb-08347e46a068",
             "Value": {
                 "id": "77ad79ef-275a-4708-9a1f-4a51f99b629d",
                 "resourcePath": "views\\33c517f8-403f-4b79-9acb-08347e46a068.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "38421fd3-4cde-4bc5-89c9-74332e04f9f6",
+            "Value": {
+                "id": "8de6660d-bf05-4412-9259-0564121cba52",
+                "resourcePath": "sprites\\s_squad_placeholder\\s_squad_placeholder.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -247,6 +279,14 @@
             }
         },
         {
+            "Key": "4e727976-97bb-42e5-93cc-e00d7fd140c0",
+            "Value": {
+                "id": "366feb9d-32e1-4e86-8053-2c35fc02a020",
+                "resourcePath": "objects\\object4\\object4.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "504bde95-700d-4cfa-8bb0-3b14243f2074",
             "Value": {
                 "id": "f457683b-aa29-470a-807d-a04d0fff3e89",
@@ -307,6 +347,14 @@
             "Value": {
                 "id": "bbca0080-ce8a-4777-b1ea-f881fab3195c",
                 "resourcePath": "objects\\o_enemy_squad\\o_enemy_squad.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6308b7b3-a191-407a-8fab-9426a55e05fa",
+            "Value": {
+                "id": "46bb45c8-9245-4ceb-9a56-8b8fa300255e",
+                "resourcePath": "objects\\o_camera\\o_camera.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -679,6 +727,14 @@
             }
         },
         {
+            "Key": "c612fa55-f788-4266-a7d8-00f230b1c8db",
+            "Value": {
+                "id": "0395405b-68ee-442b-9778-62914e37b4fc",
+                "resourcePath": "views\\c612fa55-f788-4266-a7d8-00f230b1c8db.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c702c604-b7f2-42dc-9270-4b78681cc435",
             "Value": {
                 "id": "8dbadfe6-5c5f-492b-9694-79ff9d57fa31",
@@ -739,6 +795,14 @@
             "Value": {
                 "id": "46885705-a084-4c76-ab65-7627aba03946",
                 "resourcePath": "sprites\\s_missile_blue_explosion_original\\s_missile_blue_explosion_original.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d2ce0eae-67c4-4622-9394-efa8f46975da",
+            "Value": {
+                "id": "86c1695d-083e-40c8-a8c0-75b36edd8f82",
+                "resourcePath": "sprites\\s_enemy_squad_placeholder\\s_enemy_squad_placeholder.yy",
                 "resourceType": "GMSprite"
             }
         },
