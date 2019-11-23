@@ -1,3 +1,16 @@
+/*==========================================================
+BUGS
+Theres a bug in this code that permits the camera to go a full camera length
+past where it shoudl be able to go.  
+
+Since the camera starts at position 0,0, when it reaches posittion 5000,5000,
+it's actually at the top left corner.
+
+The bottom edge and right edge need to be roomheight - camera height
+and room width minus camera width
+
+
+==========================================================*/
 var view_x_position = camera_get_view_x(view_camera[0])
 var view_y_position = camera_get_view_y(view_camera[0])
 var view_width = camera_get_view_width(view_camera[0])
@@ -71,10 +84,10 @@ if (abs(camera_speed_y)>max_camera_speed){
 
 camera_x = camera_get_view_x(view_camera[0])
 camera_y = camera_get_view_y(view_camera[0])
-if ((camera_x + camera_speed_x) < 0 or (camera_x + camera_speed_x) > room_width){
+if ((camera_x + camera_speed_x) < 0 or (camera_x + camera_speed_x) > room_width-view_width){
 	camera_speed_x = 0
 }
-if ((camera_y + camera_speed_y) < 0 or (camera_y + camera_speed_y) > room_height){
+if ((camera_y + camera_speed_y) < 0 or (camera_y + camera_speed_y) > room_height-view_height){
 	camera_speed_y = 0
 }
 

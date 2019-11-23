@@ -1,4 +1,6 @@
 /// @description Game start!
+
+randomize()
 if (!game_created){
 	var _player_start_location = irandom(15)
 	var _enemy_start_location = irandom(15)
@@ -134,10 +136,76 @@ if (!game_created){
 	var _player_x = possible_spawn_location[_player_start_location, 0]
 	var _player_y = possible_spawn_location[_player_start_location, 1]
 
-	var _enemy_x = possible_spawn_location[_enemy_start_location, 1]
+	var _enemy_x = possible_spawn_location[_enemy_start_location, 0]
 	var _enemy_y = possible_spawn_location[_enemy_start_location, 1]
-
+	
+	var _enemy_spawn_side = ""
+	switch (_enemy_start_location){
+		case 0:
+			_enemy_spawn_side = "top left corner"
+		break;
+		case 1:
+			_enemy_spawn_side = "top edge"
+		break;
+		case 2:
+			_enemy_spawn_side = "top edge"
+		break;
+		case 3:
+			_enemy_spawn_side = "top edge"
+		break;
+		case 4:
+			_enemy_spawn_side = "top right corner"
+		break;
+		case 5:
+			_enemy_spawn_side = "left edge"
+		break;
+		case 6:
+			_enemy_spawn_side = "right edge"
+		break;
+		case 7:
+			_enemy_spawn_side = "left edge"
+		break;
+		case 8:
+			_enemy_spawn_side = "right edge"
+		break;
+		case 9:
+			_enemy_spawn_side = "left edge"
+		break;
+		case 10:
+			_enemy_spawn_side = "right edge"
+		break;
+		case 11:
+			_enemy_spawn_side = "bottom left corner"
+		break;
+		case 12:
+			_enemy_spawn_side = "bottom edge"
+		break;
+		case 13:
+			_enemy_spawn_side = "bottom edge"
+		break;
+		case 14:
+			_enemy_spawn_side = "bottom edge"
+		break;
+		case 15:
+			_enemy_spawn_side = "bottom right corner"
+		break;
+	}
 	var player_squad = instance_create_layer(_player_x, _player_y, "Instances", o_player_squad)
 	var enemy_squad = instance_create_layer(_enemy_x, _enemy_y, "Instances", o_enemy_squad)
+	
+	with (player_squad){
+		player_spawn_side = spawn_side
+		enemy_spawn_side = _enemy_spawn_side
+	}
+	with (enemy_squad){
+		player_spawn_side = spawn_side
+		enemy_spawn_side = _enemy_spawn_side
+	}
+	
 	game_created = true
+}
+i = 0
+repeat(16){
+	instance_create_layer(possible_spawn_location[i, 0], possible_spawn_location[i, 1], "Instances", o_spawn_beacon)
+	i++
 }

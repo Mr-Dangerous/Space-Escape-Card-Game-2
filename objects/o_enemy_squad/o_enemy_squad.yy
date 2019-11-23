@@ -22,7 +22,36 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "af5c49b4-e046-4e0f-bce2-ce79b96bbb52",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "player_spawn_side",
+            "varType": 2
+        },
+        {
+            "id": "d0a998e5-67d4-4818-8f16-9c0f4831f73a",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "enemy_spawn_side",
+            "varType": 2
+        }
+    ],
     "solid": false,
     "spriteId": "d2ce0eae-67c4-4622-9394-efa8f46975da",
     "visible": true
