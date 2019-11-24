@@ -204,7 +204,7 @@ if (!game_created){
 	
 	game_created = true
 }
-i = 0
+var i = 0
 repeat(16){
 	instance_create_layer(possible_spawn_location[i, 0], possible_spawn_location[i, 1], "Instances", o_spawn_beacon)
 	i++

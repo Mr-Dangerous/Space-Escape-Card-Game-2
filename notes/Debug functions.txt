@@ -2,3 +2,6 @@ I'm making this small document to document how to use the controls in this game
 
 Pressing the 1 key will begin a new game, so all functinos relating to starting
 a new game should be mapped to 1
+
+Pressing the 2 key will lock the planning grid, this will be used
+later in code when transitioning to the new attacking state or whatever it is.

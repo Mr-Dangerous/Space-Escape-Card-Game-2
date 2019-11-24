@@ -1,8 +1,8 @@
 {
-    "id": "7892d91d-938b-4030-9b8b-10379620d10b",
+    "id": "4a1323a6-5517-4dee-ae5b-1d1eab3da355",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_spawn_beacon",
+    "name": "o_grid_box",
     "eventList": [
         
     ],
