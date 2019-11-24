@@ -1,7 +1,8 @@
 /// @description Game start!
 
-randomize()
+
 if (!game_created){
+	randomize()
 	var _player_start_location = irandom(15)
 	var _enemy_start_location = irandom(15)
 
@@ -133,6 +134,8 @@ if (!game_created){
 			_enemy_start_location = irandom(15)
 		}
 	}
+	
+	//here
 	var _player_x = possible_spawn_location[_player_start_location, 0]
 	var _player_y = possible_spawn_location[_player_start_location, 1]
 
@@ -206,6 +209,8 @@ if (!game_created){
 }
 var i = 0
 repeat(16){
-	instance_create_layer(possible_spawn_location[i, 0], possible_spawn_location[i, 1], "Instances", o_spawn_beacon)
+	var _x = possible_spawn_location[i, 0]
+	var _y = possible_spawn_location[i, 1]
+	instance_create_layer(_x, _y, "Instances", o_spawn_beacon)
 	i++
 }
