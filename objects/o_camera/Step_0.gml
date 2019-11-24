@@ -95,3 +95,9 @@ camera_set_view_pos(view_camera[0], camera_x+camera_speed_x, camera_y+camera_spe
 
 fast_camera = false
 max_camera_speed = 4
+
+layer_x("Background", camera_x)
+layer_y("Background", camera_y-400)
+
+layer_x("Parallax_Background", camera_x * .95)
+layer_y("Parallax_Background", camera_y * .95)

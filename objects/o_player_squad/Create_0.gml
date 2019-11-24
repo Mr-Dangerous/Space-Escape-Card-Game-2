@@ -1,5 +1,5 @@
-x_offset = -450 //should allow for 9 squares of grid boxes
-y_offset = -450
+x_offset = -400 //should allow for 9 squares of grid boxes
+y_offset = -400
 spacing = 100
 
 
