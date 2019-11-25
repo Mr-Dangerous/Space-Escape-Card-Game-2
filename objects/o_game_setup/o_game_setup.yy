@@ -55,6 +55,34 @@
             "value": "False",
             "varName": "game_created",
             "varType": 3
+        },
+        {
+            "id": "867b808e-e918-4dc8-88db-1b935a9b1fac",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "\"\"",
+            "varName": "spawn_side",
+            "varType": 2
+        },
+        {
+            "id": "2d7b86fc-625c-40e4-83c9-a41b6b8d1aaa",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "\"\"",
+            "varName": "_enemy_spawn_side",
+            "varType": 2
         }
     ],
     "solid": false,

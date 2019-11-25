@@ -263,11 +263,27 @@
             }
         },
         {
+            "Key": "3bdcff51-5f4d-4a0b-9095-0377403bf8ba",
+            "Value": {
+                "id": "c527fc00-0f8b-4245-8c43-c1097912de1a",
+                "resourcePath": "sprites\\s_recon_grid_arrow\\s_recon_grid_arrow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3db3aeae-6329-4a73-bfc9-cad72e3b7ba1",
             "Value": {
                 "id": "daed9c89-389c-492d-a346-545dd7e1e595",
                 "resourcePath": "views\\3db3aeae-6329-4a73-bfc9-cad72e3b7ba1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3f8dec3a-9faf-4c9c-88f5-d2a1a4a81065",
+            "Value": {
+                "id": "f91f626b-b5f1-4839-a30f-6d690dc771df",
+                "resourcePath": "scripts\\turn_to_face_direction\\turn_to_face_direction.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -807,6 +823,14 @@
             }
         },
         {
+            "Key": "b3969acc-9353-4fff-8aea-a9d54e8842f1",
+            "Value": {
+                "id": "71644381-e144-4246-a6e1-51531fb4baa9",
+                "resourcePath": "sprites\\s_recon_grid_box_outline\\s_recon_grid_box_outline.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b3ea2c3d-9dbd-4e8c-8ee5-1ad0c6288534",
             "Value": {
                 "id": "9e6fde31-5c2b-4ccd-9a7f-b980d16b1e69",
@@ -1055,6 +1079,14 @@
             }
         },
         {
+            "Key": "f1a11f20-d902-4237-9581-de6258bdec16",
+            "Value": {
+                "id": "5132e7a8-eb15-494d-bafd-8fa07ede0609",
+                "resourcePath": "scripts\\limit_speed\\limit_speed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "988ffad1-05f5-4ff2-bcc9-37279fb21386",
@@ -1104,7 +1136,9 @@
         }
     ],
     "script_order": [
-        "7b288659-a9fa-4243-aec7-45df8db0f13d"
+        "7b288659-a9fa-4243-aec7-45df8db0f13d",
+        "3f8dec3a-9faf-4c9c-88f5-d2a1a4a81065",
+        "f1a11f20-d902-4237-9581-de6258bdec16"
     ],
     "tutorial": ""
 }

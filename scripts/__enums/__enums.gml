@@ -6,5 +6,13 @@ enum card {
 
 enum ship {
 	planning,
-	idle
+	idle,
+	scouting,
+	moving
+}
+
+enum camera {
+	free_look,
+	locked,
+	all_encompassing
 }

@@ -3,13 +3,16 @@
 var selected_card_slot = -1
 var camera_x = camera_get_view_x(view_camera[0])
 var camera_y = camera_get_view_y(view_camera[0])
+var _camera_controller = instance_find(o_camera, 0)
+var _camera_zoom = _camera_controller.camera_zoom
 
+_view_port_height = camera_get_view_height(view_camera[0])
 //check card slot 
 i=0
 var _card_width = 158
 repeat(5){
-if (mouse_x >= 227 + camera_x + (_card_width*i) and mouse_x <= 385 + camera_x + (_card_width*i)){
-	if (mouse_y <= view_port_height - 8 + camera_y and mouse_y >= view_port_height -110 + camera_y){
+if (mouse_x >= ((227*_camera_zoom) + camera_x + (_card_width*i*_camera_zoom)) and mouse_x <= ((385*_camera_zoom) + camera_x + (_card_width*i*_camera_zoom))){
+	if (mouse_y <= _view_port_height - 8 + camera_y and mouse_y >= _view_port_height -110 + camera_y){
 		selected_card_slot = i
 		}
 	}

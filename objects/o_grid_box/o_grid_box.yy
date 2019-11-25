@@ -4,7 +4,26 @@
     "mvc": "1.0",
     "name": "o_grid_box",
     "eventList": [
-        
+        {
+            "id": "550748d5-e21c-409c-92fc-bdc6b5750ae4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "4a1323a6-5517-4dee-ae5b-1d1eab3da355"
+        },
+        {
+            "id": "f5da1b9a-0eab-4fd4-8e28-013b62490a3b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "4a1323a6-5517-4dee-ae5b-1d1eab3da355"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -22,7 +41,50 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "01adeb54-47b9-4de7-ab62-0b9cc38127d1",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "noone",
+            "varName": "player_unit_assigned",
+            "varType": 0
+        },
+        {
+            "id": "062bd096-6105-4b9c-b804-63981cc74716",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "False",
+            "varName": "recon_square",
+            "varType": 3
+        },
+        {
+            "id": "ccb26aa6-8674-46e1-85cd-255e84b8de72",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "recon_direction",
+            "varType": 0
+        }
+    ],
     "solid": false,
     "spriteId": "20aaf247-d6cb-40bd-9c9a-cf5290e1d940",
     "visible": true

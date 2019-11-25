@@ -1,5 +1,6 @@
+view_port_height = view_hport[0]
 
-view_port_height = view_get_hport(0)
+
 i = 0
 var _card_width = 166
 repeat (5){

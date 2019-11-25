@@ -215,6 +215,20 @@
             "value": "0",
             "varName": "final_ship_resource",
             "varType": 5
+        },
+        {
+            "id": "37690791-12d2-4522-8bc5-b79b13763051",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "instance_find(o_camera, 0)",
+            "varName": "camera_controller",
+            "varType": 4
         }
     ],
     "solid": false,

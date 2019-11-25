@@ -7,3 +7,7 @@ Pressing the 2 key will lock the planning grid, this will be used
 later in code when transitioning to the new attacking state or whatever it is.
 
 Pressing 3 will spawn cards and cycle through the shop
+
+Pressing 4 will deploy all scouts in recon squares to go scouting!
+
+Pressing 0 will restart the game

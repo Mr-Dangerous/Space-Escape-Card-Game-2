@@ -9,7 +9,7 @@ if (!game_created){
 	var acceptable_start_locations = false
 	while (acceptable_start_locations = false){
 		if (_player_start_location !=_enemy_start_location){
-			var spawn_side = ""
+			
 			switch (_player_start_location){
 				case 0:
 					spawn_side = "top left corner"
@@ -142,7 +142,7 @@ if (!game_created){
 	var _enemy_x = possible_spawn_location[_enemy_start_location, 0]
 	var _enemy_y = possible_spawn_location[_enemy_start_location, 1]
 	
-	var _enemy_spawn_side = ""
+	
 	switch (_enemy_start_location){
 		case 0:
 			_enemy_spawn_side = "top left corner"
@@ -197,14 +197,18 @@ if (!game_created){
 	var enemy_squad = instance_create_layer(_enemy_x, _enemy_y, "Instances", o_enemy_squad)
 	
 	with (player_squad){
-		player_spawn_side = spawn_side
-		enemy_spawn_side = _enemy_spawn_side
+		
+		enemy_spawn_side = other._enemy_spawn_side
 	}
 	with (enemy_squad){
-		player_spawn_side = spawn_side
-		enemy_spawn_side = _enemy_spawn_side
+		player_spawn_side = other.spawn_side
+		enemy_spawn_side = other._enemy_spawn_side
 	}
 	
+	var _camera = instance_find(o_camera, 0)
+	with (_camera){
+		state = camera.locked
+	}
 	game_created = true
 }
 var i = 0

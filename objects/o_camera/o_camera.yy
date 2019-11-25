@@ -13,6 +13,26 @@
             "enumb": 0,
             "eventtype": 3,
             "m_owner": "6308b7b3-a191-407a-8fab-9426a55e05fa"
+        },
+        {
+            "id": "0163d1ba-bf0e-448e-b195-fa9585cd783c",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "6308b7b3-a191-407a-8fab-9426a55e05fa"
+        },
+        {
+            "id": "432e7f89-1b5e-4bfa-8a05-585252fe8bf2",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 52,
+            "eventtype": 9,
+            "m_owner": "6308b7b3-a191-407a-8fab-9426a55e05fa"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -87,6 +107,76 @@
             "value": "0",
             "varName": "fast_camera",
             "varType": 3
+        },
+        {
+            "id": "178a4349-703a-49a5-926d-8189099dcd03",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "noone",
+            "varName": "upper_left_grid_box",
+            "varType": 0
+        },
+        {
+            "id": "aea07a9a-b7bf-4ad9-a58c-57a2cecaa2ee",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "noone",
+            "varName": "bottom_right_grid_box",
+            "varType": 0
+        },
+        {
+            "id": "a52ecfaf-65e3-435f-a9c8-8cee1c85b793",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "768",
+            "varName": "base_camera_height",
+            "varType": 1
+        },
+        {
+            "id": "74484abd-b4b4-4e40-a335-3387017fc338",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1280",
+            "varName": "base_camera_width",
+            "varType": 1
+        },
+        {
+            "id": "39b9308f-55cf-4f9e-81b6-c0d464cbfbb8",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "camera_zoom",
+            "varType": 0
         }
     ],
     "solid": false,
