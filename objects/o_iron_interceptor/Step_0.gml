@@ -40,8 +40,8 @@ switch(state){
 		
 		camera_object = instance_find(o_camera, 0)
 		zoom_level = camera_object.camera_zoom
-		image_xscale = image_scale*camera_zoom*.5
-		image_yscale = image_scale*camera_zoom*.5
+		image_xscale = image_scale*zoom_level*.5
+		image_yscale = image_scale*zoom_level*.5
 		
 		
 	break;

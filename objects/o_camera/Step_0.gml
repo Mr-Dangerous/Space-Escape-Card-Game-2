@@ -148,10 +148,10 @@ switch(state){
 			if (zoom_x < zoom_y)camera_zoom = zoom_y
 		}
 		
-		camera_set_view_size(view_camera[0],(base_camera_width+400) * camera_zoom, (base_camera_height + 200) * camera_zoom)
+		camera_set_view_size(view_camera[0],((base_camera_width+220)*camera_zoom), ((base_camera_height + 200)*camera_zoom))
 		
-		_camera_x = _furthest_left_player_unit_x - 400
-		_camera_y = _furthest_up_player_unit_y - 200
+		_camera_x = _furthest_left_player_unit_x - (220*camera_zoom)
+		_camera_y = _furthest_up_player_unit_y - (180 *camera_zoom)
 		camera_set_view_pos(view_camera[0], _camera_x, _camera_y)
 	
 		
@@ -159,18 +159,18 @@ switch(state){
 }
 
 //backgroun handling = might need to all change later!
-/*
+
 var lay_id = layer_get_id("Background");
 var back_id = layer_background_get_id(lay_id);
 
 var parallax_lay_id = layer_get_id("Parallax_Background");
-var parallax_back_id = layer_background_get_id(lay_id);
+var parallax_back_id = layer_background_get_id(parallax_lay_id);
 
 layer_background_xscale(back_id, camera_zoom)
 layer_background_yscale(back_id, camera_zoom)
 layer_background_xscale(parallax_back_id, camera_zoom)
 layer_background_yscale(parallax_back_id, camera_zoom)
-*/
+
 layer_x("Background", camera_get_view_x(view_camera[0]))
 layer_y("Background", camera_get_view_y(view_camera[0])-400)
 
