@@ -40,8 +40,3 @@ i++
 possible_spawn_location[i, 0] = 4500
 possible_spawn_location[i, 1] = 3500
 i++
-
-
-
-
-

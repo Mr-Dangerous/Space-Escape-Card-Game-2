@@ -33,6 +33,16 @@
             "enumb": 0,
             "eventtype": 3,
             "m_owner": "10cc1469-1e37-4abe-948e-bde225c24471"
+        },
+        {
+            "id": "d62e5422-6fd0-4c92-855b-bcba5b00f16a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 4,
+            "eventtype": 6,
+            "m_owner": "10cc1469-1e37-4abe-948e-bde225c24471"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -163,6 +173,48 @@
             "value": "-1",
             "varName": "hangar_slot",
             "varType": 1
+        },
+        {
+            "id": "77e9eaa0-e1cf-42ab-90a7-3eca9e66c933",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "hangar_x",
+            "varType": 1
+        },
+        {
+            "id": "09c46f0e-d99a-418b-9570-2454226e4175",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "hangar_y",
+            "varType": 0
+        },
+        {
+            "id": "070cfe8b-fb91-4055-bdfb-f905152c317c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "final_ship_resource",
+            "varType": 5
         }
     ],
     "solid": false,

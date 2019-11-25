@@ -735,6 +735,14 @@
             }
         },
         {
+            "Key": "a135f96c-7c55-4137-9864-36138e7ec9fd",
+            "Value": {
+                "id": "e7796471-0b80-44da-adfe-47bf7c50aefd",
+                "resourcePath": "objects\\o_iron_interceptor\\o_iron_interceptor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a54c708e-b908-430e-967a-4983930c8b6b",
             "Value": {
                 "id": "2bfbdc25-306d-45ef-a2ba-bb4406123ce9",

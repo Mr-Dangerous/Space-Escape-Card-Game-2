@@ -1,5 +1,10 @@
-enum ship {
+enum card {
 	inactive,
-	in_hangar
+	in_hangar,
+	moving
 }
 
+enum ship {
+	planning,
+	idle
+}

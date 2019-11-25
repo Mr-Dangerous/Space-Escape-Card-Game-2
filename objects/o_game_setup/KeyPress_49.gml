@@ -2,9 +2,9 @@
 
 
 if (!game_created){
-	randomize()
-	var _player_start_location = irandom(15)
-	var _enemy_start_location = irandom(15)
+	
+	var _player_start_location = 2
+	var _enemy_start_location = 9
 
 	var acceptable_start_locations = false
 	while (acceptable_start_locations = false){

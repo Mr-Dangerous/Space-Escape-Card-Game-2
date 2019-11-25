@@ -1,1 +1,1 @@
-state = ship.inactive
+state = card.inactive

@@ -32,9 +32,11 @@ if (selected_card_slot != -1){
 		if (selected_hangar_slot != -1){
 		
 			with(purchased_ship){
-				state = ship.in_hangar
+				state = card.in_hangar
 				hangar_slot = other.selected_hangar_slot
 				show_debug_message("ship in hangar!")
+				//assign hnagar x and y
+				
 			}
 			hangar_slots[selected_hangar_slot] = purchased_ship
 			//clear data in the shop IF purchased (remeber to nest this later!)
