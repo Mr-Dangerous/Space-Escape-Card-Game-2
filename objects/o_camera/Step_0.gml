@@ -1,13 +1,7 @@
 /*==========================================================
-BUGS
-Theres a bug in this code that permits the camera to go a full camera length
-past where it shoudl be able to go.  
+Code needs development to zoon out or zoom back in on command.
 
-Since the camera starts at position 0,0, when it reaches posittion 5000,5000,
-it's actually at the top left corner.
-
-The bottom edge and right edge need to be roomheight - camera height
-and room width minus camera width
+Currently, on freeform scrolling
 
 
 ==========================================================*/

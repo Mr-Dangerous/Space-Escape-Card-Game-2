@@ -5,3 +5,5 @@ a new game should be mapped to 1
 
 Pressing the 2 key will lock the planning grid, this will be used
 later in code when transitioning to the new attacking state or whatever it is.
+
+Pressing 3 will spawn cards and cycle through the shop
