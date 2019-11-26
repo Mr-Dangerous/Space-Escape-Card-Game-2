@@ -783,6 +783,14 @@
             }
         },
         {
+            "Key": "a798d3fd-1169-4ebf-9078-4f1283156d79",
+            "Value": {
+                "id": "3cdb3699-0666-4025-a7ac-7ca5143c10c1",
+                "resourcePath": "objects\\o_enemy_ship\\o_enemy_ship.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "d047d110-1c37-4de5-a851-b1b9e8bb992f",

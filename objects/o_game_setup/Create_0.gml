@@ -13,7 +13,7 @@ repeat(5){
 	possible_spawn_location[i, 0] = 500 + i*spawn_position_distance
 	possible_spawn_location[i, 1] = 500 
 	possible_spawn_location[i+11, 0] = 500 + i*spawn_position_distance
-	possible_spawn_location[i+11, 1] = 15000
+	possible_spawn_location[i+11, 1] = 12500
 	i++
 }
 
@@ -21,15 +21,15 @@ repeat(5){
 possible_spawn_location[i, 0] = 500
 possible_spawn_location[i, 1] = 3500
 i++
-possible_spawn_location[i, 0] = 15500
+possible_spawn_location[i, 0] = 12500
 possible_spawn_location[i, 1] = 3500
 i++
 
 //row 3
 possible_spawn_location[i, 0] = 500
-possible_spawn_location[i, 1] = 2500
+possible_spawn_location[i, 1] = 3500
 i++
-possible_spawn_location[i, 0] = 15500
+possible_spawn_location[i, 0] = 12500
 possible_spawn_location[i, 1] = 6500
 i++
 

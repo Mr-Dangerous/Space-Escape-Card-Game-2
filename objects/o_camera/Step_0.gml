@@ -141,17 +141,17 @@ switch(state){
 			_i++
 		}
 		
-		zoom_x = ((_furthest_right_player_unit_x +200) - (_furthest_left_player_unit_x -200))/base_camera_width
-		zoom_y = ((_furthest_down_player_unit_y + 200) - (_furthest_up_player_unit_y - 200))/base_camera_height
+		zoom_x = ((_furthest_right_player_unit_x + (200* camera_zoom)) - (_furthest_left_player_unit_x -(200*camera_zoom)))/base_camera_width
+		zoom_y = ((_furthest_down_player_unit_y + (200*camera_zoom)) - (_furthest_up_player_unit_y - (200*camera_zoom)))/base_camera_height
 		if (zoom_x > 1 or zoom_y > 1){
 			if (zoom_x > zoom_y)camera_zoom = zoom_x
 			if (zoom_x < zoom_y)camera_zoom = zoom_y
 		}
 		
-		camera_set_view_size(view_camera[0],((base_camera_width+220)*camera_zoom), ((base_camera_height + 200)*camera_zoom))
+		camera_set_view_size(view_camera[0],((base_camera_width+220)*zoom_x), ((base_camera_height + 200)*zoom_x))
 		
-		_camera_x = _squad_object.x - (camera_get_view_width(view_camera[0])/2)
-		_camera_y = _squad_object.y - 450 //- (camera_get_view_height(view_camera[0])/2)
+		_camera_x = _furthest_left_player_unit_x - (220*camera_zoom)
+		_camera_y = _furthest_up_player_unit_y- (100*camera_zoom) //- (camera_get_view_height(view_camera[0])/2)
 		camera_set_view_pos(view_camera[0], _camera_x, _camera_y)
 	
 		

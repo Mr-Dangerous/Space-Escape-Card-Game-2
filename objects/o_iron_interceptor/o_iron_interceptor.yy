@@ -233,6 +233,20 @@
             "value": "0",
             "varName": "idle_direction",
             "varType": 0
+        },
+        {
+            "id": "02233d26-130d-4bb1-b36b-cd8339080d7e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "600",
+            "varName": "scan_range",
+            "varType": 1
         }
     ],
     "solid": false,
