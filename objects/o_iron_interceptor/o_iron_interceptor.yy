@@ -96,7 +96,7 @@
             "value": ".3"
         }
     ],
-    "parentObjectId": "02f1869a-93ff-472b-826d-c53bde02bd53",
+    "parentObjectId": "ac4f7766-4563-4a9f-a711-8b20286a915f",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

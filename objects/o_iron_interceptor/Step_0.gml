@@ -1,3 +1,4 @@
+#region PreStateMachine
 if (vector_locked){
 	turn_speed = max_turn_speed - ((speed/max_speed)*2)
 }
@@ -33,6 +34,7 @@ switch(state){
 	break;
 	
 	case ship.scouting:
+		//this needs to become a path
 		turn_to_face_direction(recon_direction)
 		direction = image_angle
 		speed += acceleration_rate
@@ -49,7 +51,7 @@ switch(state){
 			recon_direction = direction
 		}
 		
-		var _nearest_enemy = instance_nearest(x, y, o_enemy_ship)
+		var _nearest_enemy = instance_nearest(x, y, target_ship_type)
 		
 		if (distance_to_object(_nearest_enemy) < scan_range){
 			with (_nearest_enemy){
