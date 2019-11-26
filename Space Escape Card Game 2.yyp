@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "02f1869a-93ff-472b-826d-c53bde02bd53",
+            "Value": {
+                "id": "ac6fd8c7-bc71-4a7b-bbc6-9a0c2acf7b3b",
+                "resourcePath": "objects\\o_player_ship\\o_player_ship.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "042c97eb-7285-4ec1-b9bd-7bca51b83760",
             "Value": {
                 "id": "b2154f7f-3e94-44bb-8830-37d160064252",
@@ -39,11 +47,27 @@
             }
         },
         {
+            "Key": "06a62d99-7dfb-42c3-9e18-1455eeede5b7",
+            "Value": {
+                "id": "be5e38fa-fde3-4df2-b350-320e145d3804",
+                "resourcePath": "objects\\o_player_fighter\\o_player_fighter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "08536d5b-6935-43a6-9aa6-e43d93de9346",
             "Value": {
                 "id": "c17f08ca-4be0-4878-af91-6ad7226e05b7",
                 "resourcePath": "sprites\\s_blue_pulse_exhaust_original\\s_blue_pulse_exhaust_original.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "08e4751e-8002-4621-a484-ad04a586bdae",
+            "Value": {
+                "id": "9fa52c16-ad0f-4dad-9484-0f0e9dfa9bde",
+                "resourcePath": "objects\\o_alien_interceptor\\o_alien_interceptor.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -335,6 +359,14 @@
             }
         },
         {
+            "Key": "4e44705a-2916-41e8-ab26-84fd9acdd238",
+            "Value": {
+                "id": "a76eb57c-12c7-493d-848c-1c285238ceb0",
+                "resourcePath": "views\\4e44705a-2916-41e8-ab26-84fd9acdd238.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4e727976-97bb-42e5-93cc-e00d7fd140c0",
             "Value": {
                 "id": "366feb9d-32e1-4e86-8053-2c35fc02a020",
@@ -431,6 +463,14 @@
             }
         },
         {
+            "Key": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "Value": {
+                "id": "d1624e29-aaa1-457b-bc0f-de062589def5",
+                "resourcePath": "objects\\o_ship\\o_ship.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "63a55d36-95ea-4eb6-8f70-02bcdbb908c6",
             "Value": {
                 "id": "5b06057e-66a6-4a84-b024-853df6da545a",
@@ -476,6 +516,14 @@
                 "id": "82d392b7-531d-4083-8e1f-40d137e957b0",
                 "resourcePath": "views\\736a95f6-22cf-47ef-9b96-7d64877cbf9e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "738d7727-f2bd-4b09-bb54-de26297e34fd",
+            "Value": {
+                "id": "2953ab71-bb43-46f2-9fca-c0f3879b432d",
+                "resourcePath": "objects\\o_enemy_fighter\\o_enemy_fighter.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -580,6 +628,14 @@
                 "id": "554f915b-d59e-4b3b-b917-9bf74d84769e",
                 "resourcePath": "sprites\\s_imperial_frigate_original\\s_imperial_frigate_original.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "839903c6-fc63-4dfb-8b83-d4b603674c37",
+            "Value": {
+                "id": "929a5ba1-817a-49bc-bb81-9586a01a49fc",
+                "resourcePath": "views\\839903c6-fc63-4dfb-8b83-d4b603674c37.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -767,6 +823,14 @@
             }
         },
         {
+            "Key": "a54f4a02-6076-4fcc-915c-ef5643952a5e",
+            "Value": {
+                "id": "dbb6dbca-966c-46f6-8654-81e1d264854c",
+                "resourcePath": "objects\\o_enemy_interceptor\\o_enemy_interceptor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a642703d-f85d-4320-b0f8-ee6407323f6c",
             "Value": {
                 "id": "99530974-44b7-4cc0-9fb0-723fa4a7b511",
@@ -783,14 +847,6 @@
             }
         },
         {
-            "Key": "a798d3fd-1169-4ebf-9078-4f1283156d79",
-            "Value": {
-                "id": "3cdb3699-0666-4025-a7ac-7ca5143c10c1",
-                "resourcePath": "objects\\o_enemy_ship\\o_enemy_ship.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "d047d110-1c37-4de5-a851-b1b9e8bb992f",
@@ -804,6 +860,14 @@
                 "id": "1de08d88-57dc-4270-9030-b58647148d06",
                 "resourcePath": "views\\aab50007-8d27-474a-9947-ae4c2965b724.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ac4f7766-4563-4a9f-a711-8b20286a915f",
+            "Value": {
+                "id": "61204ebf-d076-43d9-9ce4-84dca9450a6e",
+                "resourcePath": "objects\\o_player_interceptor\\o_player_interceptor.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -860,6 +924,14 @@
                 "id": "bd49f94c-e4c7-41bd-8ca6-bb2264352038",
                 "resourcePath": "sprites\\s_background_1_layer_2\\s_background_1_layer_2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b73e33ce-6ea7-4618-aa63-7aaa7776dbfc",
+            "Value": {
+                "id": "3e678e0c-1ffa-4c13-a7b3-f3ac4d660b63",
+                "resourcePath": "objects\\o_player_frigate\\o_player_frigate.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -943,6 +1015,14 @@
             }
         },
         {
+            "Key": "c8f0f1ab-3914-4c91-911e-a32ae229aa4c",
+            "Value": {
+                "id": "be78917b-383f-4620-b80b-908375517b82",
+                "resourcePath": "views\\c8f0f1ab-3914-4c91-911e-a32ae229aa4c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "cc972cbc-24c5-4702-9edd-c37589a576ae",
             "Value": {
                 "id": "0b7ba4b8-1078-46c2-b506-7293f9a808e5",
@@ -983,11 +1063,27 @@
             }
         },
         {
+            "Key": "d43b2ac5-48ff-4f2a-83a9-8612bf26a800",
+            "Value": {
+                "id": "6295fb62-3299-4f80-8c68-5cebcef7cf45",
+                "resourcePath": "objects\\o_enemy_frigate\\o_enemy_frigate.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d54eab3b-e384-4425-af10-249f714728ed",
             "Value": {
                 "id": "a1447b85-a8fc-47ec-ad6b-13586bdca5cb",
                 "resourcePath": "views\\d54eab3b-e384-4425-af10-249f714728ed.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d69568c6-ef31-477e-a27f-1720720d0b91",
+            "Value": {
+                "id": "a1fbd92d-3e92-4d88-8b21-c6d70b5b232f",
+                "resourcePath": "objects\\o_enemy_ship\\o_enemy_ship.yy",
+                "resourceType": "GMObject"
             }
         },
         {
