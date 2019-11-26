@@ -33,6 +33,16 @@
             "enumb": 52,
             "eventtype": 9,
             "m_owner": "a135f96c-7c55-4137-9864-36138e7ec9fd"
+        },
+        {
+            "id": "d8881f5d-7ab3-440d-b6dc-512046542c1b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "a135f96c-7c55-4137-9864-36138e7ec9fd"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -246,6 +256,20 @@
             "resourceFilter": 1023,
             "value": "600",
             "varName": "scan_range",
+            "varType": 1
+        },
+        {
+            "id": "9b9b4b71-2093-4c1a-a44d-a01e633fec91",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "rocket_image_counter",
             "varType": 1
         }
     ],
