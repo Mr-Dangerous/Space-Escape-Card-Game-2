@@ -83,6 +83,34 @@
             "value": "0",
             "varName": "recon_direction",
             "varType": 0
+        },
+        {
+            "id": "0def3ee5-735f-4605-a3bb-cdeeb1649106",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "x_offset",
+            "varType": 1
+        },
+        {
+            "id": "de84d966-54eb-46f6-89d4-42cf432b8faf",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "y_offset",
+            "varType": 1
         }
     ],
     "solid": false,

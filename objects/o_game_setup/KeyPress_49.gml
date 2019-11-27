@@ -2,10 +2,12 @@
 
 
 if (!game_created){
+	#region deprecated!  edge spawning
+	/*
 	randomize()
 	var _player_start_location = irandom(15)
 	var _enemy_start_location = irandom(15)
-
+	
 	var acceptable_start_locations = false
 	while (acceptable_start_locations = false){
 		if (_player_start_location !=_enemy_start_location){
@@ -193,17 +195,22 @@ if (!game_created){
 			_enemy_spawn_side = "bottom right corner"
 		break;
 	}
+	*/
+	
+	
+	#endregion
+	var player_start_position = irandom_range(0, 12)
+	var enemy_start_position = irandom_range(14, 24)
+	
+	var _player_x = possible_spawn_location[player_start_position, 0]
+	var _player_y = possible_spawn_location[player_start_position, 1]
+	
+	var _enemy_x = possible_spawn_location[enemy_start_position, 0]
+	var _enemy_y = possible_spawn_location[enemy_start_position, 1]
+	
 	var player_squad = instance_create_layer(_player_x, _player_y, "Instances", o_player_squad)
 	var enemy_squad = instance_create_layer(_enemy_x, _enemy_y, "Instances", o_enemy_squad)
 	
-	with (player_squad){
-		
-		enemy_spawn_side = other._enemy_spawn_side
-	}
-	with (enemy_squad){
-		player_spawn_side = other.spawn_side
-		enemy_spawn_side = other._enemy_spawn_side
-	}
 	
 	var _camera = instance_find(o_camera, 0)
 	with (_camera){

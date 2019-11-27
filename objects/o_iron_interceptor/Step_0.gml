@@ -5,6 +5,7 @@ if (vector_locked){
 if (!vector_locked){
 	turn_speed = max_turn_speed
 }
+#endregion
 
 #region state machine
 switch(state){
