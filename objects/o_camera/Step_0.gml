@@ -177,4 +177,3 @@ layer_y("Background", camera_get_view_y(view_camera[0])-400)
 layer_x("Parallax_Background", camera_get_view_x(view_camera[0]) * .95)
 layer_y("Parallax_Background", camera_get_view_y(view_camera[0]) * .95)
 
-show_debug_message(mouse_y)

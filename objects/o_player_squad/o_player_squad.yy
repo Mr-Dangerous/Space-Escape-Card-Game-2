@@ -125,9 +125,23 @@
             "value": "5",
             "varName": "maximum_units",
             "varType": 1
+        },
+        {
+            "id": "a698a7b8-64e8-49ed-a435-385a5a81770c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0.15",
+            "varName": "image_scale",
+            "varType": 0
         }
     ],
     "solid": false,
-    "spriteId": "38421fd3-4cde-4bc5-89c9-74332e04f9f6",
+    "spriteId": "f83ef7d8-19e1-4ebc-8b72-794245ac9af7",
     "visible": true
 }

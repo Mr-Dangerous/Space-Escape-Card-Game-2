@@ -214,12 +214,12 @@ if (!game_created){
 	
 	var _camera = instance_find(o_camera, 0)
 	with (_camera){
-		state = camera.locked
+		//state = camera.locked
 	}
 	game_created = true
 }
 var i = 0
-repeat(16){
+repeat(25){
 	var _x = possible_spawn_location[i, 0]
 	var _y = possible_spawn_location[i, 1]
 	instance_create_layer(_x, _y, "Instances", o_spawn_beacon)

@@ -1,3 +1,5 @@
+image_xscale = image_scale
+image_yscale = image_scale
 x_offset = -400 //should allow for 9 squares of grid boxes
 y_offset = -400
 spacing = 100
