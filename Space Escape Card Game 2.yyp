@@ -1223,6 +1223,14 @@
             }
         },
         {
+            "Key": "f0eaced3-bc16-4741-94d8-dd8424c1861b",
+            "Value": {
+                "id": "c693215b-27bc-4d2a-9909-694871454b69",
+                "resourcePath": "sprites\\s_grid_box_old\\s_grid_box_old.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f1a11f20-d902-4237-9581-de6258bdec16",
             "Value": {
                 "id": "5132e7a8-eb15-494d-bafd-8fa07ede0609",

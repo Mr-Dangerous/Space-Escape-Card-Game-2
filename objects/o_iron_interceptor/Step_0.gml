@@ -10,14 +10,11 @@ if (!vector_locked){
 #region state machine
 switch(state){
 	case ship.planning:
-		if (idle_drift_counter = 0){
-			x = assigned_defensive_grid_space.x +irandom_range(-1, 1)
-			y = assigned_defensive_grid_space.y + irandom_range(-1, 1)
-			idle_drift_counter = irandom_range(100, 300)
-			image_angle = idle_direction + irandom_range(-1, 1)
-		}
-		idle_drift_counter--
+		x = assigned_defensive_grid_space.x 
+		y = assigned_defensive_grid_space.y 
+		image_angle = squad_object.image_angle
 		
+	
 		if (recon){
 			image_angle = recon_direction
 		}
@@ -25,14 +22,10 @@ switch(state){
 	break;
 	
 	case ship.idle:
-		if (idle_drift_counter = 0){
-			x = assigned_defensive_grid_space.x +irandom_range(-1, 1)
-			y = assigned_defensive_grid_space.y + irandom_range(-1, 1)
-			idle_drift_counter = irandom_range(100, 300)
-			image_angle = idle_direction + irandom_range(-1, 1)
-		}
-		idle_drift_counter--
-	break;
+		x = assigned_defensive_grid_space.x 
+		y = assigned_defensive_grid_space.y 
+		image_angle = squad_object.image_angle
+		
 	
 	case ship.scouting:
 		//this needs to become a path

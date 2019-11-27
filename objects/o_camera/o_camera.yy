@@ -167,6 +167,20 @@
             "value": "1",
             "varName": "camera_zoom",
             "varType": 0
+        },
+        {
+            "id": "e8ecfb4f-206c-4122-b074-5709013fe1b1",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "background_scale",
+            "varType": 0
         }
     ],
     "solid": false,

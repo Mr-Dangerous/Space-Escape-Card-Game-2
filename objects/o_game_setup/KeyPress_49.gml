@@ -214,7 +214,7 @@ if (!game_created){
 	
 	var _camera = instance_find(o_camera, 0)
 	with (_camera){
-		//state = camera.locked
+		state = camera.locked
 	}
 	game_created = true
 }

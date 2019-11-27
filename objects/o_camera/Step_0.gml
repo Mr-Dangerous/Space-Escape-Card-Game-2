@@ -98,8 +98,11 @@ switch(state){
 	camera_zoom = 1.58
 	camera_set_view_size(view_camera[0],base_camera_width * camera_zoom, base_camera_height * camera_zoom)
 	
-	_camera_x = upper_left_grid_box.x -(view_width/2) + 400
-	_camera_y = upper_left_grid_box.y -48
+	//_camera_x = upper_left_grid_box.x -(view_width/2) + 400
+	//_camera_y = upper_left_grid_box.y -48
+	var _player_squad = instance_find(o_player_squad, 0)
+	_camera_x = _player_squad.x - (view_width/2)
+	_camera_y = _player_squad.y - (view_height/2)
 	camera_set_view_pos(view_camera[0], _camera_x, _camera_y)
 	
 	
@@ -166,13 +169,14 @@ var back_id = layer_background_get_id(lay_id);
 var parallax_lay_id = layer_get_id("Parallax_Background");
 var parallax_back_id = layer_background_get_id(parallax_lay_id);
 
-layer_background_xscale(back_id, camera_zoom)
-layer_background_yscale(back_id, camera_zoom)
+layer_background_xscale(back_id, background_scale*camera_zoom)
+layer_background_yscale(back_id, background_scale*camera_zoom)
+layer_background_alpha(back_id, .6)
 layer_background_xscale(parallax_back_id, camera_zoom)
 layer_background_yscale(parallax_back_id, camera_zoom)
 
 layer_x("Background", camera_get_view_x(view_camera[0]))
-layer_y("Background", camera_get_view_y(view_camera[0])-400)
+layer_y("Background", camera_get_view_y(view_camera[0]))
 
 layer_x("Parallax_Background", camera_get_view_x(view_camera[0]) * .95)
 layer_y("Parallax_Background", camera_get_view_y(view_camera[0]) * .95)
