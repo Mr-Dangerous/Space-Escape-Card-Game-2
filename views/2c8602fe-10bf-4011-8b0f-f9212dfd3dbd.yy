@@ -6,7 +6,8 @@
     "children": [
         "e5541126-e0cd-4e66-92dc-23c342db623e",
         "85db90be-541f-4024-8d0e-8e997f8b316f",
-        "3ffabf5e-a3c0-4e27-b081-d788beb5d8ee"
+        "3ffabf5e-a3c0-4e27-b081-d788beb5d8ee",
+        "371e278f-6e76-42d5-9a8a-d69e8e0e6115"
     ],
     "filterType": "GMSprite",
     "folderName": "Crystal",
