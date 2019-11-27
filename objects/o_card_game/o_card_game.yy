@@ -62,7 +62,48 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        
+        {
+            "id": "f738cb51-eecf-44d7-8d73-6ace68b85e25",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "resources",
+            "varType": 1
+        },
+        {
+            "id": "107b7e68-a2b3-4224-8cd4-4164754cfd4c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "energy_current",
+            "varType": 1
+        },
+        {
+            "id": "61114e4e-9f0e-4f1c-a9e6-5486e039aa57",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "50",
+            "varName": "energy_maximum",
+            "varType": 1
+        }
     ],
     "solid": false,
     "spriteId": "00000000-0000-0000-0000-000000000000",

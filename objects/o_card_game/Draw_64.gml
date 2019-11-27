@@ -38,3 +38,12 @@ repeat(5){
 }
 #endregion
 
+#region Econ GUI
+//Draw the econ assests, resources, energy
+var _econ_asset_y = view_port_height -138
+//Energy
+var energy_string = "Energy: " + string(energy_current) + "/" + string(energy_maximum)
+draw_text_color(227, _econ_asset_y, energy_string, c_white, c_white, c_white, c_white, .9)
+
+#endregion
+

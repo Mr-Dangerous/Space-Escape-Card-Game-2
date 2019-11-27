@@ -351,6 +351,14 @@
             }
         },
         {
+            "Key": "4974b9c7-e6dd-463e-8235-7dda7f78fb6b",
+            "Value": {
+                "id": "88c4330c-6f69-4aef-a361-06297516ed61",
+                "resourcePath": "sprites\\s_sector_map\\s_sector_map.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4a1323a6-5517-4dee-ae5b-1d1eab3da355",
             "Value": {
                 "id": "4639a205-7fda-47d5-97f1-f80fda1aad8c",
@@ -386,7 +394,7 @@
             "Key": "4e727976-97bb-42e5-93cc-e00d7fd140c0",
             "Value": {
                 "id": "366feb9d-32e1-4e86-8053-2c35fc02a020",
-                "resourcePath": "objects\\object4\\object4.yy",
+                "resourcePath": "objects\\o_travel_map\\o_travel_map.yy",
                 "resourceType": "GMObject"
             }
         },

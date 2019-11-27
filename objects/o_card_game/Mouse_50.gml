@@ -12,7 +12,7 @@ i=0
 var _card_width = 158
 repeat(5){
 if (mouse_x >= ((227*_camera_zoom) + camera_x + (_card_width*i*_camera_zoom)) and mouse_x <= ((385*_camera_zoom) + camera_x + (_card_width*i*_camera_zoom))){
-	if (mouse_y <= _view_port_height - 8 + camera_y and mouse_y >= _view_port_height -110 + camera_y){
+	if (mouse_y <= _view_port_height - (8*_camera_zoom) + camera_y and mouse_y >= _view_port_height -(110*_camera_zoom) + camera_y){
 		selected_card_slot = i
 		}
 	}
