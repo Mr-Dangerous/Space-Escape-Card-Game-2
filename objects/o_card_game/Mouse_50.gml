@@ -5,14 +5,20 @@ var camera_x = camera_get_view_x(view_camera[0])
 var camera_y = camera_get_view_y(view_camera[0])
 var _camera_controller = instance_find(o_camera, 0)
 var _camera_zoom = _camera_controller.camera_zoom
+var _shop_offset_x = (227/1280) * view_port_width * _scale
+var _shop_offset_x_far_side = (385/1280) * view_port_width * _scale
+var _shop_offset_y_bottom = (8/768) * view_port_height 
+var _shop_offset_y_top = (110/768) * view_port_height
+var _card_width = (158/1280) * view_port_width *_scale
+
 
 _view_port_height = camera_get_view_height(view_camera[0])
 //check card slot 
 i=0
-var _card_width = 158
+
 repeat(5){
-if (mouse_x >= ((227*_camera_zoom) + camera_x + (_card_width*i*_camera_zoom)) and mouse_x <= ((385*_camera_zoom) + camera_x + (_card_width*i*_camera_zoom))){
-	if (mouse_y <= _view_port_height - (8*_camera_zoom) + camera_y and mouse_y >= _view_port_height -(110*_camera_zoom) + camera_y){
+if (mouse_x >= ((_shop_offset_x*_camera_zoom) + camera_x + (_card_width*i*_camera_zoom)) and mouse_x <= ((_shop_offset_x_far_side*_camera_zoom) + camera_x + (_card_width*i*_camera_zoom))){
+	if (mouse_y <= _view_port_height - (_shop_offset_y_bottom*_camera_zoom) + camera_y and mouse_y >= _view_port_height -(_shop_offset_y_top*_camera_zoom) + camera_y){
 		selected_card_slot = i
 		}
 	}

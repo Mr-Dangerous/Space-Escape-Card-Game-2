@@ -1,5 +1,5 @@
-view_port_height = view_get_hport(0)
-view_port_width = view_get_wport(0)
+//view_port_height = view_get_hport(0)
+//view_port_width = view_get_wport(0)
 /*
 draw_set_alpha(.4)
 //left side GUI - placeholder
