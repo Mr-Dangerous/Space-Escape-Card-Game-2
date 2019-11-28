@@ -94,6 +94,14 @@
             "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
             "propertyId": "9c47b80b-b851-4ee1-a021-d8c464044bb8",
             "value": ".3"
+        },
+        {
+            "id": "3e466408-829d-4ff8-9f92-5a1a3e324eea",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "beace18f-c833-4db1-84c8-1e3a174dd76a",
+            "value": "s_rocket_exhaust_original"
         }
     ],
     "parentObjectId": "ac4f7766-4563-4a9f-a711-8b20286a915f",

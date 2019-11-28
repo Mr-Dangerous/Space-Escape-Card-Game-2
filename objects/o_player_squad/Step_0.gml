@@ -1,5 +1,5 @@
 //test function
-speed = 10
+speed = .5
 direction += .01
 image_angle = direction
 

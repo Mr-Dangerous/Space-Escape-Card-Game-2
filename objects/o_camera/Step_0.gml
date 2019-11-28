@@ -95,14 +95,14 @@ switch(state){
 	case camera.locked:
 	//this might be renamed later to planning camera.
 	//The whole planing screen must be visible within the GUI!
-	camera_zoom = 1.58
+	camera_zoom = 1.8
 	camera_set_view_size(view_camera[0],base_camera_width * camera_zoom, base_camera_height * camera_zoom)
 	
 	//_camera_x = upper_left_grid_box.x -(view_width/2) + 400
 	//_camera_y = upper_left_grid_box.y -48
 	var _player_squad = instance_find(o_player_squad, 0)
 	_camera_x = _player_squad.x - (view_width/2)
-	_camera_y = _player_squad.y - (view_height/2)
+	_camera_y = _player_squad.y - (view_height/2) + 75
 	camera_set_view_pos(view_camera[0], _camera_x, _camera_y)
 	
 	
