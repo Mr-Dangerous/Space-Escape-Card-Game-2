@@ -52,5 +52,5 @@ for(i = 0; i<81; i++){
 }
 
 squad_ships = array_create(15, noone)
-
+state = squad.defend_sector
 //testing only

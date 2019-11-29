@@ -17,3 +17,8 @@ enum camera {
 	locked,
 	all_encompassing
 }
+
+enum squad {
+	moving,
+	defend_sector
+}
