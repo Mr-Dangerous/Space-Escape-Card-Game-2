@@ -175,6 +175,7 @@ layer_background_alpha(back_id, .6)
 layer_background_xscale(parallax_back_id, camera_zoom)
 layer_background_yscale(parallax_back_id, camera_zoom)
 
+
 layer_x("Background", camera_get_view_x(view_camera[0]))
 layer_y("Background", camera_get_view_y(view_camera[0]))
 

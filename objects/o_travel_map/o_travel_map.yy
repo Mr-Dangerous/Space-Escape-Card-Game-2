@@ -65,6 +65,20 @@
             "value": "0",
             "varName": "player_location",
             "varType": 1
+        },
+        {
+            "id": "6b8aa3f1-20ab-4ba5-a669-c9838998b757",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "instance_find(o_card_game, 0)",
+            "varName": "card_game_controller",
+            "varType": 4
         }
     ],
     "solid": false,

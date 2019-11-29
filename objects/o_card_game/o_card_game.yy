@@ -43,6 +43,16 @@
             "enumb": 50,
             "eventtype": 6,
             "m_owner": "62fcf33d-6b80-4623-983b-4a98f21d0feb"
+        },
+        {
+            "id": "4948d793-b2ff-4e70-9111-52d555cf9aac",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "62fcf33d-6b80-4623-983b-4a98f21d0feb"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -86,7 +96,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
+            "value": "25",
             "varName": "energy_current",
             "varType": 1
         },
@@ -102,6 +112,34 @@
             "resourceFilter": 1023,
             "value": "50",
             "varName": "energy_maximum",
+            "varType": 1
+        },
+        {
+            "id": "40c19820-5a2a-4229-955c-785121f141e8",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "energy_counter",
+            "varType": 1
+        },
+        {
+            "id": "aa09a349-3381-404e-b5be-8e088c8490af",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "200",
+            "varName": "energy_tick",
             "varType": 1
         }
     ],
