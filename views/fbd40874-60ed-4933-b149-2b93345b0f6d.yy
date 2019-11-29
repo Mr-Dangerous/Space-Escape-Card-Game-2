@@ -10,7 +10,8 @@
         "300a84ee-3716-427b-9b57-2ca5dac6986d",
         "4a1323a6-5517-4dee-ae5b-1d1eab3da355",
         "7892d91d-938b-4030-9b8b-10379620d10b",
-        "dddd6b1c-0865-4200-b775-04dee315d890"
+        "dddd6b1c-0865-4200-b775-04dee315d890",
+        "506ddcf4-4c0f-434d-9cb1-fe6379ab5408"
     ],
     "filterType": "GMObject",
     "folderName": "Game Mangement Objects",

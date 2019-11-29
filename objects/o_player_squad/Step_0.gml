@@ -22,7 +22,6 @@ for (i = 0; i < 25; i++){
 	if (_beacon_check = current_sector){
 		with (sector_map){
 			player_location = other.i
-			show_debug_message(player_location)
 		}
 	}
 }

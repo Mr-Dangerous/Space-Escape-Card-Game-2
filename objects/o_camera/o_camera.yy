@@ -23,6 +23,26 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "6308b7b3-a191-407a-8fab-9426a55e05fa"
+        },
+        {
+            "id": "03fba1f1-318a-4ad4-a751-12f45f97aab9",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 60,
+            "eventtype": 6,
+            "m_owner": "6308b7b3-a191-407a-8fab-9426a55e05fa"
+        },
+        {
+            "id": "418eb665-a8b8-44e9-9aef-bf5d341b667a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 61,
+            "eventtype": 6,
+            "m_owner": "6308b7b3-a191-407a-8fab-9426a55e05fa"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -180,6 +200,34 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "background_scale",
+            "varType": 0
+        },
+        {
+            "id": "9c1c9e35-0e30-4bb5-ae04-ebdcd319187b",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1.8",
+            "varName": "locked_camera_zoom",
+            "varType": 0
+        },
+        {
+            "id": "16aff213-73f2-4596-b6a8-dc6ec84f2ca9",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "target_camera_zoom",
             "varType": 0
         }
     ],

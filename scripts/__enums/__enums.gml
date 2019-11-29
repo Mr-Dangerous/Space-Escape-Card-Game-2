@@ -9,7 +9,8 @@ enum ship {
 	idle,
 	scouting,
 	moving,
-	recon
+	recon,
+	repositioning
 }
 
 enum camera {

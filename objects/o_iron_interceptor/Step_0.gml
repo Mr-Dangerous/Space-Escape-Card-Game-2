@@ -13,8 +13,9 @@ switch(state){
 		x = assigned_defensive_grid_space.x 
 		y = assigned_defensive_grid_space.y 
 		image_angle = squad_object.image_angle
+		speed = 0
 		
-	
+		
 		if (recon){
 			image_angle = recon_direction
 		}
@@ -22,10 +23,11 @@ switch(state){
 	break;
 	
 	case ship.idle:
-		x = assigned_defensive_grid_space.x 
-		y = assigned_defensive_grid_space.y 
-		image_angle = squad_object.image_angle
+		//x = assigned_defensive_grid_space.x 
+		//y = assigned_defensive_grid_space.y 
+		//image_angle = squad_object.image_angle
 		
+	break;
 	
 	case ship.scouting:
 		//this needs to become a path
@@ -63,6 +65,21 @@ switch(state){
 	
 	case ship.recon:
 		
+	break;
+	
+	case ship.repositioning:
+		if (!place_meeting(x, y, assigned_defensive_grid_space)){
+			_p_dir = point_direction(x, y, assigned_defensive_grid_space.x, assigned_defensive_grid_space.y)
+			speed += acceleration_rate
+			limit_speed()
+			turn_to_face_direction(_p_dir)
+			direction = image_angle
+		}
+		if (place_meeting(x, y, assigned_defensive_grid_space)){
+			x = assigned_defensive_grid_space.x
+			y = assigned_defensive_grid_space.y
+			state = ship.planning
+		}
 	break;
 }
 #endregion

@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "506ddcf4-4c0f-434d-9cb1-fe6379ab5408",
+            "Value": {
+                "id": "54d3c5c6-3a1d-4c46-aa79-6b155625f4e8",
+                "resourcePath": "objects\\o_ship_reposition_copy\\o_ship_reposition_copy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5071d643-fb6f-4e4e-8078-178300d72567",
             "Value": {
                 "id": "5146622f-7651-49a3-9e96-37d50d6bff2f",

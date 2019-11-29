@@ -4,7 +4,7 @@
 var _player_object = instance_find(o_player_squad, 0)
 
 if (card_game_controller.energy_current >= 5){
-	card_game_controller.energy_current-=5
+	
 
 	_camera_x = camera_get_view_x(view_camera[0])
 	_camera_y = camera_get_view_y(view_camera[0])
@@ -24,10 +24,11 @@ if (card_game_controller.energy_current >= 5){
 	
 		if (mouse_x >= _sector_left and mouse_x <= _sector_right){
 			if (mouse_y >= _sector_top and mouse_y <= _sector_bottom){
-			
+				card_game_controller.energy_current-=5
 				with (_player_object){
 					target_sector = i
-					show_debug_message(target_sector)
+					
+					
 				}
 			}
 		}

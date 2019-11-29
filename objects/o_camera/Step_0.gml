@@ -95,7 +95,7 @@ switch(state){
 	case camera.locked:
 	//this might be renamed later to planning camera.
 	//The whole planing screen must be visible within the GUI!
-	camera_zoom = 1.8
+	camera_zoom = locked_camera_zoom
 	camera_set_view_size(view_camera[0],base_camera_width * camera_zoom, base_camera_height * camera_zoom)
 	
 	//_camera_x = upper_left_grid_box.x -(view_width/2) + 400
