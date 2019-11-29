@@ -1,6 +1,6 @@
 //test function
-speed = .5
-direction += .01
+speed = 10
+
 image_angle = direction
 
 //move grid boxes with the ship
@@ -19,5 +19,18 @@ repeat(81){
 	}
 	_k++
 }
+
+current_sector = instance_nearest(x, y, o_spawn_beacon)
+
+for (i = 0; i < 25; i++){
+	var _beacon_check = game_setup_controller.possible_spawn_location[i, 2]
+	if (_beacon_check = current_sector){
+		with (sector_map){
+			player_location = other.i
+			show_debug_message(player_location)
+		}
+	}
+}
+
 
 	

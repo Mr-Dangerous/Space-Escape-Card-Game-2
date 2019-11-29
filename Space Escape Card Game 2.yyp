@@ -1015,6 +1015,14 @@
             }
         },
         {
+            "Key": "c0b80b9c-c9e7-4b6a-9d57-9154ec57f301",
+            "Value": {
+                "id": "f60573f0-f01d-4e2e-b4bc-ed7ac00e7441",
+                "resourcePath": "sprites\\s_player_location_dot\\s_player_location_dot.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c612fa55-f788-4266-a7d8-00f230b1c8db",
             "Value": {
                 "id": "0395405b-68ee-442b-9778-62914e37b4fc",

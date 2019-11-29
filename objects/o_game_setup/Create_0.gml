@@ -4,6 +4,7 @@ var spawn_position_distance = 3000
 
 possible_spawn_location[0, 0] = 0//x
 possible_spawn_location[0, 1] = 0//y
+possible_spawn_location[0, 2] = 0
 
 var k = 0
 for (i = 0; i < 5 ; i++){

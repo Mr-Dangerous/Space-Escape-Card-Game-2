@@ -2,6 +2,7 @@
 
 
 if (!game_created){
+	randomize()
 	#region deprecated!  edge spawning
 	/*
 	randomize()
@@ -222,6 +223,7 @@ var i = 0
 repeat(25){
 	var _x = possible_spawn_location[i, 0]
 	var _y = possible_spawn_location[i, 1]
-	instance_create_layer(_x, _y, "Instances", o_spawn_beacon)
+	var _spawn_beacon = instance_create_layer(_x, _y, "Instances", o_spawn_beacon)
+	possible_spawn_location[i, 2] = _spawn_beacon
 	i++
 }

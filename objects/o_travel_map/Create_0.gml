@@ -10,6 +10,6 @@ for (i = 0; i < 5; i++){//i = y
 		mini_map_sector_locations[_k, 1] = 45 + (25*i) 
 		mini_map_sector_locations[_k, 2] = 54 + (25*j)
 		mini_map_sector_locations[_k, 3] = 54 + (25*i)
-		k++
+		_k++
 	}
 }

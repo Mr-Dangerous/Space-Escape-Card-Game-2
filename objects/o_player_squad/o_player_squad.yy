@@ -149,6 +149,34 @@
             "value": "0.15",
             "varName": "image_scale",
             "varType": 0
+        },
+        {
+            "id": "9eb4e92b-2224-4573-a4ee-2a81ded341c1",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "noone",
+            "varName": "current_sector",
+            "varType": 0
+        },
+        {
+            "id": "56aed711-f50f-4592-a66b-dd740fd29ad2",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "instance_find(o_travel_map, 0)",
+            "varName": "sector_map",
+            "varType": 4
         }
     ],
     "solid": false,
