@@ -41,13 +41,21 @@ for(i = 0; i<81; i++){
 		with(_camera){
 			upper_left_grid_box = _grid_box
 		}
+		
 	}
+
 	if (i = 80){
 		with(_camera){
 			bottom_right_grid_box = _grid_box
 		}
 	}
 	//assign_recon_squares as a whole
+	if (i = 0 or i = 4 or i = 8 or i = 36 or i = 44 or i = 72 or i = 76 or i = 80){
+		with (grid_boxes[i, 4]){
+			recon_square = true
+			recon_direction = point_direction(other.x, other.y, x, y)
+		}
+	}
 		
 }
 

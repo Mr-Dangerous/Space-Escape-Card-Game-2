@@ -5,6 +5,9 @@ Currently, on freeform scrolling
 
 
 ==========================================================*/
+if (locked_camera_zoom > max_zoom){
+	locked_camera_zoom = max_zoom
+}
 var view_x_position = camera_get_view_x(view_camera[0])
 var view_y_position = camera_get_view_y(view_camera[0])
 var view_width = camera_get_view_width(view_camera[0])

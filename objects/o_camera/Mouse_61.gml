@@ -1,1 +1,1 @@
-locked_camera_zoom += .01
+locked_camera_zoom += .05

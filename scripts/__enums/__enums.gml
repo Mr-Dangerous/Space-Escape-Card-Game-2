@@ -10,6 +10,7 @@ enum ship {
 	scouting,
 	moving,
 	recon,
+	returning,
 	repositioning
 }
 

@@ -1,5 +1,5 @@
 if (recon){
 	state = ship.scouting
 } else {
-	state = ship.idle
+	state = ship.planning
 }

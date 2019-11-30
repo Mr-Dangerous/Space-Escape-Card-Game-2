@@ -229,6 +229,20 @@
             "value": "0",
             "varName": "target_camera_zoom",
             "varType": 0
+        },
+        {
+            "id": "5a905fee-3636-4af0-a82c-49b6233355ff",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "4",
+            "varName": "max_zoom",
+            "varType": 0
         }
     ],
     "solid": false,
