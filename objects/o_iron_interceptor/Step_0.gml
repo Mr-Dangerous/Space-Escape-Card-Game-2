@@ -5,10 +5,14 @@ if (vector_locked){
 if (!vector_locked){
 	turn_speed = max_turn_speed
 }
+
+
 #endregion
 
 #region state machine
 switch(state){
+	
+	#region ship.planning
 	case ship.planning:
 		x = assigned_defensive_grid_space.x 
 		y = assigned_defensive_grid_space.y 
@@ -21,14 +25,9 @@ switch(state){
 		}
 		
 	break;
+	#endregion
 	
-	case ship.idle:
-		//x = assigned_defensive_grid_space.x 
-		//y = assigned_defensive_grid_space.y 
-		//image_angle = squad_object.image_angle
-		
-	break;
-	
+	#region scouting
 	case ship.scouting:
 		//this needs to become a path
 		turn_to_face_direction(recon_direction + squad_object.image_angle)
@@ -59,14 +58,17 @@ switch(state){
 			state = ship.returning
 		}
 	
-		
-		
+			
 	break;
+	#endregion
 	
+	#region recon
 	case ship.recon:
 		
 	break;
+	#endregion
 	
+	#region ship.returning
 	case ship.returning:
 		if (!place_meeting(x, y, assigned_defensive_grid_space)){
 			_p_dir = point_direction(x, y, assigned_defensive_grid_space.x, assigned_defensive_grid_space.y)
@@ -81,7 +83,9 @@ switch(state){
 			state = ship.planning
 		}
 	break;
-	
+	#endregion
+		
+	#region repositioning
 	case ship.repositioning:
 		if (!place_meeting(x, y, assigned_defensive_grid_space)){
 			_p_dir = point_direction(x, y, assigned_defensive_grid_space.x, assigned_defensive_grid_space.y)
@@ -96,5 +100,24 @@ switch(state){
 			state = ship.planning
 		}
 	break;
+	#endregion
+	
+	#region ship.interceptor_attacking
+		case ship.interceptor_attacking:
+			
+		break;
+	#endregion
+	
+	#region ship.fighter_attacking
+	
+	#endregion
+	
+	#region ship.frigate_attacking
+	
+	#endregion
+	
+	#region ship_ability
+	
+	#endregion
 }
 #endregion

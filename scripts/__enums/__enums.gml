@@ -11,7 +11,10 @@ enum ship {
 	moving,
 	recon,
 	returning,
-	repositioning
+	repositioning,
+	interceptor_attacking,
+	fighter_attacking,
+	frigate_attacking
 }
 
 enum camera {
