@@ -306,7 +306,7 @@
             "Key": "3ac92515-b41d-451e-8571-389efac825ef",
             "Value": {
                 "id": "b6529ac1-5298-4107-8406-8621c5d31d1b",
-                "resourcePath": "objects\\o_light_ballistic_cannon\\o_light_ballistic_cannon.yy",
+                "resourcePath": "objects\\o_ballistic_bullet\\o_ballistic_bullet.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -775,6 +775,14 @@
             }
         },
         {
+            "Key": "8e4f91cb-0285-4863-b918-67414f0ef3ca",
+            "Value": {
+                "id": "71e3d8e4-8c05-40f8-bb89-8e0876d1bdfc",
+                "resourcePath": "scripts\\instance_nth_nearest\\instance_nth_nearest.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8f61ef78-4e18-468c-89c3-104d9ad5f603",
             "Value": {
                 "id": "cba2cd65-6a34-4d5f-86d1-a52f44cae143",
@@ -1167,6 +1175,14 @@
             }
         },
         {
+            "Key": "d1204e2d-e576-4d09-a7cc-b51b525c7ece",
+            "Value": {
+                "id": "dba02273-9ce6-457b-801e-d15885c160e4",
+                "resourcePath": "views\\d1204e2d-e576-4d09-a7cc-b51b525c7ece.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d1afd053-0bee-4294-ba76-fbb78dc87add",
             "Value": {
                 "id": "46885705-a084-4c76-ab65-7627aba03946",
@@ -1389,7 +1405,8 @@
         "f1a11f20-d902-4237-9581-de6258bdec16",
         "487d0051-2867-4fbd-881b-f9b0c22f2e80",
         "bb23e0b9-38ed-4bbe-bf48-71f7230cdc58",
-        "f6983a44-27f0-4541-bfa0-a0a916efd54e"
+        "f6983a44-27f0-4541-bfa0-a0a916efd54e",
+        "8e4f91cb-0285-4863-b918-67414f0ef3ca"
     ],
     "tutorial": ""
 }

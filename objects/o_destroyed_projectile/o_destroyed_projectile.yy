@@ -83,6 +83,20 @@
             "value": "0",
             "varName": "starting_frame",
             "varType": 1
+        },
+        {
+            "id": "274eeb48-057c-40e8-94e2-14e18d5bc158",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "created",
+            "varType": 3
         }
     ],
     "solid": false,

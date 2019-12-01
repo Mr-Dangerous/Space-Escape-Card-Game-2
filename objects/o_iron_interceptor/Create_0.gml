@@ -13,6 +13,14 @@ if (allied_ship_type = o_player_ship){
 } else {
 	basic_attack_array[0, 1] = false
 }
+basic_attack_array[0, 2] = basic_attack_flight_time
+var weapon_1_length_offset = point_distance(0, 0, (weapon_1_x_offset * image_scale), (weapon_1_y_offset * image_scale))
+var weapon_1_direction_offset = point_direction(0, 0, (weapon_1_x_offset * image_scale), (weapon_1_y_offset* image_scale))
+
+var weapon_2_length_offset = point_distance(0, 0, (weapon_2_x_offset * image_scale), (weapon_2_y_offset * image_scale))
+var weapon_2_direction_offset = point_direction(0, 0, (weapon_2_x_offset * image_scale), (weapon_2_y_offset * image_scale))
+
+
 
 basic_attack_array[1, 0] = weapon_1_projectile_speed
 basic_attack_array[1, 1] = weapon_1_projectile_resource

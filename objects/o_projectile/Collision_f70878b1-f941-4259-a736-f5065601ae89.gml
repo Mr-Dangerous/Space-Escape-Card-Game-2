@@ -7,5 +7,6 @@ if (!player_attack){
 		//execute damage effect
 		}
 	}
+	instance_destroy()
 }
 

@@ -273,6 +273,20 @@
             "varType": 1
         },
         {
+            "id": "6df06843-db3b-46bc-8aa4-c2fc94c0696f",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "can_skirmish",
+            "varType": 3
+        },
+        {
             "id": "f7455d7d-cfe0-4ab8-8aef-2159af8334c7",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -371,6 +385,34 @@
             "varType": 0
         },
         {
+            "id": "640bfed4-a684-4b7e-9cd5-04f3e1d5c50a",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "max_armor",
+            "varType": 0
+        },
+        {
+            "id": "1753d281-85b1-4bd5-9027-29781333de40",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "max_shields",
+            "varType": 0
+        },
+        {
             "id": "c0c7cdf3-f111-4f29-893d-0698a356b6f8",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -396,6 +438,34 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "armor_damage_reduction",
+            "varType": 1
+        },
+        {
+            "id": "db0015b8-faef-4de2-b393-8eeece94f3d3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "weapon_1_x_offset",
+            "varType": 1
+        },
+        {
+            "id": "e8284394-905d-4333-a15c-5e409b875516",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "weapon_1_y_offset",
             "varType": 1
         },
         {
@@ -455,7 +525,7 @@
             "varType": 2
         },
         {
-            "id": "d24dd47b-5215-4fc1-8cbe-3853a283868f",
+            "id": "7f2a1262-c1e2-46ea-a1d2-52f30c352bdb",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -465,11 +535,11 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "0",
-            "varName": "weapon_1_length_offset",
-            "varType": 4
+            "varName": "weapon_2_x_offset",
+            "varType": 1
         },
         {
-            "id": "a53dd88b-d424-465b-a178-f9c4866e087c",
+            "id": "b8d3d16a-bc12-42f3-955f-87e9a8ec2d12",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -479,8 +549,8 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "0",
-            "varName": "weapon_1_direction_offset",
-            "varType": 4
+            "varName": "weapon_2_y_offset",
+            "varType": 1
         },
         {
             "id": "05a49b70-4757-42a6-89c6-01e4b4a919fe",
@@ -539,34 +609,6 @@
             "varType": 2
         },
         {
-            "id": "689060f4-7e2f-4321-a896-15586a1f7cd0",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "weapon_2_length_offset",
-            "varType": 4
-        },
-        {
-            "id": "5f92bf3b-c50e-4542-8e2f-b4260686e1af",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "weapon_2_direction_offset",
-            "varType": 4
-        },
-        {
             "id": "3e0d10fe-6e76-413d-8e86-2429a489c05c",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -576,7 +618,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
+            "value": "500",
             "varName": "scout_range",
             "varType": 1
         },
@@ -590,9 +632,121 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
+            "value": "2",
             "varName": "basic_attack_number",
             "varType": 1
+        },
+        {
+            "id": "e987f005-c652-4490-9f05-d2e4726debbc",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "40",
+            "varName": "basic_attack_fire_rate",
+            "varType": 1
+        },
+        {
+            "id": "c32f452d-50c4-4f0c-a461-aea9615157bc",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "basic_attack_fire_counter",
+            "varType": 1
+        },
+        {
+            "id": "fcd04830-9886-45b9-9696-0e2731dbd165",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "100",
+            "varName": "basic_attack_flight_time",
+            "varType": 1
+        },
+        {
+            "id": "4aa3cbb6-d5cc-45b4-a471-cded5cd8a558",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "basic_attack_flight_time*weapon_1_projectile_speed",
+            "varName": "basic_attack_range",
+            "varType": 4
+        },
+        {
+            "id": "df5cfbe7-275b-49ee-93c4-8451c55f3462",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "noone",
+            "varName": "ship_target",
+            "varType": 0
+        },
+        {
+            "id": "0034f6b4-04b6-4337-8218-11eecd0732fb",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "ally_requires_help",
+            "varType": 3
+        },
+        {
+            "id": "b51fed18-d796-41a8-b6bd-7b3aa32403af",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "ally_retreating",
+            "varType": 3
+        },
+        {
+            "id": "29cf2869-4252-4617-9065-022b1870bf53",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "enemy_squad_target",
+            "varType": 0
         }
     ],
     "solid": false,

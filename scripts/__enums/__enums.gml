@@ -5,16 +5,18 @@ enum card {
 }
 
 enum ship {
-	planning,
-	idle,
-	scouting,
-	moving,
-	recon,
-	returning,
-	repositioning,
-	interceptor_attacking,
-	fighter_attacking,
-	frigate_attacking
+	planning, //ship can be moved about
+	idle, //ship cna't be moved, but flies in formation
+	scouting, //ship is travelign ina scouting direction
+	moving, //
+	recon, //ship is not going to skirmish(used for cloaked
+	skirmishing, // skirmishing with the 
+	returning, // returning fromt eh scout mission
+	repositioning, //moving to a new grid coordinate
+	approaching_enemy, //move towards enemy squad until a valid target appears
+	attacking_interceptor, //code to execute fighting an inerceptor
+	attacking_fighter, //code to execute fighting a fighter
+	attacking_frigate // code to execute fighting a frigate
 }
 
 enum camera {
