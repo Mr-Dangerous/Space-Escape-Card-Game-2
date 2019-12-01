@@ -82,7 +82,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "300",
+            "value": "20",
             "varName": "duration",
             "varType": 1
         },
@@ -211,6 +211,20 @@
             "value": "0",
             "varName": "image_scale",
             "varType": 0
+        },
+        {
+            "id": "04d3f941-5589-4960-b56d-900e2540c1c7",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "projectile_image_resource",
+            "varType": 5
         }
     ],
     "solid": false,

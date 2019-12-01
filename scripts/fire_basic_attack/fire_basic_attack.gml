@@ -19,6 +19,7 @@ repeat(_basic_attack_number){
 		direction = image_angle
 		speed = _basic_attack_array[_i, 0]
 		projectile_resource = _basic_attack_array[_i, 1]
+		projectile_image_resource = object_get_sprite(_basic_attack_array[_i, 1])
 		damage = _basic_attack_array[_i, 2]
 		player_attack = _basic_attack_team
 		damage_type = _basic_attack_array[_i, 3]

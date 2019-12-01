@@ -9,3 +9,19 @@ if (team_squad_type = o_enemy_squad){
 	state = ship.idle
 }
 
+#region basic attack
+//header
+basic_attack_array[0, 0] = basic_attack_number
+if (allied_ship_type = o_player_ship){
+	basic_attack_array[0, 1] = true
+} else {
+	basic_attack_array[0, 1] = false
+}
+
+basic_attack_array[1, 0] = weapon_1_projectile_speed
+basic_attack_array[1, 1] = weapon_1_projectile_resource
+basic_attack_array[1, 2] = weapon_1_projectile_damage
+basic_attack_array[1, 3] = weapon_1_projectile_damage_type
+basic_attack_array[1, 4] = weapon_1_length_offset
+basic_attack_array[1, 5] = weapon_1_direction_offset
+#endregion
