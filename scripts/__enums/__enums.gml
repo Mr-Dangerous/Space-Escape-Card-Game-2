@@ -18,6 +18,15 @@ enum ship {
 	attacking_fighter, //code to execute fighting a fighter
 	attacking_frigate // code to execute fighting a frigate
 }
+enum interceptor_combat{
+	vector_sliding,
+	close_distance,
+	orbit,
+	joust,
+	hard_disengage,
+	disengage,
+	out_of_combat
+}
 
 enum camera {
 	free_look,

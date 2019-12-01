@@ -5,6 +5,7 @@ image_yscale = image_scale
 idle_direction = squad_object.image_angle
 
 state = ship.planning
+combat_state = interceptor_combat.out_of_combat
 
 //header
 basic_attack_array[0, 0] = basic_attack_number
