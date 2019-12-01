@@ -53,6 +53,16 @@
             "enumb": 52,
             "eventtype": 9,
             "m_owner": "a135f96c-7c55-4137-9864-36138e7ec9fd"
+        },
+        {
+            "id": "af1b15d4-cc47-4388-b405-0e8652b68d9e",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 54,
+            "eventtype": 9,
+            "m_owner": "a135f96c-7c55-4137-9864-36138e7ec9fd"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -112,6 +122,118 @@
             "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
             "propertyId": "beace18f-c833-4db1-84c8-1e3a174dd76a",
             "value": "s_rocket_exhaust_original"
+        },
+        {
+            "id": "6046612b-124c-415a-a2c2-2d6493bde57d",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "22606d26-6d60-4f45-96c9-3c9f4ac9701c",
+            "value": "o_light_ballistic_cannon"
+        },
+        {
+            "id": "98e22056-11ed-4abb-a9fc-db457ff31204",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "3a8f943e-d11a-481c-91cd-8ea707b565d2",
+            "value": "8"
+        },
+        {
+            "id": "3c86b861-c1bc-4636-9610-a1d9d1a3a96a",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "dd67c69e-e81b-4afa-98e0-46ccb1097309",
+            "value": "40"
+        },
+        {
+            "id": "181b6f52-a7d6-4ed8-8398-040d47ac13de",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "ba2696e1-1651-4836-b3c9-8fb9739fed3a",
+            "value": "\"light\""
+        },
+        {
+            "id": "99d25cd7-d0dd-4cab-822b-c4d91c17727e",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "3e0d10fe-6e76-413d-8e86-2429a489c05c",
+            "value": "700"
+        },
+        {
+            "id": "d87adf92-4050-426c-8ed7-1f4bfc848e95",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "d24dd47b-5215-4fc1-8cbe-3853a283868f",
+            "value": "point_distance(0, 0, (45 * image_scale), -(121 * image_scale))"
+        },
+        {
+            "id": "dfee0501-3c44-4f7f-8232-b2b34fba1e65",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "a53dd88b-d424-465b-a178-f9c4866e087c",
+            "value": "point_direction(0, 0, (45 * image_scale), -(121 * image_scale))"
+        },
+        {
+            "id": "ac6f4a81-5c8f-4c37-b0e4-604598052cea",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "689060f4-7e2f-4321-a896-15586a1f7cd0",
+            "value": "point_distance(0, 0, (45 * image_scale), (121 * image_scale))"
+        },
+        {
+            "id": "27a951b3-c50a-4446-94b4-3b8a374fa066",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "5f92bf3b-c50e-4542-8e2f-b4260686e1af",
+            "value": "point_direction(0, 0, (45 * image_scale), (121 * image_scale))"
+        },
+        {
+            "id": "035efd9d-39f6-4123-ba6a-fc2eb3cc42d0",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "8265573c-adf1-4e68-b897-56ec32d7da74",
+            "value": "2"
+        },
+        {
+            "id": "d0693b1b-ec8a-409e-bdae-3a339abd5b87",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "05a49b70-4757-42a6-89c6-01e4b4a919fe",
+            "value": "8"
+        },
+        {
+            "id": "77f08c25-a6d3-4c12-ad85-b15efd032285",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "aaf325f3-359b-4976-8fde-a7772c8537dd",
+            "value": "o_light_ballistic_cannon"
+        },
+        {
+            "id": "b107a1fd-b83c-4184-a936-9277d9bf36e0",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "52b0fbb9-9ae1-4d71-a169-33fb9b1dc525",
+            "value": "40"
+        },
+        {
+            "id": "6a3c761e-22d3-46a7-8793-3f261d01617d",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
+            "propertyId": "caf351e9-364c-4f75-a93a-53ad2a1d5ef4",
+            "value": "\"light\""
         }
     ],
     "parentObjectId": "ac4f7766-4563-4a9f-a711-8b20286a915f",
@@ -129,20 +251,7 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        {
-            "id": "f61f2bb3-fa93-437e-9dd4-b4216ab9b1aa",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "700",
-            "varName": "scout_range",
-            "varType": 1
-        }
+        
     ],
     "solid": false,
     "spriteId": "e95513a8-3351-49f9-9b33-c173e133d211",

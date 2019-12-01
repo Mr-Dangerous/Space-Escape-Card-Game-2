@@ -8,3 +8,4 @@ if (team_squad_type = o_player_squad){
 if (team_squad_type = o_enemy_squad){
 	state = ship.idle
 }
+
