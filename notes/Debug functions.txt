@@ -11,3 +11,7 @@ Pressing 3 will spawn cards and cycle through the shop
 Pressing 4 will deploy all scouts in recon squares to go scouting!
 
 Pressing 0 will restart the game
+
+AI notes
+
+very detailed notes about what I'm changing
