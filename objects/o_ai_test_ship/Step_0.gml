@@ -39,7 +39,7 @@ switch(state){
 		//this needs to become a path
 		turn_to_face_direction(recon_direction)
 		direction = image_angle
-		speed += acceleration_rate
+		motion_add(direction, acceleration_rate)
 		limit_speed()
 		
 		camera_object = instance_find(o_camera, 0)
@@ -150,7 +150,7 @@ switch(state){
 						} else {
 							turn_to_face_direction(recon_direction + 0)
 							direction = image_angle
-							speed += acceleration_rate
+							motion_add(direction, acceleration_rate)
 							limit_speed()
 						}
 						show_debug_message("out_of_combat")
@@ -182,6 +182,7 @@ switch(state){
 							combat_state = interceptor_combat.hard_disengage
 							vector_locked = false
 						}
+						vector_sliding_counter = 0
 						show_debug_message("vector_sliding")
 						
 					break;
@@ -190,7 +191,7 @@ switch(state){
 						var _travel_direction = point_direction(x,y, ship_target.x, ship_target.y)
 						turn_to_face_direction(_travel_direction)
 						direction = image_angle
-						speed += acceleration_rate
+						motion_add(direction, acceleration_rate)
 						limit_speed()
 						
 						if (_distance_to_target < basic_attack_range * .8){
@@ -221,7 +222,7 @@ switch(state){
 						}
 						turn_to_face_direction(_tangent_direction)
 						direction = image_angle
-						speed += acceleration_rate
+						motion_add(direction, acceleration_rate)
 						limit_speed()
 						
 						//exit the state
@@ -255,9 +256,9 @@ switch(state){
 						var _travel_direction = point_direction(x, y, ship_target.x, ship_target.y)
 						turn_to_face_direction(_travel_direction)
 						direction = image_angle
-						speed += acceleration_rate
+						motion_add(direction, acceleration_rate)
 						limit_speed()
-						if (abs(angle_difference(direction, _travel_direction)) < 5 and speed = max_speed){
+						if (abs(angle_difference(direction, _travel_direction)) < 5 and speed = max_speed and vector_sliding_counter > 25){
 							combat_state =interceptor_combat.vector_sliding
 						}
 						if (abs(angle_difference(direction, _travel_direction)) > 35){
@@ -273,13 +274,13 @@ switch(state){
 						var _travel_direction = point_direction(x, y, ship_target.x, ship_target.y)-180
 						turn_to_face_direction(_travel_direction)
 						direction = image_angle
-						speed += acceleration_rate
+						motion_add(direction, acceleration_rate)
 						limit_speed()
 						if (!ship_ok and _distance_to_target < basic_attack_range and speed = max_speed){
 							state = ship.returning
 							vector_locked = false
 						}
-						if (speed = max_speed and _distance_to_target < basic_attack_range * .75){
+						if (speed = max_speed and _distance_to_target < basic_attack_range * .75 and vector_sliding_counter > 25){
 							combat_state = interceptor_combat.vector_sliding
 						}
 						if (speed = max_speed and _distance_to_target > basic_attack_range *.75){
@@ -294,13 +295,13 @@ switch(state){
 						var _travel_direction = point_direction(x, y, ship_target.x, ship_target.y)-180
 						turn_to_face_direction(_travel_direction)
 						direction = image_angle
-						speed += acceleration_rate
+						motion_add(direction, acceleration_rate)
 						limit_speed()
 						if (!ship_ok and _distance_to_target < basic_attack_range and speed = max_speed){
 							state = ship.returning
 							vector_locked = false
 						}
-						if (speed = max_speed and _distance_to_target < basic_attack_range * .75){
+						if (speed = max_speed and _distance_to_target < basic_attack_range * .75 and vector_sliding_counter > 25){
 							combat_state = interceptor_combat.vector_sliding
 						}
 						if (speed = max_speed and _distance_to_target > basic_attack_range *.75){
@@ -357,7 +358,7 @@ switch(state){
 	case ship.returning:
 		if (!place_meeting(x, y, assigned_defensive_grid_space)){
 			_p_dir = point_direction(x, y, assigned_defensive_grid_space.x, assigned_defensive_grid_space.y)
-			speed += acceleration_rate
+			motion_add(direction, acceleration_rate)
 			limit_speed()
 			turn_to_face_direction(_p_dir)
 			direction = image_angle
@@ -374,7 +375,7 @@ switch(state){
 	case ship.repositioning:
 		if (!place_meeting(x, y, assigned_defensive_grid_space)){
 			_p_dir = point_direction(x, y, assigned_defensive_grid_space.x, assigned_defensive_grid_space.y)
-			speed += acceleration_rate
+			motion_add(direction, acceleration_rate)
 			limit_speed()
 			turn_to_face_direction(_p_dir)
 			direction = image_angle
@@ -413,6 +414,8 @@ switch(state){
 if (basic_attack_fire_counter < basic_attack_fire_rate){
 	basic_attack_fire_counter++
 }
+
+vector_sliding_counter++
 
 //is the ship ok?
 if (shields = 0 and armor < max_armor*.5){
