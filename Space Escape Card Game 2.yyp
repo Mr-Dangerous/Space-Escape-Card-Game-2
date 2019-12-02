@@ -1007,6 +1007,14 @@
             }
         },
         {
+            "Key": "ad2ebf3a-8a79-439a-b2e4-fe3270933017",
+            "Value": {
+                "id": "eb2c8acf-b5d1-4105-837e-3603eee6fda1",
+                "resourcePath": "objects\\o_iron_interceptor_mmai_2\\o_iron_interceptor_mmai_2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ade13422-14d8-4351-8ce7-5221c1e565de",
             "Value": {
                 "id": "41f5e231-76f1-4da3-9674-cf71df7ea706",
