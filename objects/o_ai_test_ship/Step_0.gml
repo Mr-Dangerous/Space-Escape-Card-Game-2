@@ -147,6 +147,7 @@ switch(state){
 						if (_distance_to_target < basic_attack_range * 1.5){
 							combat_state = interceptor_combat.close_distance
 							vector_locked = false
+							previous_combat_state = "out_of_combat"
 						} else {
 							turn_to_face_direction(recon_direction + 0)
 							direction = image_angle
@@ -173,14 +174,17 @@ switch(state){
 						if (_distance_to_target > basic_attack_range * .9){
 							combat_state = interceptor_combat.close_distance
 							vector_locked = false
+							previous_combat_state = "vector_sliding"
 						}
 						if (_distance_to_target < basic_attack_range * .3 and basic_attack_fire_counter = 0){
 							combat_state = interceptor_combat.orbit
 							orbit = 0
+							previous_combat_state = "vector_sliding"
 						}
 						if (!ship_ok){
 							combat_state = interceptor_combat.hard_disengage
 							vector_locked = false
+							previous_combat_state = "vector_sliding"
 						}
 						vector_sliding_counter = 0
 						show_debug_message("vector_sliding")
@@ -197,8 +201,10 @@ switch(state){
 						if (_distance_to_target < basic_attack_range * .8){
 							combat_state = interceptor_combat.joust//changed from orbit
 							vector_locked = false
+							previous_combat_state = "close_distance"
 							if (abs(angle_difference(direction, _target_direction)> 95)){
 								combat_state = interceptor_combat.joust
+								previous_combat_state = "close_distance"
 								show_debug_message(ship_ok)
 								vector_locked = false
 							}
@@ -229,6 +235,7 @@ switch(state){
 						if (distance_to_object(ship_target) > basic_attack_range * .8 and ship_ok = true){
 							combat_state = interceptor_combat.close_distance
 							vector_locked = false
+							previous_combat_state = "orbit"
 						}
 						
 						if (distance_to_object(ship_target) < basic_attack_range * .5 and ship_ok = true){
@@ -238,13 +245,16 @@ switch(state){
 								if (abs(angle_difference(direction, _direction_to_target)) < turn_speed * 5){
 								combat_state = interceptor_combat.joust
 								vector_locked = false
+								previous_combat_state = "orbit"
 								} else {
 									combat_state = interceptor_combat.hard_disengage
 									vector_locked = false
+									previous_combat_state = "orbit"
 								}
 							} else {
 								combat_state = interceptor_combat.disengage
 								vector_locked = false
+								previous_combat_state = "orbit"
 							}
 						}
 							
@@ -260,11 +270,13 @@ switch(state){
 						limit_speed()
 						if (abs(angle_difference(direction, _travel_direction)) < 5 and speed = max_speed and vector_sliding_counter > 25){
 							combat_state =interceptor_combat.vector_sliding
+							previous_combat_state = "joust"
 						}
 						if (abs(angle_difference(direction, _travel_direction)) > 35){
 							combat_state = interceptor_combat.orbit
 							vector_locked = false
 							orbit_spin = 0
+							previous_combat_state = "joust"
 						}
 						show_debug_message("jousting")
 					break;
@@ -279,12 +291,15 @@ switch(state){
 						if (!ship_ok and _distance_to_target < basic_attack_range and speed = max_speed){
 							state = ship.returning
 							vector_locked = false
+							previous_combat_state = ""
 						}
 						if (speed = max_speed and _distance_to_target < basic_attack_range * .75 and vector_sliding_counter > 25){
 							combat_state = interceptor_combat.vector_sliding
+							previous_combat_state = "disengage"
 						}
 						if (speed = max_speed and _distance_to_target > basic_attack_range *.75){
 							combat_state = interceptor_combat.orbit
+							previous_combat_state = "disengage"
 							vector_locked = false
 							orbit = 0
 						}
@@ -303,9 +318,11 @@ switch(state){
 						}
 						if (speed = max_speed and _distance_to_target < basic_attack_range * .75 and vector_sliding_counter > 25){
 							combat_state = interceptor_combat.vector_sliding
+							previous_combat_state = "hard_disengage"
 						}
 						if (speed = max_speed and _distance_to_target > basic_attack_range *.75){
 							combat_state = interceptor_combat.orbit
+							previous_combat_state = "hard_disengage"
 							vector_locked = false
 							orbit = 0
 						}

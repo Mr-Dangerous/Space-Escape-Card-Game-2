@@ -113,7 +113,7 @@
             "mvc": "1.0",
             "objectId": "639bd7bf-e1be-449d-b3c9-1c30319b0e4c",
             "propertyId": "9c47b80b-b851-4ee1-a021-d8c464044bb8",
-            "value": ".3"
+            "value": ".03"
         },
         {
             "id": "155532e7-8e99-4f56-bea7-93cfec5d7b05",
@@ -352,6 +352,20 @@
             "value": "0",
             "varName": "vector_sliding_counter",
             "varType": 1
+        },
+        {
+            "id": "bc73748e-145f-4198-86dd-1bc8994212dd",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "previous_combat_state",
+            "varType": 2
         }
     ],
     "solid": false,
