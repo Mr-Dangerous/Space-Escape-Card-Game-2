@@ -8,7 +8,8 @@
         "41c8621f-7549-40d4-8920-1b5ef045e392",
         "e7b8a016-9e18-48c9-a363-376848443661",
         "af8182fb-1306-456c-ab1e-999e997422de",
-        "ad2ebf3a-8a79-439a-b2e4-fe3270933017"
+        "ad2ebf3a-8a79-439a-b2e4-fe3270933017",
+        "fd65721c-c231-4056-84b1-f284b56d1bc6"
     ],
     "filterType": "GMObject",
     "folderName": "Test Folder",

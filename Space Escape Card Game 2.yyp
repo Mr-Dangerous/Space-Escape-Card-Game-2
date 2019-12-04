@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "3b2d02f0-0456-417e-a0d0-929e418fc653",
+            "Value": {
+                "id": "dc1bf7a9-fb4d-4032-aa5c-8f4391b19eee",
+                "resourcePath": "sprites\\s_solar_interceptor_resized\\s_solar_interceptor_resized.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3bdcff51-5f4d-4a0b-9095-0377403bf8ba",
             "Value": {
                 "id": "c527fc00-0f8b-4245-8c43-c1097912de1a",
@@ -1207,6 +1215,14 @@
             }
         },
         {
+            "Key": "c9e9cf1c-5fda-4491-8afb-74f3f4131add",
+            "Value": {
+                "id": "d7f167f5-7cec-4bca-b9c1-076673c265e8",
+                "resourcePath": "rooms\\r_eulers_playground\\r_eulers_playground.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "cc972cbc-24c5-4702-9edd-c37589a576ae",
             "Value": {
                 "id": "0b7ba4b8-1078-46c2-b506-7293f9a808e5",
@@ -1220,6 +1236,14 @@
                 "id": "25d2adc5-9de2-47c5-8287-458e590edcd9",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cd4c265f-bc88-4b4d-ba3e-a493424c5bbe",
+            "Value": {
+                "id": "7c2ecbb6-e019-43ec-b075-d23b5715dee2",
+                "resourcePath": "views\\cd4c265f-bc88-4b4d-ba3e-a493424c5bbe.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1460,6 +1484,14 @@
                 "id": "54284834-6860-4c35-bb5e-37a262dc84b6",
                 "resourcePath": "views\\fc23c9f4-029f-4e85-948f-1fdbf5237354.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fd65721c-c231-4056-84b1-f284b56d1bc6",
+            "Value": {
+                "id": "dd8d6bc7-fd02-4f85-bd0b-7b18d38ab714",
+                "resourcePath": "objects\\o_test_ship\\o_test_ship.yy",
+                "resourceType": "GMObject"
             }
         },
         {

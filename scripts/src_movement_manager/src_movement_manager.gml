@@ -27,7 +27,7 @@ var flee_behavior = argument3
 var pursue_behavior = argument4
 var evade_behavior = argument5
 var follow_behavior = argument6
-var joust_behavior_ argument7
+var joust_behavior_ = argument7
 
 
 var _ship_a_direction = direction
@@ -43,9 +43,9 @@ var _direction_to_target = point_direction(x, y, target_x, target_y)
 var _direction_to_lead_target = point_direction(x, y, _lead_target_x, _lead_target_y)
 var _direction_to_follow_target = point_direction(x, y, _follow_target_x, _follow_target_y)
 
-var _target_point_ship = distance_to_point(x, y, target_x, target_y)
-var _target_point_follow_distance = distance_to_point(x, y, _follow_target_x, _follow_target_y)
-var _target_point_lead_distance = distance_to_point(x, y, _lead_target_x, _lead_target_y)
+var _target_point_ship = distance_to_point(target_x, target_y)
+var _target_point_follow_distance = distance_to_point(_follow_target_x, _follow_target_y)
+var _target_point_lead_distance = distance_to_point(_lead_target_x, _lead_target_y)
 
 
 var _arrival_slow_down_radius = 500
@@ -68,6 +68,7 @@ if (evade_behavior){
 if (follow_behavior){
 	_desired_ship_a_direction += _direction_to_follow_target
 }
+
 
 
 
