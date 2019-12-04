@@ -185,6 +185,34 @@
             "value": "False",
             "varName": "vector_sliding",
             "varType": 3
+        },
+        {
+            "id": "18a78a6a-fd6a-4ecf-8175-eb4cbc0ed6ca",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "target_x",
+            "varType": 1
+        },
+        {
+            "id": "e8e5649d-aa4f-4062-b13c-526dceb7f853",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "target_y",
+            "varType": 0
         }
     ],
     "solid": false,

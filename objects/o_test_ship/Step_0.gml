@@ -14,27 +14,33 @@ zero_pressed = keyboard_check_pressed(ord("0"))
 if (one_pressed){
 	seek = !seek
 	show_debug_message("seek")
+	scr_show_truth(seek)
 }
 if (two_pressed){
 	flee = !flee
 	show_debug_message("flee")
+	scr_show_truth(flee)
 }
 if (three_pressed){
 	pursue = !pursue
 	show_debug_message("pursue")
+	scr_show_truth(pursue)
 }
 if (four_pressed){
 	evade = !evade
 	show_debug_message("evade")
+	scr_show_truth(evade)
 }
 if (five_pressed){
 	follow = !follow
 	show_debug_message("follow")
+	scr_show_truth(follow)
 	
 }
 if (six_pressed){
 	joust = !joust
 	show_debug_message("joust")
+	scr_show_truth(joust)
 }
 if (zero_pressed){
 	seek = false
@@ -45,11 +51,42 @@ if (zero_pressed){
 	follow = false
 	joust = false
 }
+if (!joust){
+	vector_sliding = false
+}
 
-//testinggggg
+//testing arrivals
 
+if (distance_to_object(ship_target) < 50 * max_speed){
+	if (joust){
+		//turn off other behavior and break through!
+		seek = false
+		pursue = false
+		evade = false
+		follow = false
+		flee = false
+	} else { 
+		seek = false
+		pursue = false
+		follow = false
+		flee = false
+		evade = true
+	//hard break!
+	}
+}
+
+var beacon_target = instance_nearest(x, y, o_path_beacon)
 
 ship_target = instance_nearest(x, y, o_enemy_ship_test)
 if (instance_exists(ship_target)){
-	src_movement_manager(ship_target.x, ship_target.y, seek, flee, pursue, evade, follow, joust)
+	target_x = ship_target.x
+	target_y = ship_target.y
+	
+} else {
+	if (instance_exists(beacon_target)){
+		target_x = beacon_target.x
+		target_y = beacon_target.y
+		
+	}
 }
+scr_movement_manager(target_x, target_y, seek, flee, pursue, evade, follow, joust)
