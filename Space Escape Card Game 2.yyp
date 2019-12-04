@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "1f9141a0-fcb4-46af-82ab-7625e81f12ba",
+            "Value": {
+                "id": "2ba9fb06-a16b-46fc-a1f3-b1b281fdc99d",
+                "resourcePath": "sprites\\s_lead_target_indicatr\\s_lead_target_indicatr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "20aaf247-d6cb-40bd-9c9a-cf5290e1d940",
             "Value": {
                 "id": "6de08be9-b79b-44eb-9fbc-790836a549b4",
@@ -359,6 +367,14 @@
             }
         },
         {
+            "Key": "3fb9a899-8ab8-4f5f-90be-6b6166d77074",
+            "Value": {
+                "id": "2934b228-fad6-4721-9c8a-6cae74b8f4c8",
+                "resourcePath": "objects\\o_player_ship_test\\o_player_ship_test.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3ffabf5e-a3c0-4e27-b081-d788beb5d8ee",
             "Value": {
                 "id": "72fe8a17-b9d8-41df-9459-874218d688fa",
@@ -483,6 +499,14 @@
             "Value": {
                 "id": "1d66d113-8d85-40b4-8174-0b6282884bac",
                 "resourcePath": "sprites\\s_card_placeholder\\s_card_placeholder.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5612b391-f707-4fa0-b352-b650456ef64d",
+            "Value": {
+                "id": "686b42ae-55c9-42f5-a06f-497ed059ad19",
+                "resourcePath": "sprites\\s_crystal_fighter_resized\\s_crystal_fighter_resized.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1111,6 +1135,14 @@
             }
         },
         {
+            "Key": "b789d76a-664e-49ac-a805-1f02c4b000bc",
+            "Value": {
+                "id": "4e7c6d31-34f6-4c5d-a4ac-b5569510a175",
+                "resourcePath": "objects\\o_test_ship_dummy\\o_test_ship_dummy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ba8b383f-17db-4416-a0b9-9d336c0ac577",
             "Value": {
                 "id": "bdd15fe3-a943-430d-8464-85aefbe6ce34",
@@ -1364,6 +1396,14 @@
                 "id": "b0f977c9-852f-4c17-ba89-e0f563b85551",
                 "resourcePath": "views\\e6fb263b-a973-415b-a618-fa096290bb22.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e736f8f1-adfa-4330-86c2-8d2613aa2a1b",
+            "Value": {
+                "id": "c68edd92-868a-4ee6-aa31-cf6ee0e03d00",
+                "resourcePath": "objects\\o_enemy_ship_test\\o_enemy_ship_test.yy",
+                "resourceType": "GMObject"
             }
         },
         {

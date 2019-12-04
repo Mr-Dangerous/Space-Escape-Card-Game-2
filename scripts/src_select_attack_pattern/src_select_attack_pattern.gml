@@ -7,7 +7,7 @@ and attacks
 */
 
 ///@param target_ship
-
+/*
 var _target_ship = argument0
 
 //THIS IS TEH RETURN VALUE
@@ -71,7 +71,7 @@ switch (_agression){
 		}
 	break;
 	//defensive band
-	case (_aggression >= 0 and _agression < 8):
+	case (_aggression >= 0 and _aggression < 8):
 		switch (_random_seed){
 			case (_random_seed < 25):
 				_returned_behavior = "highly defensive"
@@ -107,3 +107,4 @@ switch (_agression){
 }
 	
 return _returned_behavior
+*/
