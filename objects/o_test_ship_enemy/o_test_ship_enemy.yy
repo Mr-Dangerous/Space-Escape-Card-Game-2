@@ -127,6 +127,20 @@
             "varType": 3
         },
         {
+            "id": "62ae20bd-0686-4607-9514-5612f387f9c2",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "strafe",
+            "varType": 3
+        },
+        {
             "id": "5dd5dbd6-e907-4216-922b-b1ee56113349",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -208,6 +222,20 @@
             "resourceFilter": 1023,
             "value": "40",
             "varName": "target_indicator",
+            "varType": 1
+        },
+        {
+            "id": "604cd974-7506-4813-97f0-7d5ebef8babc",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "-1",
+            "varName": "strafe_direction",
             "varType": 1
         }
     ],

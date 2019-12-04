@@ -55,7 +55,8 @@ if (zero_pressed){
 //testinggggg
 
 
+
 ship_target = instance_nearest(x, y, o_player_ship_test)
 if (instance_exists(ship_target)){
-	scr_movement_manager(ship_target.x, ship_target.y, seek, flee, pursue, evade, follow, joust)
+	scr_movement_manager(ship_target.x, ship_target.y, seek, flee, pursue, evade, follow, joust, strafe)
 }

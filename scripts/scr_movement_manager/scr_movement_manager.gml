@@ -21,6 +21,7 @@ Ship B - ship_target
 ///@param evade_behavior
 ///@param follow_behavior
 ///@param joust_behavior
+///@param strafe_behavior
 
 var target_x = argument0
 var target_y = argument1
@@ -29,29 +30,43 @@ var flee_behavior = argument3
 var pursue_behavior = argument4
 var evade_behavior = argument5
 var follow_behavior = argument6
-var joust_behavior_ = argument7
+var joust_behavior = argument7
+var strafe_behavior = argument8
 
 
-var _ship_a_direction = direction
+
 var _desired_ship_a_direction = 0
 
+if (!joust_behavior or !strafe_behavior and speed < max_speed/2){
+	vector_sliding = false
+}
 
+if(joust_behavior or strafe_behavior or evade_behavior or follow_behavior){
+	pursue = false
+}
+
+_ship_target_x = target_x
+_ship_target_y = target_y
 _lead_distance = 0
 _lead_target_x = target_x
 _lead_target_y = target_y
 _follow_target_x = target_x
 _follow_target_y = target_y
-target_direction = direction
+target_direction = point_direction(x, y, target_x, target_y)
 target_speed = 0
 if (instance_exists(ship_target)){
 	_lead_distance = ship_target.speed * 40
 	target_direction = ship_target.direction
+	_ship_target_x = ship_target.x
+	_ship_target_y = ship_target.y
 	_lead_target_x += lengthdir_x(_lead_distance, ship_target.direction)
 	_lead_target_y += lengthdir_y(_lead_distance, ship_target.direction)
 	_follow_target_x += lengthdir_x(_lead_distance, ship_target.direction - 180)
 	_follow_target_y += lengthdir_y(_lead_distance, ship_target.direction - 180)
+	
 }
-var _direction_to_target = point_direction(x, y, target_x, target_y)
+var _direction_to_path_target = point_direction(x, y, target_x, target_y)
+var _direction_to_ship_target = point_direction(x, y, _ship_target_x, _ship_target_y)
 var _direction_to_lead_target = point_direction(x, y, _lead_target_x, _lead_target_y)
 var _direction_to_follow_target = point_direction(x, y, _follow_target_x, _follow_target_y)
 
@@ -60,35 +75,54 @@ var _target_point_follow_distance = distance_to_point(_follow_target_x, _follow_
 var _target_point_lead_distance = distance_to_point(_lead_target_x, _lead_target_y)
 
 
-
-var _arrival_slow_down_radius = 10
 var _motion_to_add = 0
 
 
 if (seek_behavior){
-	 _desired_ship_a_direction += _direction_to_target
-	 _motion_to_add += acceleration_rate
+	//seek makes a ship approach a point
+	flee = false
+	evade = false
+	
+	 _desired_ship_a_direction += _direction_to_path_target
+	 var arrival_to_slow_down_radius = 50*max_speed
+	 if (_target_point_distance > arrival_to_slow_down_radius){
+		 _motion_to_add += acceleration_rate
+	 } else {
+		 speed -= acceleration_rate
+	 } 
 
 }
 if (flee_behavior){
-	_desired_ship_a_direction += _direction_to_target + 180
+	//flee makes a ship go opposite the point
+	
+	pursue = false
+	_desired_ship_a_direction += _direction_to_path_target + 180
 	_motion_to_add += acceleration_rate
 
 }
 if (pursue_behavior){
+	//pursue makes a ship go to where a ship will be.
+	
+	
 	_desired_ship_a_direction += _direction_to_lead_target
 	_target_point_distance = _target_point_lead_distance
 	_motion_to_add += acceleration_rate
+	
+			
+		
+		
 }
 if (evade_behavior){
+	//evade makes a ship go away from where a ship will be
 	_desired_ship_a_direction += _direction_to_lead_target + 180
 	_target_point_distance = _target_point_lead_distance
 	_motion_to_add += acceleration_rate
 }
 if (follow_behavior){
+	//follow is an attack behavior that is triggered when the enemy ship's angle is close to ship A
 	_desired_ship_a_direction += _direction_to_follow_target
 	_target_point_distance = _target_point_follow_distance
-	if (distance_to_point(_follow_target_x, _follow_target_y) < 100){
+	if (_target_point_distance < 100){
 		if (speed > target_speed){
 			speed -=.1
 			if (speed < target_speed){
@@ -99,18 +133,40 @@ if (follow_behavior){
 	_motion_to_add += acceleration_rate
 	}
 }
-if (joust){
+if (joust_behavior){
+	//joust is an attack behavior when two ships are close and apporaching head on
 	if (speed < max_speed){
 		_motion_to_add += acceleration_rate
 	}
-	turn_to_face_direction(_direction_to_target)
+	turn_to_face_direction(_direction_to_ship_target)
 	
 	vector_sliding = true
 	if (distance_to_object(ship_target) > 75 * max_speed){
 		joust = false
 		vector_sliding = false
+		evade = true
 	}
 }
+
+if (strafe_behavior){
+	//strafe is an attack behavior inbetween jousting and following
+	if (vector_sliding = false){
+		_desired_ship_a_direction += _direction_to_ship_target + (90*strafe_direction)
+	}
+	if (abs(angle_difference(direction, _desired_ship_a_direction) < 10))
+	{
+		vector_sliding = true
+	}
+	if (vector_sliding = true){
+		turn_to_face_direction(_direction_to_lead_target)
+		if (target_direction = image_angle + 180){
+			strafe = false
+			vector_sliding = false
+			evade = true
+		}
+	}
+}
+	
 
 //put ont he brakes if there are no behaviors assigned
 if (seek = false and

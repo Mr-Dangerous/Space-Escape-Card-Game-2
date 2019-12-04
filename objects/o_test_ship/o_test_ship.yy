@@ -117,6 +117,20 @@
             "varType": 3
         },
         {
+            "id": "1aaceae6-cf2c-450e-82e4-91f3323419de",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "strafe",
+            "varType": 3
+        },
+        {
             "id": "162e1a49-9cb5-4e90-98d1-e1efc925e119",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -213,6 +227,34 @@
             "value": "0",
             "varName": "target_y",
             "varType": 0
+        },
+        {
+            "id": "2bfd1df1-061f-425b-84df-d2f67905b2c1",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "strafe_direction",
+            "varType": 1
+        },
+        {
+            "id": "e59d98b7-4946-4f5b-9c58-cd5767054666",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "combat_manuever_counter",
+            "varType": 1
         }
     ],
     "solid": false,
