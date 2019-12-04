@@ -255,6 +255,20 @@
             "value": "0",
             "varName": "combat_manuever_counter",
             "varType": 1
+        },
+        {
+            "id": "d7c06164-a035-4ce6-942b-903f206d46a8",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "ship_ok",
+            "varType": 3
         }
     ],
     "solid": false,

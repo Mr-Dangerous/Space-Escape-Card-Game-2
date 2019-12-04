@@ -84,39 +84,57 @@ var beacon_target = instance_nearest(x, y, o_path_beacon)
 ship_target = instance_nearest(x, y, o_enemy_ship_test)
 var _distance = distance_to_object(ship_target)
 
-var _combat_manuever_distance = 50*max_speed
+var _combat_manuever_distance = 100*max_speed
 combat_manuever_counter++
 
-	
-if (_distance < _combat_manuever_distance and combat_manuever_counter >= 60){
+if (combat_manuever_counter >= 60){	
 	combat_manuever_counter = 0
-	var _angle_difference = angle_difference(image_angle, ship_target.image_angle)
-	if (abs(_angle_difference) < 30){
-		follow = true
-		joust = false
-		strafe = false
+	if (evade){
+		if(ship_ok){
+			evade = false
+		}
 	}
-	if (abs(_angle_difference) > 140){
-		joust = true
-		follow = false
-		strafe = false
+	if (_distance < _combat_manuever_distance){
+		combat_manuever_counter = 0
+		
+		//check to see if being followed
+		var _angle_difference = 0
+		if(vector_sliding){
+			_angle_difference = angle_difference(direction, ship_target.image_angle)
+		}
+		if(!vector_sliding){
+			_angle_difference = angle_difference(direction, ship_target.image_angle)
+		}
+		if (abs(_angle_difference) < 30){
+			follow = true
+			joust = false
+			strafe = false
+		}
+		if (abs(_angle_difference) > 140){
+			joust = true
+			follow = false
+			strafe = false
+		}
+		if (abs(_angle_difference) >= 30 and abs(_angle_difference) <= 140){
+			strafe = true
+			joust = false
+			follow = false
+			strafe_direction = -sign(_angle_difference)
+		}
+		pursue = false
+	}	
+	if (_distance < 600 and !evade and !joust and !strafe and !follow){
+		pursue = true
+		seek = false
 	}
-	if (abs(_angle_difference) >= 30 and abs(_angle_difference) <= 140){
-		strafe = true
-		joust = false
-		follow = false
-		strafe_direction = -sign(_angle_difference)
+	if (_distance > 600){
+		pursue = false
+		seek = true
+		vector_sliding = false
 	}
-	pursue = false
-}	
-if (_distance < 300 and !evade and !joust and !strafe and !follow){
-	pursue = true
-	seek = false
+	
 }
-if (_distance > 300){
-	pursue = false
-	seek = true
-}
+
 
 
 if (instance_exists(beacon_target)){
@@ -124,3 +142,7 @@ if (instance_exists(beacon_target)){
 	target_y = beacon_target.y
 }
 scr_movement_manager(target_x, target_y, seek, flee, pursue, evade, follow, joust, strafe)
+
+if (image_angle > 360){
+	image_angle-=360
+}

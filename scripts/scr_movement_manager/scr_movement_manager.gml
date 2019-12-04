@@ -55,7 +55,7 @@ _follow_target_y = target_y
 target_direction = point_direction(x, y, target_x, target_y)
 target_speed = 0
 if (instance_exists(ship_target)){
-	_lead_distance = ship_target.speed * 40
+	_lead_distance = ship_target.speed * 100
 	target_direction = ship_target.direction
 	_ship_target_x = ship_target.x
 	_ship_target_y = ship_target.y
@@ -118,19 +118,37 @@ if (evade_behavior){
 	_target_point_distance = _target_point_lead_distance
 	_motion_to_add += acceleration_rate
 }
+
+//there is a major error in the follow behavior
+//when two ships follow one another, the ship int he front has no idea and doesn'tm break
 if (follow_behavior){
 	//follow is an attack behavior that is triggered when the enemy ship's angle is close to ship A
-	_desired_ship_a_direction += _direction_to_follow_target
-	_target_point_distance = _target_point_follow_distance
-	if (_target_point_distance < 100){
-		if (speed > target_speed){
-			speed -=.1
-			if (speed < target_speed){
-				speed = target_speed
+	var _follow_check_x = x + lengthdir_x(60, direction)
+	var _follow_check_y = y + lengthdir_y(60, direction)
+	var _follow_check_point_distance = point_distance(_follow_check_x, _follow_check_y, ship_target.x, ship_target.y)
+	var _ship_check_distance = point_distance(x, y, ship_target.x, ship_target.y)
+	var _following = false
+	if (_follow_check_point_distance > _ship_check_distance){
+		_following = !_following
+	}
+	if (_following){
+		_desired_ship_a_direction += _direction_to_follow_target
+		_target_point_distance = _target_point_follow_distance
+		if (_target_point_distance < 100){
+			if (speed > target_speed){
+				speed -=.1
+				if (speed < target_speed){
+					speed = target_speed
+				}
 			}
+		} else {
+		_motion_to_add += acceleration_rate
 		}
-	} else {
-	_motion_to_add += acceleration_rate
+	}
+	if (!_following){
+		strafe_direction = sign (angle_difference(direction, ship_target.direction))
+		follow = false
+		strafe = true
 	}
 }
 if (joust_behavior){
@@ -159,7 +177,7 @@ if (strafe_behavior){
 	}
 	if (vector_sliding = true){
 		turn_to_face_direction(_direction_to_lead_target)
-		if (target_direction = image_angle + 180){
+		if (abs(angle_difference(image_angle, ship_target.image_angle)<10)){
 			strafe = false
 			vector_sliding = false
 			evade = true
@@ -175,7 +193,8 @@ if (seek = false and
 	pursue = false and
 	evade = false and
 	follow = false and
-	joust = false){
+	joust = false and 
+	!instance_exists(ship_target)){
 		_desired_ship_a_direction = image_angle
 		scr_apply_friction(acceleration_rate)
 	}

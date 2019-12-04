@@ -237,6 +237,20 @@
             "value": "-1",
             "varName": "strafe_direction",
             "varType": 1
+        },
+        {
+            "id": "108c1c22-62c4-493c-b1cb-262e3e0ccf0a",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "combat_manuever_counter",
+            "varType": 1
         }
     ],
     "solid": false,
