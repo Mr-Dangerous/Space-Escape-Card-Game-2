@@ -37,7 +37,7 @@ var strafe_behavior = argument8
 
 var _desired_ship_a_direction = 0
 
-if (!joust_behavior or !strafe_behavior and speed < max_speed/2){
+if (!joust_behavior or !strafe_behavior or speed < max_speed/2){
 	vector_sliding = false
 }
 
@@ -55,7 +55,7 @@ _follow_target_y = target_y
 target_direction = point_direction(x, y, target_x, target_y)
 target_speed = 0
 if (instance_exists(ship_target)){
-	_lead_distance = ship_target.speed * 100
+	_lead_distance = ship_target.speed * 10
 	target_direction = ship_target.direction
 	_ship_target_x = ship_target.x
 	_ship_target_y = ship_target.y
@@ -75,7 +75,7 @@ var _target_point_follow_distance = distance_to_point(_follow_target_x, _follow_
 var _target_point_lead_distance = distance_to_point(_lead_target_x, _lead_target_y)
 
 
-var _motion_to_add = 0
+var _motion_to_add = 
 
 
 if (seek_behavior){
@@ -88,7 +88,7 @@ if (seek_behavior){
 	 if (_target_point_distance > arrival_to_slow_down_radius){
 		 _motion_to_add += acceleration_rate
 	 } else {
-		 speed -= acceleration_rate
+		 if (!instance_exists(ship_target)) speed -= acceleration_rate
 	 } 
 
 }
@@ -159,11 +159,7 @@ if (joust_behavior){
 	turn_to_face_direction(_direction_to_ship_target)
 	
 	vector_sliding = true
-	if (distance_to_object(ship_target) > 75 * max_speed){
-		joust = false
-		vector_sliding = false
-		evade = true
-	}
+	
 }
 
 if (strafe_behavior){
@@ -171,17 +167,17 @@ if (strafe_behavior){
 	if (vector_sliding = false){
 		_desired_ship_a_direction += _direction_to_ship_target + (90*strafe_direction)
 	}
-	if (abs(angle_difference(direction, _desired_ship_a_direction) < 10))
+	if (abs(angle_difference(direction, _desired_ship_a_direction) < 10) and speed > max_speed/2)
 	{
 		vector_sliding = true
 	}
 	if (vector_sliding = true){
 		turn_to_face_direction(_direction_to_lead_target)
-		if (abs(angle_difference(image_angle, ship_target.image_angle)<10)){
+		/*if (abs(angle_difference(image_angle, ship_target.image_angle-180)<10)){
 			strafe = false
 			vector_sliding = false
 			evade = true
-		}
+		}*/
 	}
 }
 	
@@ -197,7 +193,8 @@ if (seek = false and
 	!instance_exists(ship_target)){
 		_desired_ship_a_direction = image_angle
 		scr_apply_friction(acceleration_rate)
-	}
+	} 
+		
 
 //check for arrival
 
@@ -207,13 +204,12 @@ if (seek = false and
 if (!vector_sliding){
 	turn_to_face_direction(_desired_ship_a_direction)
 	direction = image_angle
+	motion_add(direction, _motion_to_add)
 }
 	
 //add motion
-clamp(_motion_to_add, 0, acceleration_rate)
-if (!vector_sliding){
-	motion_add(image_angle, _motion_to_add)
-}
+clamp(_motion_to_add, -acceleration_rate, acceleration_rate)
+
 if (vector_sliding){
 	motion_add(direction, _motion_to_add)
 }

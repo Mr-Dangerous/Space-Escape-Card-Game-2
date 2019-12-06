@@ -192,7 +192,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0.3",
+            "value": "0.03",
             "varName": "acceleration_rate",
             "varType": 0
         },
@@ -251,6 +251,34 @@
             "value": "0",
             "varName": "combat_manuever_counter",
             "varType": 1
+        },
+        {
+            "id": "401e7d39-0e47-47b6-8863-bbc3cd12d3ff",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "o_player_ship_test",
+            "varName": "target_ship_type",
+            "varType": 5
+        },
+        {
+            "id": "7780e23b-f527-4fc2-b356-271488471524",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "ship_ok",
+            "varType": 0
         }
     ],
     "solid": false,
