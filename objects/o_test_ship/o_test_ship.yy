@@ -182,7 +182,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0.3",
+            "value": "0.03",
             "varName": "acceleration_rate",
             "varType": 0
         },
@@ -269,6 +269,20 @@
             "value": "True",
             "varName": "ship_ok",
             "varType": 3
+        },
+        {
+            "id": "5a454842-ece6-4a86-8e19-519400cfe158",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "o_enemy_ship_test",
+            "varName": "target_ship_type",
+            "varType": 5
         }
     ],
     "solid": false,

@@ -46,45 +46,25 @@ if (zero_pressed){
 	seek = false
 	pursue = false
 	flee = false
-	pursue = false
+	strafe = false
 	evade = false
 	follow = false
 	joust = false
+	
 }
 if (!joust or !strafe){
 	vector_sliding = false
 }
 
-//testing arrivals
-/*
-if (distance_to_object(ship_target) < 50 * max_speed){
-	if (joust){
-		//turn off other behavior and break through!
-		seek = false
-		pursue = false
-		evade = false
-		follow = false
-		flee = false
-	} else { 
-		seek = false
-		pursue = false
-		follow = false
-		flee = false
-		evade = true
-	//hard break!
-	}
-}
-*/
-
-//psuedo skirmishing state
+//pseudo skirmishing
 
 
 var beacon_target = instance_nearest(x, y, o_path_beacon)
 
-ship_target = instance_nearest(x, y, o_enemy_ship_test)
+ship_target = instance_nearest(x, y, target_ship_type)
 var _distance = distance_to_object(ship_target)
 
-var _combat_manuever_distance = 100*max_speed
+var _combat_manuever_distance = 50*max_speed
 combat_manuever_counter++
 
 if (combat_manuever_counter >= 60){	
@@ -122,10 +102,25 @@ if (combat_manuever_counter >= 60){
 			strafe_direction = -sign(_angle_difference)
 		}
 		pursue = false
-	}	
-	if (_distance < 600 and !evade and !joust and !strafe and !follow){
+		seek = false
+	}	else {
+		evade = false
+		joust = false
+		strafe = false
+		follow = false
+	}
+		
+	if (_distance < _combat_manuever_distance*2 and !evade and !joust and !strafe and !follow){
 		pursue = true
 		seek = false
+		vector_sliding = false
+	}
+	if (_distance > _combat_manuever_distance*2 and _distance < 600){
+		evade = false
+		joust = false
+		follow = false
+		strafe = false
+		pursue = true
 	}
 	if (_distance > 600){
 		pursue = false

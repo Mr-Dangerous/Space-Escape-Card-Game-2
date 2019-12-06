@@ -46,42 +46,22 @@ if (zero_pressed){
 	seek = false
 	pursue = false
 	flee = false
-	pursue = false
+	strafe = false
 	evade = false
 	follow = false
 	joust = false
+	
 }
 if (!joust or !strafe){
 	vector_sliding = false
 }
 
-//testing arrivals
-/*
-if (distance_to_object(ship_target) < 50 * max_speed){
-	if (joust){
-		//turn off other behavior and break through!
-		seek = false
-		pursue = false
-		evade = false
-		follow = false
-		flee = false
-	} else { 
-		seek = false
-		pursue = false
-		follow = false
-		flee = false
-		evade = true
-	//hard break!
-	}
-}
-*/
-
-//psuedo skirmishing state
+//pseudo skirmishing
 
 
 var beacon_target = instance_nearest(x, y, o_path_beacon)
 
-ship_target = instance_nearest(x, y, o_player_ship_test)
+ship_target = instance_nearest(x, y, target_ship_type)
 var _distance = distance_to_object(ship_target)
 
 var _combat_manuever_distance = 50*max_speed
@@ -89,12 +69,18 @@ combat_manuever_counter++
 
 if (combat_manuever_counter >= 60){	
 	combat_manuever_counter = 0
+	if (evade){
+		if(ship_ok){
+			evade = false
+		}
+	}
 	if (_distance < _combat_manuever_distance){
 		combat_manuever_counter = 0
+		
 		//check to see if being followed
 		var _angle_difference = 0
 		if(vector_sliding){
-			_angle_difference = angle_difference(image_angle, ship_target.image_angle)
+			_angle_difference = angle_difference(direction, ship_target.image_angle)
 		}
 		if(!vector_sliding){
 			_angle_difference = angle_difference(direction, ship_target.image_angle)
@@ -116,15 +102,32 @@ if (combat_manuever_counter >= 60){
 			strafe_direction = -sign(_angle_difference)
 		}
 		pursue = false
-	}	
-	if (_distance < 600 and !evade and !joust and !strafe and !follow){
+		seek = false
+	}	else {
+		evade = false
+		joust = false
+		strafe = false
+		follow = false
+	}
+		
+	if (_distance < _combat_manuever_distance*2 and !evade and !joust and !strafe and !follow){
 		pursue = true
 		seek = false
+		vector_sliding = false
 	}
-	if (_distance > 300){
+	if (_distance > _combat_manuever_distance*2 and _distance < 600){
+		evade = false
+		joust = false
+		follow = false
+		strafe = false
+		pursue = true
+	}
+	if (_distance > 600){
 		pursue = false
 		seek = true
+		vector_sliding = false
 	}
+	
 }
 
 
@@ -133,8 +136,8 @@ if (instance_exists(beacon_target)){
 	target_x = beacon_target.x
 	target_y = beacon_target.y
 }
+scr_movement_manager(target_x, target_y, seek, flee, pursue, evade, follow, joust, strafe)
 
 if (image_angle > 360){
-	image_angle -= 360
+	image_angle-=360
 }
-scr_movement_manager(target_x, target_y, seek, flee, pursue, evade, follow, joust, strafe)
