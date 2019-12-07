@@ -50,5 +50,8 @@ if (combat_timing_counter = 0){
 combat_timing_counter--
 scr_movement_manager_2()
 
+//Fire upon the enemy
+
+
 
 //TEST
