@@ -75,7 +75,7 @@ var _target_point_follow_distance = distance_to_point(_follow_target_x, _follow_
 var _target_point_lead_distance = distance_to_point(_lead_target_x, _lead_target_y)
 
 
-var _motion_to_add = 
+var _motion_to_add =  0
 
 
 if (seek_behavior){

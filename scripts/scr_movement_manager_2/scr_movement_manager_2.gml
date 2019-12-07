@@ -58,6 +58,35 @@ if (evade or pursue){
 	}
 }
 
+if (strafe){
+	_desired_direction = direction
+	_added_motion += acceleration_rate
+	if (instance_exists(ship_target)){
+		var _target_direction = ship_target.direction
+		var _target_speed = ship_target.speed
+		var _distance_to_target = distance_to_object(ship_target)
+		var _projectile_flight_time = _distance_to_target/projectile_speed
+					
+		var _lead_target_x = ship_target.x + lengthdir_x((_target_speed * _projectile_flight_time), _target_direction)
+		var _lead_target_y = ship_target.y + lengthdir_y((_target_speed * _projectile_flight_time), _target_direction)
+	
+		var _pursue_direction = point_direction(x, y, _lead_target_x, _lead_target_y)
+		
+		turn_to_face_direction(_pursue_direction)
+		_desired_direction += _pursue_direction
+		_added_motion += acceleration_rate
+	} else {
+		if (pursue){
+			pursue = !pursue
+			seek = true
+		}
+		if (evade){
+			evade = !evade
+			flee = true
+		}
+	}
+}
+
 
 //Post movement manager stuff
 motion_add(_desired_direction, _added_motion)
