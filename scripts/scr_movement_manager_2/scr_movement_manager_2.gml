@@ -15,14 +15,16 @@ if (seek or flee){
 	_added_motion += acceleration_rate
 
 	//check for arrival
+	
 	var _distance_to_target = point_distance(x, y, target_x, target_y)
-	if (_distance_to_target < 100){
+	if (_distance_to_target < 50){
 		speed -= acceleration_rate
 		_added_motion = 0
 		if (speed < 0){
 			speed = 0
 		}
 	}
+	
 }
 if (evade or pursue){
 	//needs a lead target!

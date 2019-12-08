@@ -257,6 +257,20 @@
             "value": "noone",
             "varName": "sector_beacon",
             "varType": 4
+        },
+        {
+            "id": "4b7e98e3-f4ae-416a-a340-aaa37d8121c7",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "moving",
+            "varType": 3
         }
     ],
     "solid": false,

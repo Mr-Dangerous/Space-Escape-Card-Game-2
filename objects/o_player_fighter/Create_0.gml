@@ -15,15 +15,15 @@ strafe = false
 #endregion
 
 #region Ship information
-ship_class = ""
+ship_class = "fighter"
 ship_origin = ""
 ship_subclass = ""
 #endregion
 
 #region Movement
-turn_speed = 2
-max_speed = 3
-acceleration_rate = .05
+turn_speed = 1.5
+max_speed = 2
+acceleration_rate = .025
 pilot_reflexes = 10
 vector_locked = false
 combat_timing_counter = 0
@@ -48,9 +48,9 @@ target_x = 0
 target_y = 0
 ship_target = noone
 scout_beacon = noone
-target_ship_team = 0 //resource
-allied_ship_team = 0//resource
-team_squad_type = 0//resource
+target_ship_team = o_enemy_ship //resource
+allied_ship_team = o_player_ship//resource
+team_squad_type = o_player_squad//resource
 scan_range= 600
 can_attack = true
 #endregion
@@ -78,15 +78,8 @@ weapon_1_projectile_flight_time = 0
 
 #region Exhaust variables
 //1 per exhaust, refer to draw event
-rocket_image_counter = 30
+rocket_image_counter = 0
 exhaust_type = 0//resource
-//exhaust port header
-exhaust_ports[0, 0] = 1 //number of exhaust ports
-exhaust_ports[0, 1] = rocket_image_counter //rocket_image_counter_reset
-//exhaust port 1
-exhaust_ports[1, 0] = 0 //exhaust_distance_offset
-exhaust_ports[1, 1] = 0 //exhaust_direction_offset = point_direction(-x, -y, 0, 0)
-
 #endregion
 
 #region Scouting variables
@@ -101,12 +94,9 @@ max_scout_range = 0
 image_xscale = image_scale
 image_yscale = image_scale
 
-if (team_squad_type = o_player_squad){
-	state = ship.planning
-}
-if (team_squad_type = o_enemy_squad){
-	state = ship.idle
-}
+state = ship.planning
+
+
 
 #region basic attack
 //header

@@ -57,7 +57,7 @@ switch (state){
 	break;
 	
 	case squad.moving:
-		
+		moving = true
 		_p_dir = point_direction(x, y, sector_beacon.x, sector_beacon.y)
 		turn_to_face_direction_no_correction(_p_dir)
 		direction = image_angle
@@ -67,6 +67,7 @@ switch (state){
 			sector_beacon = noone
 			target_sector = -1
 			state = squad.defend_sector
+			moving = false
 		}
 	break;
 }

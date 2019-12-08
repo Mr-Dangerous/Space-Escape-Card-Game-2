@@ -431,6 +431,14 @@
             }
         },
         {
+            "Key": "43a8655d-5059-43cc-8ff3-b11d44d7bd4a",
+            "Value": {
+                "id": "6546c56f-ed97-40fc-a379-fb4589161af6",
+                "resourcePath": "objects\\o_player_fighter\\o_player_fighter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4709f2cd-6aea-47f9-8e2b-8406de45519c",
             "Value": {
                 "id": "0f6d164f-e984-430d-9e2b-0d2fe21c465e",
@@ -820,6 +828,14 @@
                 "id": "39a1b7a6-79bc-4144-ad3c-a362fa40a85e",
                 "resourcePath": "sprites\\s_solar_capital_ship\\s_solar_capital_ship.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "81909101-3c99-433a-8879-4e7fbf02a5ee",
+            "Value": {
+                "id": "645acba0-e73f-479d-9a0f-1d012b5925e1",
+                "resourcePath": "objects\\o_iron_interceptor\\o_iron_interceptor.yy",
+                "resourceType": "GMObject"
             }
         },
         {

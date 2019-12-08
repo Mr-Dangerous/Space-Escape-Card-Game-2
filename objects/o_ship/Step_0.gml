@@ -7,11 +7,13 @@ switch(state){
 		target_x = assigned_defensive_grid_space.x 
 		target_y = assigned_defensive_grid_space.y 
 		
-		if (abs (x - target_x) > 10 and abs (y - target_y > 10)){
+		if (abs (x - target_x) > 20 or abs (y - target_y > 20)){
 			formation_locked = false
 			seek = true
 		} else {
 			formation_locked = true
+			
+			
 		}	
 		if (formation_locked){
 			//might need to just become 
@@ -32,6 +34,16 @@ switch(state){
 				turn_to_face_direction(squad_object.image_angle)
 			} else {
 				image_angle = squad_object.image_angle
+			}
+			if (recon){
+				image_angle = recon_direction
+			}
+			speed -= acceleration_rate
+			if (speed < 0){
+				speed = 0
+			}
+			if (squad_object.moving = true){
+				speed = squad_object.speed
 			}
 		}	
 			
@@ -130,7 +142,15 @@ switch(state){
 	
 	#region repositioning
 	case ship.repositioning:
-		state = ship.planning
+	
+		seek = true
+		target_x = assigned_defensive_grid_space.x
+		target_y = assigned_defensive_grid_space.y
+		if (place_meeting(x, y, assigned_defensive_grid_space)){
+			x = assigned_defensive_grid_space.x
+			y = assigned_defensive_grid_space.y
+			state = ship.planning
+		}
 	break;
 #endregion
 	
@@ -154,19 +174,20 @@ if (armor/damage_partition_tick < 1.2){
 
 //counter ticks
 if (basic_attack_fire_rate_counter < basic_attack_fire_rate){
-	basic_attack_fire_rate_counter++
-}
+		basic_attack_fire_rate_counter++
+	}
+	if (instance_exists(ship_target)){
+	var _direction_to_target = point_direction(x, y, ship_target.x, ship_target.y)
+	var _distance_to_target = distance_to_object(ship_target)
+	var _angle_difference_to_target = abs(angle_difference(image_angle, _direction_to_target))
 
-var _direction_to_target = point_direction(x, y, ship_target.x, ship_target.y)
-var _distance_to_target = distance_to_object(ship_target)
-var _angle_difference_to_target = abs(angle_difference(image_angle, _direction_to_target))
-
-if (_angle_difference_to_target < gimbal_fire_angle and
-		_distance_to_target < basic_attack_range and
-		basic_attack_fire_rate_counter >= basic_attack_fire_rate and
-		can_attack = true){
-	basic_attack_fire_rate_counter = 0
-	fire_basic_attack(basic_attack_array)
+	if (_angle_difference_to_target < gimbal_fire_angle and
+			_distance_to_target < basic_attack_range and
+			basic_attack_fire_rate_counter >= basic_attack_fire_rate and
+			can_attack = true){
+		basic_attack_fire_rate_counter = 0
+		fire_basic_attack(basic_attack_array)
+	}
 }
 
 
@@ -174,25 +195,6 @@ if (_angle_difference_to_target < gimbal_fire_angle and
 #endregion
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//TEST
 if (combat_timing_counter = 0){
 	combat_timing_counter = (irandom_range(40, 80)-pilot_reflexes)
 	ship_target = instance_nearest(x, y, target_ship_team)
@@ -244,8 +246,5 @@ if (combat_timing_counter = 0){
 combat_timing_counter--
 scr_movement_manager_2()
 
-//Fire upon the enemy
 
 
-
-//TEST
