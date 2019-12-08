@@ -25,7 +25,7 @@
             "value": "o_player_ship_test"
         }
     ],
-    "parentObjectId": "7726de57-54b0-427c-916b-3f724804ae49",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

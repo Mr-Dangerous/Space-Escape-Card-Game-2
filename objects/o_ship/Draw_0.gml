@@ -1,6 +1,7 @@
 draw_self()
 
 //exhaust effect
+//should be from an array called exhaust ports, for each exhaust port
 if (speed > 0){
 	//length dir instead
 	_rocket_x = x + lengthdir_x(-317*image_xscale, image_angle)
