@@ -4,8 +4,6 @@
 image_scale = .045
 #endregion
 
-
-
 #region Behavior
 seek = false
 flee = false
@@ -53,8 +51,15 @@ scout_beacon = noone
 target_ship_team = o_enemy_ship //resource
 allied_ship_team = o_player_ship//resource
 team_squad_type = o_player_squad//resource
+enemy_squad_type = 0
 scan_range= 600
 can_attack = true
+deploy = false 
+deploy_direction = 0 
+enemy_squad_target = noone
+disengage_counter = 0
+disengage_enemy = false
+approach_enemy = false
 #endregion
 
 #region Weapon variables
@@ -107,10 +112,13 @@ exhaust_ports[1, 1] = 0 //exhaust_firection_offset
 
 #region Scouting variables
 can_skirmish = false
+scout_mission = false
 recon = 0
 recon_direction = 0
+recon_distance_multiplier = 0
 scout_range = 0
-max_scout_range = 0
+max_scout_range = 700
+scout_beacon = noone
 #endregion
 
 #region Fleet and positioning info

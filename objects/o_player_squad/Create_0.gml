@@ -22,20 +22,21 @@ for (i = 0; i < 9; i++){
 		with(_grid_box){
 			x_offset = other.x_offset
 			y_offset = other.x_offset
-			visible = false
+			
 		}
 		
 		grid_boxes[_k, 4] = _grid_box
 		_k++
 		}
 }
-for(i = 0; i<81; i++){
+for(var i = 0; i<81; i++){
 	//assign_recon_squares as a whole
 	if (i = 0 or i = 4 or i = 8 or i = 36 or i = 44 or i = 72 or i = 76 or i = 80){
-		with (grid_boxes[i, 4]){
+		_grid_box = grid_boxes[i, 4]
+		with (_grid_box){
 			recon_square = true
 			recon_direction = point_direction(other.x, other.y, x, y)
-			switch(other.i){
+			switch(i){
 				case 0:
 					recon_distance_multiplier = .75
 				break;
@@ -68,7 +69,7 @@ for(i = 0; i<81; i++){
 }
 
 //fleet list
-fleet[0] = 0
+fleet = array_create(15, noone)
 fleet_size = 0
 
 state = squad.defend_sector

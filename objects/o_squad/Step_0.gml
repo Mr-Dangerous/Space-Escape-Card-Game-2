@@ -1,5 +1,5 @@
 //move grid boxes with the ship
-if (fleet[0] != 0){
+if (fleet[0] != noone){
 	fleet_size = array_length_1d(fleet)
 }
 if (engage_enemy = true){
@@ -155,7 +155,7 @@ switch (state){
 //post state machine
 scout_timer--
 if (scout_timer = 0){
-	scout_timer = 1000
+	scout_timer = 3000
 	if (state = squad.defend_sector or state = squad.find_enemy or state = squad.moving){
 		_k = 0
 		repeat(fleet_size){

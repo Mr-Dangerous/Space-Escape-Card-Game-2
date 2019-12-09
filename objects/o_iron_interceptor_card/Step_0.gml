@@ -41,7 +41,7 @@ switch (state){
 			var _nearest_grid_space = instance_nearest(x, y, o_grid_box)
 			var _distance_to_space = distance_to_object(_nearest_grid_space)
 			var _squad_object = instance_find(o_player_squad, 0)
-			var _squad_list = _squad_object.squad_ships
+			var _squad_list = _squad_object.fleet
 			
 			var _open_squad_slot = -1
 		
@@ -66,11 +66,13 @@ switch (state){
 					if (recon_square){
 						_new_ship.recon_direction = recon_direction
 						_new_ship.recon = true
+						_new_ship.recon_distance_multiplier = recon_distance_multiplier
+						
 					}
 				}
 				var _card_game = instance_find(o_card_game, 0)
 				_card_game.hangar_slots[hangar_slot] = noone
-				_squad_object.squad_ships[_open_squad_slot] = _new_ship
+				_squad_object.fleet[_open_squad_slot] = _new_ship
 				
 				instance_destroy()
 			} else {

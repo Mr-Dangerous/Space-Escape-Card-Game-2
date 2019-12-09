@@ -6,7 +6,7 @@ exhaust_number = exhaust_ports[0,0]
 rocket_frame_speed = exhaust_ports[0, 1]/10
 
 var thrust_image_scale = 1
-show_debug_message(thrust_image_scale)
+
 if (speed != 0){
 	//length dir instead
 	i = 1

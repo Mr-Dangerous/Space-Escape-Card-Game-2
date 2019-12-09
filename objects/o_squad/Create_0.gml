@@ -22,7 +22,7 @@ for (i = 0; i < 9; i++){
 		with(_grid_box){
 			x_offset = other.x_offset
 			y_offset = other.x_offset
-			visible = false
+			
 		}
 		
 		grid_boxes[_k, 4] = _grid_box
@@ -68,7 +68,8 @@ for(i = 0; i<81; i++){
 }
 
 //fleet list
-fleet[0] = 0
+
+fleet = array_create(15, noone)
 fleet_size = 0
 
 state = squad.find_enemy

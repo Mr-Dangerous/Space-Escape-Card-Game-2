@@ -28,7 +28,7 @@ repeat(81){
 }
 
 current_sector = instance_nearest(x, y, o_spawn_beacon)
-
+/*
 for (i = 0; i < 25; i++){
 	var _beacon_check = game_setup_controller.possible_spawn_location[i, 2]
 	if (_beacon_check = current_sector){
@@ -37,6 +37,7 @@ for (i = 0; i < 25; i++){
 		}
 	}
 }
+*/
 
 //Pre State machine checks
 if(instance_exists(target_squad)){

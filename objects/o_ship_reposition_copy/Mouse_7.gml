@@ -8,6 +8,7 @@ if (distance_to_object(_nearest_grid_space) < 25 and _nearest_grid_space.player_
 		if (assigned_defensive_grid_space.recon_square = true){
 			recon = true
 			recon_direction = assigned_defensive_grid_space.recon_direction
+			recon_distance_multiplier = assigned_defensive_grid_space.recon_distance_multiplier
 		} else {
 			recon = false
 		}

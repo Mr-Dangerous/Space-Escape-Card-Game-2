@@ -155,15 +155,18 @@ switch (state){
 //post state machine
 scout_timer--
 if (scout_timer = 0){
-	scout_timer = 1000
+	scout_timer = 3000
 	if (state = squad.defend_sector or state = squad.find_enemy or state = squad.moving){
 		_k = 0
 		repeat(fleet_size){
-			if(fleet[_k].recon){
-				with(fleet[_k]){
-					scout_mission = true
-					scout_range = max_scout_range
+			if (instance_exists(fleet[_k])){
+				if(fleet[_k].recon){
+					with(fleet[_k]){
+						scout_mission = true
+						scout_range = max_scout_range
+					}
 				}
+				show_debug_message("scout mission fired")
 			}
 			_k++
 		}

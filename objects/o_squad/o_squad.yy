@@ -181,6 +181,48 @@
             "value": "1000",
             "varName": "scout_timer",
             "varType": 1
+        },
+        {
+            "id": "9e0f14ed-dee6-4adb-974f-8ce9f4477b73",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "instance_find(o_game_setup, 0)",
+            "varName": "game_setup_controller",
+            "varType": 4
+        },
+        {
+            "id": "cef27d41-752c-45a6-8791-b7d6f5b1bd8c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "instance_find(o_travel_map, 0)",
+            "varName": "sector_map",
+            "varType": 4
+        },
+        {
+            "id": "25e5a964-4c92-497c-83ab-1bfcf05ac980",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "15",
+            "varName": "maximum_units",
+            "varType": 1
         }
     ],
     "solid": false,

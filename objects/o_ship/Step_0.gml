@@ -3,9 +3,11 @@ if (deploy){
 	
 }
 if (scout_mission){
-	var _scout_beacon_x = lengthdir_x(max_speed * max_scout_range * recon_distance_multiplier, squad_object.image_angle + recon_direction)
-	var _scout_beacon_y = lengthdir_y(max_speed * max_scout_range * recon_distance_multiplier, squad_object.image_angle + recon_direction)
+	var _scout_beacon_x = assigned_defensive_grid_space.x + lengthdir_x(max_speed * max_scout_range * recon_distance_multiplier, squad_object.image_angle + recon_direction)
+	var _scout_beacon_y = assigned_defensive_grid_space.y + lengthdir_y(max_speed * max_scout_range * recon_distance_multiplier, squad_object.image_angle + recon_direction)
 	scout_beacon = instance_create_layer(_scout_beacon_x, _scout_beacon_y, "Above_UI", o_scout_beacon)	
+	state = ship.scouting
+	scout_mission = false
 }
 if (approach_enemy){
 	state = ship.engage_enemy
@@ -90,7 +92,7 @@ switch(state){
 		}
 		
 		scout_range--
-		if (scout_range < 0 or (!instance_exists(scout_beacon))){
+		if (scout_range < 0 or (!instance_exists(scout_beacon) or distance_to_object(scout_beacon) < 10)){
 			scout_range = max_scout_range
 			state = ship.returning
 		}

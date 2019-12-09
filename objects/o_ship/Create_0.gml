@@ -51,13 +51,14 @@ scout_beacon = noone
 target_ship_team = 0 //resource
 allied_ship_team = 0//resource
 team_squad_type = 0//resource
-enemy_squad_type = 0//resource //to copy
+enemy_squad_type = 0//resource 
 scan_range= 600
 can_attack = true
-deploy = false //to copy
-deploy_direction = 0 //to copy
-enemy_squad_target = noone//to copy
+deploy = false
+deploy_direction = 0
+enemy_squad_target = noone
 disengage_counter = 0
+disengage_enemy = false
 approach_enemy = false
 #endregion
 
@@ -104,6 +105,11 @@ recon_distance_multiplier = 0
 scout_range = 0
 max_scout_range = 0
 scout_beacon = noone
+#endregion
+
+#region Fleet and positioning info
+squad_object = instance_nearest(x, y, team_squad_type)
+assigned_defensive_grid_space = 0
 #endregion
 #endregion
 
