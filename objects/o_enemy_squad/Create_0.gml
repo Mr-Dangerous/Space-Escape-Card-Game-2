@@ -1,3 +1,6 @@
+//Variables
+target_squad = instance_find(o_player_squad, 0)
+
 image_xscale = image_scale
 image_yscale = image_scale
 x_offset = -400 //should allow for 9 squares of grid boxes
@@ -24,7 +27,9 @@ for (i = 0; i < 9; i++){
 			y_offset = other.x_offset
 			visible = false
 		}
-		
+		//temporary function to add some units
+		 
+		//
 		grid_boxes[_k, 4] = _grid_box
 		_k++
 		}
@@ -68,8 +73,9 @@ for(i = 0; i<81; i++){
 }
 
 //fleet list
-fleet[0] = 0
+fleet = array_create(15, noone)
 fleet_size = 0
+create_fleet_counter = 20
 
 state = squad.find_enemy
 //testing only

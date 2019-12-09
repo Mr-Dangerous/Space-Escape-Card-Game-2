@@ -1,3 +1,6 @@
+//variables
+target_squad = instance_nearest(x, y, o_enemy_squad)
+
 //move grid boxes with the ship
 if (fleet[0] != 0){
 	fleet_size = array_length_1d(fleet)
@@ -25,6 +28,13 @@ repeat(81){
 		
 	}
 	_k++
+}
+
+if (target_sector != -1){
+	state = squad.moving
+	sector_beacon = game_setup_controller.possible_spawn_location[target_sector, 2]
+	target_sector = -1
+	
 }
 
 current_sector = instance_nearest(x, y, o_spawn_beacon)
@@ -123,8 +133,8 @@ switch (state){
 				repeat(size){
 					with(fleet[_k]){
 						deploy = true
-						enemy_squad_target = target_squad
-						deploy_direction = point_direction(x, y, target_squad.x, target_squad.y)
+						enemy_squad_target = other.target_squad
+						deploy_direction = point_direction(x, y, other.target_squad.x, other.target_squad.y)
 					}
 					_k++
 				}

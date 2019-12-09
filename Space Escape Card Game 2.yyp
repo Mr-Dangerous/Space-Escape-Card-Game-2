@@ -1279,6 +1279,14 @@
             }
         },
         {
+            "Key": "d0f0ca73-eba8-446b-91ce-66ee37774f91",
+            "Value": {
+                "id": "2ce62435-4416-4bf7-9154-96066b84b931",
+                "resourcePath": "objects\\o_alien_interceptor\\o_alien_interceptor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d1173272-ac01-4fe1-8005-4835e0ed0e29",
             "Value": {
                 "id": "68b07d08-4df6-43ae-ba5b-12512fdb4bb5",

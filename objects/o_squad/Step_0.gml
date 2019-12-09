@@ -3,9 +3,11 @@ if (fleet[0] != noone){
 	fleet_size = array_length_1d(fleet)
 }
 if (engage_enemy = true){
+	engage_enemy = false
 	var _k = 0
 	repeat(fleet_size){
 		with(fleet[_k]){
+			deploy = false
 			approach_enemy = true
 		}
 		_k++
@@ -123,8 +125,8 @@ switch (state){
 				repeat(size){
 					with(fleet[_k]){
 						deploy = true
-						enemy_squad_target = target_squad
-						deploy_direction = point_direction(x, y, target_squad.x, target_squad.y)
+						enemy_squad_target = other.target_squad
+						deploy_direction = point_direction(x, y, other.target_squad.x, other.target_squad.y)
 					}
 					_k++
 				}

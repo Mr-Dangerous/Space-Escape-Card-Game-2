@@ -223,6 +223,34 @@
             "value": "15",
             "varName": "maximum_units",
             "varType": 1
+        },
+        {
+            "id": "57bec3e7-2bef-4fbf-b636-240c19b8229e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "-1",
+            "varName": "target_sector",
+            "varType": 0
+        },
+        {
+            "id": "5be7c800-3388-4809-9074-0d2884f2387e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "combat_switch",
+            "varType": 3
         }
     ],
     "solid": false,

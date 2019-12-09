@@ -1,3 +1,44 @@
+target_squad = instance_nearest(x, y, target_squad_resource)
+if (create_fleet_counter >= 0){
+	create_fleet_counter--
+	if(create_fleet_counter = 0){
+		
+		repeat(10){
+			var _open_squad_slot = -1
+			
+			
+			for(i = 0; i < maximum_units; i++){
+				if (fleet[i] = noone){
+					_open_squad_slot = i
+					i = 100 //ends the loop.... can I jsut exit?
+				}
+			}
+			_x = x + irandom_range(-200, 200)
+			_y = y + irandom_range(-200, 200)
+			var _nearest_grid_space = instance_nearest(_x, _y, o_grid_box)
+			if (_nearest_grid_space.player_unit_assigned = noone and _open_squad_slot != -1){
+				
+				var _new_ship = instance_create_layer(_nearest_grid_space.x, _nearest_grid_space.y, "Ships", o_alien_interceptor)
+				fleet[_open_squad_slot] = _new_ship
+				show_debug_message("ship_created!")
+				
+				with (_new_ship){
+					assigned_defensive_grid_space = _nearest_grid_space
+				}
+				with (_nearest_grid_space){
+					player_unit_assigned = _new_ship
+					if (recon_square){
+						_new_ship.recon_direction = recon_direction
+						_new_ship.recon = true
+						_new_ship.recon_distance_multiplier = recon_distance_multiplier
+						
+					}
+				}
+			}
+		}
+		
+	}
+}
 //move grid boxes with the ship
 if (fleet[0] != 0){
 	fleet_size = array_length_1d(fleet)
@@ -75,10 +116,11 @@ switch (state){
 	case squad.find_enemy:
 		moving = true
 		//all placeholders for now
-		if (target_beacon = noone){
-			var _random_seed = irandom(8)
-			target_beacon = instance_nth_nearest(x, y, o_spawn_beacon, _random_seed)
-		}
+		target_beacon = target_squad //debugging
+		//if (target_beacon = noone){
+		//	var _random_seed = irandom(8)
+		//	target_beacon = instance_nth_nearest(x, y, o_spawn_beacon, _random_seed)
+		//}
 		_p_dir = point_direction(x, y, target_beacon.x, target_beacon.y)
 		turn_to_face_direction_no_correction(_p_dir)
 		direction = image_angle
@@ -124,8 +166,8 @@ switch (state){
 				repeat(size){
 					with(fleet[_k]){
 						deploy = true
-						enemy_squad_target = target_squad
-						deploy_direction = point_direction(x, y, target_squad.x, target_squad.y)
+						enemy_squad_target = other.target_squad
+						deploy_direction = point_direction(x, y, other.target_squad.x, other.target_squad.y)
 					}
 					_k++
 				}
@@ -154,9 +196,9 @@ switch (state){
 #endregion
 
 //post state machine
-scout_timer--
+//scout_timer--
 if (scout_timer = 0){
-	scout_timer = 1000
+	scout_timer = 3000
 	if (state = squad.defend_sector or state = squad.find_enemy or state = squad.moving){
 		_k = 0
 		repeat(fleet_size){
@@ -171,6 +213,9 @@ if (scout_timer = 0){
 	}
 	
 }
+
+show_debug_message(x)
+show_debug_message(y)
 
 
 	

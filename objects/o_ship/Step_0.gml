@@ -1,4 +1,5 @@
 if (deploy){
+	deploy = false
 	state = ship.deploy
 	
 }
@@ -10,6 +11,7 @@ if (scout_mission){
 	scout_mission = false
 }
 if (approach_enemy){
+	deploy = false
 	state = ship.engage_enemy
 }
 
@@ -200,6 +202,7 @@ switch(state){
 	
 	#region deploy
 	case ship.deploy:
+		deploy = false
 		if(instance_exists(enemy_squad_target)){
 			target_x = x + lengthdir_x(100, deploy_direction)
 			target_y = y + lengthdir_y(100, deploy_direction)
@@ -210,8 +213,9 @@ switch(state){
 			strafe = false
 			ship_target = noone
 			var nearest_enemy = instance_nearest(x, y, o_enemy_ship)
-			if (distance_to_object(nearest_enemy) < 600){
+			if (distance_to_object(nearest_enemy) < 600 and squad_object.combat_switch = false){
 				squad_object.engage_enemy = true
+				squad_object.combat_switch = true
 			}
 		} else {
 			state = ship.planning
@@ -221,7 +225,9 @@ switch(state){
 	
 	#region engage_enemy
 	case ship.engage_enemy:
+		approach_enemy = false
 		//determine target
+		
 		if (ship_target = noone){
 			var nearest_interceptor = noone
 			var nearest_fighter = noone
@@ -236,13 +242,13 @@ switch(state){
 				nearest_fighter = instance_nearest(x, y, o_player_fighter)
 				nearest_frigate = instance_nearest(x, y, o_player_frigate)
 			}
-			if (distance_to_object(nearest_interceptor) < 200){
+			if (distance_to_object(nearest_interceptor) > 6000){
 				nearest_interceptor = noone
 			}
-			if (distance_to_object(nearest_fighter) < 300){
+			if (distance_to_object(nearest_fighter) > 6000){
 				nearest_fighter = noone
 			}
-			if (distance_to_object(nearest_frigate) < 600){
+			if (distance_to_object(nearest_frigate) > 6000){
 				nearest_frigate = noone
 			}
 			//switch targeting based on class
@@ -265,7 +271,8 @@ switch(state){
 					if (instance_exists(nearest_interceptor)) ship_target = nearest_interceptor
 				break;
 			}
-			if (ship_target != noone){
+		}
+		if (ship_target != noone){
 				switch (ship_target.ship_class){
 					case "interceptor":
 						state = ship.attacking_interceptor
@@ -286,7 +293,6 @@ switch(state){
 				target_y = y + lengthdir_y(100, enemy_squad_target)
 				seek = true
 			}
-		}
 	break;
 	#endregion
 	
