@@ -1,4 +1,21 @@
+if (deploy){
+	state = ship.deploy
+	
+}
+if (scout_mission){
+	var _scout_beacon_x = lengthdir_x(max_speed * max_scout_range * recon_distance_multiplier, squad_object.image_angle + recon_direction)
+	var _scout_beacon_y = lengthdir_y(max_speed * max_scout_range * recon_distance_multiplier, squad_object.image_angle + recon_direction)
+	scout_beacon = instance_create_layer(_scout_beacon_x, _scout_beacon_y, "Above_UI", o_scout_beacon)	
+}
+if (approach_enemy){
+	state = ship.engage_enemy
+}
 
+if (approach_enemy = false and disengage_enemy = true){
+	disengage_enemy = false
+	state = ship.disengage
+	disengage_counter = 100
+}
 #region state machine
 switch(state){
 	
@@ -84,6 +101,7 @@ switch(state){
 	
 	#region skirmishing
 	case ship.skirmishing:
+	#region retarget
 		if (!instance_exists(ship_target)){
 			var _nearest_enemy = instance_nearest(x, y, target_ship_team)
 		
@@ -99,6 +117,8 @@ switch(state){
 				}			
 			}
 		}
+		#endregion
+	#region check status of ship
 		if (ship_ok){
 			if (seek){
 				seek = false
@@ -121,8 +141,425 @@ switch(state){
 		if (scout_range < 0){
 			state = ship.returning
 		}
+		#endregion
+	#region combat manuevers
+	if (combat_timing_counter = 0){
+	combat_timing_counter = (irandom_range(40, 80)-pilot_reflexes)
+	ship_target = instance_nearest(x, y, target_ship_team)
+	if (instance_exists(ship_target)){
+		var _distance_to_enemy = distance_to_object(ship_target)
+		if (vector_locked = true){//meaning the ship can rotate freely and not change direction
+			vector_locked = false
+		}
+		//this expression should return false if the fight can't happen anymore
+		if (_distance_to_enemy < 500){
+			target_x = ship_target.x
+			target_y = ship_target.y
+		}
+		if (_distance_to_enemy < 300 and !pursue and !evade){
+			pursue = true
+			seek = false
+			flee = false
+		}
+		if (_distance_to_enemy > 300 and !seek and !flee){
+			pursue = false
+			evade = false
+			seek = true
+		}
+		if (_distance_to_enemy < basic_attack_range){
+			var _random_seed = irandom_range(1, 2)
+			switch (_random_seed){
+				case 1:
+					evade = true
+					pursue = false
+				break;
+				case 2:
+					pursue = true
+					evade = false
+				break;
+				case 3:
+					strafe = true
+					evade = false
+					pursue = false
+					vector_locked = false
+				break;
+			}
+			
+		} else {
+			evade = false
+		}
+	
+	}
+}
+	#endregion
 	
 	break;
+	#endregion
+	
+	#region deploy
+	case ship.deploy:
+		if(instance_exists(enemy_squad_target)){
+			target_x = x + lengthdir_x(100, deploy_direction)
+			target_y = y + lengthdir_y(100, deploy_direction)
+			seek = true
+			flee = false
+			evade = false
+			pursue = false
+			strafe = false
+			ship_target = noone
+			var nearest_enemy = instance_nearest(x, y, o_enemy_ship)
+			if (distance_to_object(nearest_enemy) < 600){
+				squad_object.engage_enemy = true
+			}
+		} else {
+			state = ship.planning
+		}
+	break;
+	#endregion
+	
+	#region engage_enemy
+	case ship.engage_enemy:
+		//determine target
+		if (ship_target = noone){
+			var nearest_interceptor = noone
+			var nearest_fighter = noone
+			var nearest_frigate = noone
+			if (allied_ship_team = o_player_ship){
+				nearest_interceptor = instance_nearest(x, y, o_enemy_interceptor)
+				nearest_fighter = instance_nearest(x, y, o_enemy_fighter)
+				nearest_frigate = instance_nearest(x, y, o_enemy_frigate)
+			}
+			if (allied_ship_team = o_enemy_ship){
+				nearest_interceptor = instance_nearest(x, y, o_player_interceptor)
+				nearest_fighter = instance_nearest(x, y, o_player_fighter)
+				nearest_frigate = instance_nearest(x, y, o_player_frigate)
+			}
+			if (distance_to_object(nearest_interceptor) < 200){
+				nearest_interceptor = noone
+			}
+			if (distance_to_object(nearest_fighter) < 300){
+				nearest_fighter = noone
+			}
+			if (distance_to_object(nearest_frigate) < 600){
+				nearest_frigate = noone
+			}
+			//switch targeting based on class
+			//might be better as an array later
+			switch(ship_class){
+				case "interceptor":
+					if (instance_exists(nearest_frigate)) ship_target = nearest_frigate
+					if (instance_exists(nearest_interceptor)) ship_target = nearest_interceptor	
+					if (instance_exists(nearest_fighter)) ship_target = nearest_fighter
+					
+				break;
+				case "fighter":
+					if (instance_exists(nearest_frigate)) ship_target = nearest_frigate
+					if (instance_exists(nearest_fighter)) ship_target = nearest_fighter
+					if (instance_exists(nearest_interceptor)) ship_target = nearest_interceptor
+				break;
+				case "frigate":
+					if (instance_exists(nearest_frigate)) ship_target = nearest_frigate
+					if (instance_exists(nearest_fighter)) ship_target = nearest_fighter
+					if (instance_exists(nearest_interceptor)) ship_target = nearest_interceptor
+				break;
+			}
+			if (ship_target != noone){
+				switch (ship_target.ship_class){
+					case "interceptor":
+						state = ship.attacking_interceptor
+						approach_enemy = false
+					break;
+					case "fighter":
+						state = ship.attacking_interceptor //to be changed later!
+						approach_enemy = false
+					break;
+					case "frigate":
+						state =ship.attacking_interceptor //to be changed later!
+						approach_enemy = false
+					break;
+				}
+			} 
+			if (ship_target = noone){
+				target_x = x + lengthdir_x(100, enemy_squad_target)
+				target_y = y + lengthdir_y(100, enemy_squad_target)
+				seek = true
+			}
+		}
+	break;
+	#endregion
+	
+	#region attacking_interceptor
+	case ship.attacking_interceptor:
+		#region retarget
+		if (!instance_exists(ship_target)){
+			state = ship.engage_enemy
+			seek = false
+			pursue = false
+			flee = false
+			evade = false
+			strafe = false
+		}
+		#endregion
+		#region check status of ship
+			if (ship_ok){
+				if (seek){
+					seek = false
+				}
+				if (!pursue or !evade or !strafe){
+					pursue = true
+				}
+			}
+			if (!ship_ok){
+				pursue = false
+				seek = false
+				evade = false
+				flee = true
+				strafe = false
+				if (distance_to_object(ship_target) > 300){
+					state = ship.returning
+				}
+			}
+		
+			#endregion
+		#region combat manuevers
+		if (combat_timing_counter = 0){
+		combat_timing_counter = (irandom_range(40, 80)-pilot_reflexes)
+	
+		if (instance_exists(ship_target)){
+			var _distance_to_enemy = distance_to_object(ship_target)
+			if (vector_locked = true){//meaning the ship can rotate freely and not change direction
+				vector_locked = false
+			}
+			//this expression should return false if the fight can't happen anymore
+			if (_distance_to_enemy < 500){
+				target_x = ship_target.x
+				target_y = ship_target.y
+			}
+			if (_distance_to_enemy < 300 and !pursue and !evade){
+				pursue = true
+				seek = false
+				flee = false
+			}
+			if (_distance_to_enemy > 300 and !seek and !flee){
+				pursue = false
+				evade = false
+				seek = true
+			}
+			if (_distance_to_enemy < basic_attack_range){
+				var _random_seed = irandom_range(1, 2)
+				switch (_random_seed){
+					case 1:
+						evade = true
+						pursue = false
+					break;
+					case 2:
+						pursue = true
+						evade = false
+					break;
+					case 3:
+						strafe = true
+						evade = false
+						pursue = false
+						vector_locked = false
+					break;
+				}
+			
+			} else {
+				evade = false
+			}
+	
+		}
+	}
+	#endregion
+	break;
+	#endregion
+	
+	#region attacking_fighter
+	case ship.attacking_fighter:
+		#region retarget
+		if (!instance_exists(ship_target)){
+			state = ship.engage_enemy
+			seek = false
+			pursue = false
+			flee = false
+			evade = false
+			strafe = false
+		}
+		#endregion
+		#region check status of ship
+			if (ship_ok){
+				if (seek){
+					seek = false
+				}
+				if (!pursue or !evade or !strafe){
+					pursue = true
+				}
+			}
+			if (!ship_ok){
+				pursue = false
+				seek = false
+				evade = false
+				flee = true
+				strafe = false
+				if (distance_to_object(ship_target) > 300){
+					state = ship.returning
+				}
+			}
+		
+			#endregion
+		#region combat manuevers
+		if (combat_timing_counter = 0){
+		combat_timing_counter = (irandom_range(40, 80)-pilot_reflexes)
+	
+		if (instance_exists(ship_target)){
+			var _distance_to_enemy = distance_to_object(ship_target)
+			if (vector_locked = true){//meaning the ship can rotate freely and not change direction
+				vector_locked = false
+			}
+			//this expression should return false if the fight can't happen anymore
+			if (_distance_to_enemy < 500){
+				target_x = ship_target.x
+				target_y = ship_target.y
+			}
+			if (_distance_to_enemy < 300 and !pursue and !evade){
+				pursue = true
+				seek = false
+				flee = false
+			}
+			if (_distance_to_enemy > 300 and !seek and !flee){
+				pursue = false
+				evade = false
+				seek = true
+			}
+			if (_distance_to_enemy < basic_attack_range){
+				var _random_seed = irandom_range(1, 2)
+				switch (_random_seed){
+					case 1:
+						evade = true
+						pursue = false
+					break;
+					case 2:
+						pursue = true
+						evade = false
+					break;
+					case 3:
+						strafe = true
+						evade = false
+						pursue = false
+						vector_locked = false
+					break;
+				}
+			
+			} else {
+				evade = false
+			}
+	
+		}
+	}
+	#endregion
+	break;
+	#endregion
+	
+	#region attacking_frigate
+	case ship.attacking_frigate:
+		#region retarget
+		if (!instance_exists(ship_target)){
+			state = ship.engage_enemy
+			seek = false
+			pursue = false
+			flee = false
+			evade = false
+			strafe = false
+		}
+		#endregion
+		#region check status of ship
+			if (ship_ok){
+				if (seek){
+					seek = false
+				}
+				if (!pursue or !evade or !strafe){
+					pursue = true
+				}
+			}
+			if (!ship_ok){
+				pursue = false
+				seek = false
+				evade = false
+				flee = true
+				strafe = false
+				if (distance_to_object(ship_target) > 300){
+					state = ship.returning
+				}
+			}
+		
+			#endregion
+		#region combat manuevers
+		if (combat_timing_counter = 0){
+		combat_timing_counter = (irandom_range(40, 80)-pilot_reflexes)
+	
+		if (instance_exists(ship_target)){
+			var _distance_to_enemy = distance_to_object(ship_target)
+			if (vector_locked = true){//meaning the ship can rotate freely and not change direction
+				vector_locked = false
+			}
+			//this expression should return false if the fight can't happen anymore
+			if (_distance_to_enemy < 500){
+				target_x = ship_target.x
+				target_y = ship_target.y
+			}
+			if (_distance_to_enemy < 300 and !pursue and !evade){
+				pursue = true
+				seek = false
+				flee = false
+			}
+			if (_distance_to_enemy > 300 and !seek and !flee){
+				pursue = false
+				evade = false
+				seek = true
+			}
+			if (_distance_to_enemy < basic_attack_range){
+				var _random_seed = irandom_range(1, 2)
+				switch (_random_seed){
+					case 1:
+						evade = true
+						pursue = false
+					break;
+					case 2:
+						pursue = true
+						evade = false
+					break;
+					case 3:
+						strafe = true
+						evade = false
+						pursue = false
+						vector_locked = false
+					break;
+				}
+			
+			} else {
+				evade = false
+			}
+	
+		}
+	}
+	#endregion
+	break;
+	#endregion
+		
+	#region disengage
+	case ship.disengage:
+		target_x = assigned_grid_space.x
+		target_y = assigned_grid_space.y
+		seek = true
+		flee = false
+		pursue = false
+		evade= false
+		strafe = false
+		disengage_counter--
+		if (disengage_counter = 0){
+			state = ship.returning
+			deploy = false
+		}
 	#endregion
 	
 	#region ship.returning
@@ -160,11 +597,7 @@ switch(state){
 
 
 #region Post state machine
-if (!movement_locked){
-	scr_movement_manager_2()
-} else {
-	speed = 0
-}
+
 //ship status
 if (armor/damage_partition_tick < 1.2){
 	ship_ok = false
@@ -190,61 +623,19 @@ if (basic_attack_fire_rate_counter < basic_attack_fire_rate){
 	}
 }
 
+combat_timing_counter--
+
+
+if (!movement_locked){
+	scr_movement_manager_2()
+} else {
+	speed = 0
+}
 
 
 #endregion
 
 
-if (combat_timing_counter = 0){
-	combat_timing_counter = (irandom_range(40, 80)-pilot_reflexes)
-	ship_target = instance_nearest(x, y, target_ship_team)
-	if (instance_exists(ship_target)){
-		var _distance_to_enemy = distance_to_object(ship_target)
-		if (vector_locked = true){//meaning the ship can rotate freely and not change direction
-			vector_locked = false
-		}
-		//this expression should return false if the fight can't happen anymore
-		if (_distance_to_enemy < 500){
-			target_x = ship_target.x
-			target_y = ship_target.y
-		}
-		if (_distance_to_enemy < 300 and !pursue and !evade){
-			pursue = true
-			seek = false
-			flee = false
-		}
-		if (_distance_to_enemy > 300 and !seek and !flee){
-			pursue = false
-			evade = false
-			seek = true
-		}
-		if (_distance_to_enemy < weapon_range){
-			var _random_seed = irandom_range(1, 2)
-			switch (_random_seed){
-				case 1:
-					evade = true
-					pursue = false
-				break;
-				case 2:
-					pursue = true
-					evade = false
-				break;
-				case 3:
-					strafe = true
-					evade = false
-					pursue = false
-					vector_locked = false
-				break;
-			}
-			
-		} else {
-			evade = false
-		}
-	
-	}
-}
-combat_timing_counter--
-scr_movement_manager_2()
 
 
 

@@ -111,6 +111,20 @@
             "value": "0",
             "varName": "y_offset",
             "varType": 1
+        },
+        {
+            "id": "e8c437b4-5af4-4cfe-b3ff-ebbb7fcf833c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "recon_distance_multiplier",
+            "varType": 0
         }
     ],
     "solid": false,

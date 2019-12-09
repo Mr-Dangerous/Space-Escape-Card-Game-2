@@ -82,7 +82,7 @@
             "Key": "0e3c8362-8952-45f7-b68b-e10eb5138db0",
             "Value": {
                 "id": "de22d568-6cfe-4c5f-821b-2277c7a0d051",
-                "resourcePath": "sprites\\s_alein_capital_ship_original\\s_alein_capital_ship_original.yy",
+                "resourcePath": "sprites\\s_alien_capital_ship_original\\s_alien_capital_ship_original.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -204,6 +204,14 @@
                 "id": "7ce057a2-f5c8-4f8b-b8a6-69be197835bb",
                 "resourcePath": "views\\20abd8b4-5b19-41a0-a352-c9360eb7459e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "2672df78-26ec-44b5-b86f-ecacede585ce",
+            "Value": {
+                "id": "82bdc469-ce92-4861-80d9-3c10e2f11720",
+                "resourcePath": "objects\\o_scout_beacon\\o_scout_beacon.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -940,6 +948,14 @@
                 "id": "277a29be-7a7f-45c6-9ded-62b44d53b992",
                 "resourcePath": "sprites\\s_imperial_fighter_original\\s_imperial_fighter_original.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8d76ac5c-c5ae-488c-9168-1544e89d8d6b",
+            "Value": {
+                "id": "e6e1e6a7-3c5f-4765-84f7-7d98f4fe0877",
+                "resourcePath": "objects\\o_squad\\o_squad.yy",
+                "resourceType": "GMObject"
             }
         },
         {

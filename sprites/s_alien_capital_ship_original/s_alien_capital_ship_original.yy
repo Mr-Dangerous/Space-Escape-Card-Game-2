@@ -2,7 +2,7 @@
     "id": "0e3c8362-8952-45f7-b68b-e10eb5138db0",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_alein_capital_ship_original",
+    "name": "s_alien_capital_ship_original",
     "For3D": false,
     "HTile": false,
     "VTile": false,

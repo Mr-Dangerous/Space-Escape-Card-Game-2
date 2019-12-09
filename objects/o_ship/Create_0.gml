@@ -51,8 +51,14 @@ scout_beacon = noone
 target_ship_team = 0 //resource
 allied_ship_team = 0//resource
 team_squad_type = 0//resource
+enemy_squad_type = 0//resource //to copy
 scan_range= 600
 can_attack = true
+deploy = false //to copy
+deploy_direction = 0 //to copy
+enemy_squad_target = noone//to copy
+disengage_counter = 0
+approach_enemy = false
 #endregion
 
 #region Weapon variables
@@ -91,10 +97,13 @@ exhaust_ports[1, 1] = 0 //exhaust_direction_offset = point_direction(-x, -y, 0, 
 
 #region Scouting variables
 can_skirmish = false
+scout_mission = false//to copy
 recon = 0
 recon_direction = 0
+recon_distance_multiplier = 0
 scout_range = 0
 max_scout_range = 0
+scout_beacon = noone
 #endregion
 #endregion
 

@@ -13,10 +13,12 @@ enum ship {
 	skirmishing, // skirmishing with the 
 	returning, // returning fromt eh scout mission
 	repositioning, //moving to a new grid coordinate
-	approaching_enemy, //move towards enemy squad until a valid target appears
+	engage_enemy, //move towards enemy squad until a valid target appears
 	attacking_interceptor, //code to execute fighting an inerceptor
 	attacking_fighter, //code to execute fighting a fighter
-	attacking_frigate // code to execute fighting a frigate
+	attacking_frigate, // code to execute fighting a frigate
+	deploy,
+	disengage
 }
 enum interceptor_combat{
 	vector_sliding,
@@ -36,5 +38,7 @@ enum camera {
 
 enum squad {
 	moving,
-	defend_sector
+	defend_sector,
+	find_enemy,
+	combat
 }
