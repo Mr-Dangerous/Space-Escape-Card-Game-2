@@ -1,3 +1,4 @@
+/*
 if (duration <= 0){
 	x = irandom(room_width)
 	y = irandom(room_height)

@@ -1,3 +1,4 @@
+/*
 if (vector_locked){
 	turn_speed = max_turn_speed - ((speed/max_speed)*2)
 }

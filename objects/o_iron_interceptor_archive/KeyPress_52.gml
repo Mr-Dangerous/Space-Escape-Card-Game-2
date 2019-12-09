@@ -1,3 +1,4 @@
+/*
 /// @description  test scout
 if (recon){
 	state = ship.scouting

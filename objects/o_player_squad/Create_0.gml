@@ -22,28 +22,55 @@ for (i = 0; i < 9; i++){
 		with(_grid_box){
 			x_offset = other.x_offset
 			y_offset = other.x_offset
-			
-			
+			visible = false
 		}
+		
 		grid_boxes[_k, 4] = _grid_box
 		_k++
 		}
 }
-
-
-
-
 for(i = 0; i<81; i++){
 	//assign_recon_squares as a whole
 	if (i = 0 or i = 4 or i = 8 or i = 36 or i = 44 or i = 72 or i = 76 or i = 80){
 		with (grid_boxes[i, 4]){
 			recon_square = true
 			recon_direction = point_direction(other.x, other.y, x, y)
+			switch(other.i){
+				case 0:
+					recon_distance_multiplier = .75
+				break;
+				case 4:
+					recon_distance_multiplier = .85
+				break;
+				case 8:
+					recon_distance_multiplier = 1
+				break;
+				case 36:
+					recon_distance_multiplier = .5
+				break;
+				case 44:
+					recon_distance_multiplier = 1
+				break;
+				case 72:
+					recon_distance_multiplier = .75
+				break;
+				case 76:
+					recon_distance_multiplier = .5
+				break;
+				case 80:
+					recon_distance_multiplier = .85
+				break;
+			}
+				
 		}
 	}
 		
 }
 
-squad_ships = array_create(15, noone)
+//fleet list
+fleet[0] = 0
+fleet_size = 0
+
 state = squad.defend_sector
 //testing only
+

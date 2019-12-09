@@ -1,3 +1,4 @@
+/*
 draw_self()
 
 _lead_target_x = x + lengthdir_x(speed * target_indicator, direction)

@@ -703,6 +703,14 @@
             }
         },
         {
+            "Key": "690341ed-fe2b-4d57-8a1b-94cbc1f2a9ba",
+            "Value": {
+                "id": "af239386-840b-471a-add3-44b9245b0678",
+                "resourcePath": "objects\\o_player_squad\\o_player_squad.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6ed1cd66-813b-4cb1-9a84-8a26532e2420",
             "Value": {
                 "id": "9750eeb2-2c32-473c-99a5-69a5a92aa801",
@@ -1523,14 +1531,6 @@
             "Value": {
                 "id": "4c6c48d3-dee4-4f17-a35a-6ec38b0c6590",
                 "resourcePath": "objects\\o_card\\o_card.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "df7d0a93-de65-499e-8d5d-75eecf599eea",
-            "Value": {
-                "id": "3ba648d0-5f67-4ccc-a3e2-6c2340b7421b",
-                "resourcePath": "objects\\o_player_squad\\o_player_squad.yy",
                 "resourceType": "GMObject"
             }
         },

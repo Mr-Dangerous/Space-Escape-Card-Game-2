@@ -1,3 +1,4 @@
+/*
 if (recon){
 	state = ship.scouting
 } else {

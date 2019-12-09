@@ -1,3 +1,4 @@
+/*
 speed = 2
 
 direction_change_counter--

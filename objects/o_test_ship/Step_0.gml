@@ -1,5 +1,5 @@
 /// @description
-
+/*
 one_pressed = keyboard_check_pressed(ord("1"))
 two_pressed = keyboard_check_pressed(ord("2"))
 three_pressed = keyboard_check_pressed(ord("3"))

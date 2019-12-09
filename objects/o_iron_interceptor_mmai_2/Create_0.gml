@@ -1,3 +1,4 @@
+/*
 //test functions - delete later
 assigned_defensive_grid_space = instance_nearest(x, y, o_grid_box)
 //assign post create variable definitions

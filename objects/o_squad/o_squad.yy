@@ -80,7 +80,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "o_player_squad",
+            "value": "0",
             "varName": "target_squad_resource",
             "varType": 5
         },

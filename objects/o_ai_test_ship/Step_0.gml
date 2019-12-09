@@ -1,3 +1,4 @@
+/*
 #region PreStateMachine
 //iron interceptor
 if (vector_locked){
@@ -118,6 +119,7 @@ switch(state){
 				}
 				*/
 				//check to see if enough damage has been sustained to warrant returning
+				/*
 				if (!ship_ok and interceptor_combat.out_of_combat){
 					state = ship.returning
 					vector_locked = false
@@ -126,7 +128,7 @@ switch(state){
 				/*
 				In all seriousness, how is this giong to work?  
 				*/
-				
+				/*
 				var _selected_weapon = basic_attack_array
 				var projectile_speed = weapon_1_projectile_speed
 				
@@ -368,6 +370,7 @@ switch(state){
 			
 		}
 	*/
+	/*
 	break;
 	#endregion
 	

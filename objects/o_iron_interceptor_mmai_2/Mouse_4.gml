@@ -1,4 +1,5 @@
 /// @description drag ship to a new square
+/*
 if (state = ship.planning or state = ship.repositioning){
 	var ship_copy = instance_create_layer(mouse_x, mouse_y, "Above_UI", o_ship_reposition_copy)
 	with (ship_copy){

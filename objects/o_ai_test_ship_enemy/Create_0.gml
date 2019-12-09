@@ -1,4 +1,5 @@
 //test functions - delete later
+/*
 assigned_defensive_grid_space = instance_nearest(x, y, o_grid_box)
 
 basic_attack_range = basic_attack_flight_time*weapon_1_projectile_speed

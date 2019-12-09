@@ -1,3 +1,4 @@
+/*
 draw_self()
 
 //exhaust effect

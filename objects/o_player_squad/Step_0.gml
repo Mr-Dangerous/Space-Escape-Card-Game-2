@@ -1,5 +1,16 @@
 //move grid boxes with the ship
-
+if (fleet[0] != 0){
+	fleet_size = array_length_1d(fleet)
+}
+if (engage_enemy = true){
+	var _k = 0
+	repeat(fleet_size){
+		with(fleet[_k]){
+			approach_enemy = true
+		}
+		_k++
+	}
+}
 var _k = 0
 repeat(81){
 	_length = grid_boxes[_k, 3]
@@ -11,6 +22,7 @@ repeat(81){
 		x = _x
 		y = _y
 		image_angle = other.image_angle
+		
 	}
 	_k++
 }
@@ -27,11 +39,8 @@ for (i = 0; i < 25; i++){
 }
 
 //Pre State machine checks
-if (target_sector != -1){
-	state = squad.moving
-	sector_beacon = game_setup_controller.possible_spawn_location[target_sector, 2]
-	target_sector = -1
-	
+if(instance_exists(target_squad)){
+	target_squad = instance_nearest(x, y, target_squad_resource)
 }
 
 #region State Machine
@@ -54,6 +63,76 @@ switch (state){
 			speed -= acceleration_rate
 		}
 		limit_speed()
+		
+		if (instance_exists(target_squad)){
+			if (distance_to_object(target_squad)< 2000){
+				state = squad.combat
+			}
+		}
+	break;
+	
+	case squad.find_enemy:
+		moving = true
+		//all placeholders for now
+		if (target_beacon = noone){
+			var _random_seed = irandom(8)
+			target_beacon = instance_nth_nearest(x, y, o_spawn_beacon, _random_seed)
+		}
+		_p_dir = point_direction(x, y, target_beacon.x, target_beacon.y)
+		turn_to_face_direction_no_correction(_p_dir)
+		direction = image_angle
+		speed+=acceleration_rate
+		limit_speed()
+		if (instance_exists(target_squad)){
+			if (distance_to_object(target_squad)< 2000){
+				state = squad.combat
+			}
+		}
+		if (distance_to_object(target_beacon)<20){
+			target_beacon = noone
+		}
+		
+	break;	
+	
+	case squad.combat:
+		if(instance_exists(target_squad)){
+			if(distance_to_object(target_squad) > 2100){
+				//enemy automatically seeks
+				target_beacon = instance_nearest(target_squad.x, target_squad.y, o_spawn_beacon)
+				state = squad.find_enemy
+				var _k = 0
+				repeat(fleet_size){
+					with(fleet[_k]){
+						approach_enemy = false
+						disengage_enemy = true
+					}
+					_k++
+				}
+			}
+			if (distance_to_object(target_squad) > 1200){
+				var _p_dir = point_direction(x, y, target_squad.x, target_squad.y)
+				turn_to_face_direction_no_correction(_p_dir)
+				direction = image_angle
+				speed+=acceleration_rate
+				limit_speed()
+			}
+			if (distance_to_object(target_squad) > 1300){
+				//assign the deploy command to all ships in the ship list
+				var size = array_length_1d(fleet)
+				_k = 0
+				repeat(size){
+					with(fleet[_k]){
+						deploy = true
+						enemy_squad_target = target_squad
+						deploy_direction = point_direction(x, y, target_squad.x, target_squad.y)
+					}
+					_k++
+				}
+					
+			}
+		} else {
+			state = squad.defend_sector
+		}
 	break;
 	
 	case squad.moving:
@@ -73,5 +152,25 @@ switch (state){
 }
 #endregion
 
+//post state machine
+scout_timer--
+if (scout_timer = 0){
+	scout_timer = 1000
+	if (state = squad.defend_sector or state = squad.find_enemy or state = squad.moving){
+		_k = 0
+		repeat(fleet_size){
+			if(fleet[_k].recon){
+				with(fleet[_k]){
+					scout_mission = true
+					scout_range = max_scout_range
+				}
+			}
+			_k++
+		}
+	}
+	
+}
+
 
 	
+
