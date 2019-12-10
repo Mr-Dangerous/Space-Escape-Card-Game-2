@@ -1,3 +1,4 @@
+#region Prestate machine
 if (deploy){
 	deploy = false
 	state = ship.deploy
@@ -18,8 +19,10 @@ if (approach_enemy){
 if (approach_enemy = false and disengage_enemy = true){
 	disengage_enemy = false
 	state = ship.disengage
-	disengage_counter = 100
+	disengage_counter = 10
 }
+#endregion
+
 #region state machine
 switch(state){
 	
@@ -217,9 +220,9 @@ switch(state){
 				squad_object.engage_enemy = true
 				squad_object.combat_switch = true
 			}
-		} else {
-			state = ship.planning
-		}
+		} 
+		if(!instance_exists(enemy_squad_target)) state = ship.planning
+		
 	break;
 	#endregion
 	
@@ -556,8 +559,8 @@ switch(state){
 		
 	#region disengage
 	case ship.disengage:
-		target_x = assigned_grid_space.x
-		target_y = assigned_grid_space.y
+		target_x = assigned_defensive_grid_space.x
+		target_y = assigned_defensive_grid_space.y
 		seek = true
 		flee = false
 		pursue = false
@@ -602,8 +605,6 @@ switch(state){
 }
 #endregion
 
-
-
 #region Post state machine
 
 //ship status
@@ -642,8 +643,3 @@ if (!movement_locked){
 
 
 #endregion
-
-
-
-
-

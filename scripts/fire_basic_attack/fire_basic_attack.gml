@@ -14,7 +14,7 @@ repeat(_basic_attack_number){
 	gun_offset_y = y+lengthdir_y(gun_offset_length, gun_offset_direction)
 	var _projectile = instance_create_layer(gun_offset_x, gun_offset_y, "Projectiles", _basic_attack_array[_i, 1])
 	with (_projectile){
-		duration = _basic_attack_array[0, 6]
+		duration = _basic_attack_array[_i, 6]
 		image_scale = other.image_scale
 		image_angle = other.image_angle
 		direction = image_angle
