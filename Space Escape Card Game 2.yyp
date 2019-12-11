@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "130eb0c6-7afb-43b3-9fc4-31ae9dca7f9c",
+            "Value": {
+                "id": "683c3cfe-8bf8-4d07-a1a8-6e7b6980a970",
+                "resourcePath": "views\\130eb0c6-7afb-43b3-9fc4-31ae9dca7f9c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "14210552-4f0f-4293-87da-b4a0919debfa",
             "Value": {
                 "id": "099c86f3-fd90-4f64-98a9-8f2583f60e77",
@@ -1007,6 +1015,14 @@
             }
         },
         {
+            "Key": "9f3a0736-8f8f-428d-8696-10ef9be0b0a7",
+            "Value": {
+                "id": "388562a7-bcc3-45fd-b17d-474db3fa6d34",
+                "resourcePath": "objects\\o_crystal_interceptor_card\\o_crystal_interceptor_card.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a11c8be4-0f43-430d-ba0e-ba3517db8420",
             "Value": {
                 "id": "be912a97-1c48-4c25-a6a0-2f818d95674c",
@@ -1282,7 +1298,7 @@
             "Key": "d0f0ca73-eba8-446b-91ce-66ee37774f91",
             "Value": {
                 "id": "2ce62435-4416-4bf7-9154-96066b84b931",
-                "resourcePath": "objects\\o_alien_interceptor\\o_alien_interceptor.yy",
+                "resourcePath": "objects\\o_alien_interceptor_enemy\\o_alien_interceptor_enemy.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1359,6 +1375,14 @@
             }
         },
         {
+            "Key": "dc8d0eec-9814-47b0-a2cb-ea21e81c1186",
+            "Value": {
+                "id": "09d6e4cf-fad2-4fb9-a5f4-0650e05b6040",
+                "resourcePath": "objects\\o_crystal_interceptor\\o_crystal_interceptor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "dddd6b1c-0865-4200-b775-04dee315d890",
             "Value": {
                 "id": "4c6c48d3-dee4-4f17-a35a-6ec38b0c6590",
@@ -1423,6 +1447,14 @@
             }
         },
         {
+            "Key": "eb84d44f-719c-426c-a1c6-4d4d6eee4dea",
+            "Value": {
+                "id": "f956a5f9-0246-4759-99e7-b244c7784559",
+                "resourcePath": "views\\eb84d44f-719c-426c-a1c6-4d4d6eee4dea.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "ede726cd-8f22-4ad4-a4ef-25b4042acdef",
             "Value": {
                 "id": "bd99b1c2-b087-4722-92cd-9afff0295d97",
@@ -1468,6 +1500,14 @@
                 "id": "244efbed-a915-4917-99be-0d5a9228923b",
                 "resourcePath": "scripts\\fire_basic_attack\\fire_basic_attack.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f7a3580c-4afc-4090-9d38-596e5abc38b7",
+            "Value": {
+                "id": "c35e531f-8e54-4a64-9ef0-9aa87133a731",
+                "resourcePath": "objects\\o_card_parent\\o_card_parent.yy",
+                "resourceType": "GMObject"
             }
         },
         {

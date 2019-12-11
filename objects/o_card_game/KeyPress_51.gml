@@ -5,7 +5,18 @@ repeat (5){
 	
 	//define the object that goes in the card
 	//the source for this instance will be accomplished via a script later\
-	shop_slots[i, 1] = o_iron_interceptor_card  //card in the slot, or maybe the actual object
+	var _card = 0
+	var _random_seed = irandom(1)
+	switch (_random_seed){
+		case 0:
+			_card = o_iron_interceptor_card
+		break;
+		
+		case 1:
+			_card = o_crystal_interceptor_card
+		break;
+	}
+	shop_slots[i, 1] = _card  //card in the slot, or maybe the actual object
 	i++
 }
 //create the instances that will go into the shop slots
