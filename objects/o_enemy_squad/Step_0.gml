@@ -1,48 +1,6 @@
 //enemy_squad
 target_squad = instance_nearest(x, y, target_squad_resource)
 
-#region create fleet
-if (create_fleet_counter >= 0){
-	create_fleet_counter--
-	if(create_fleet_counter = 0){
-		
-		repeat(10){
-			var _open_squad_slot = -1
-			
-			
-			for(i = 0; i < maximum_units; i++){
-				if (fleet[i] = noone){
-					_open_squad_slot = i
-					i = 100 //ends the loop.... can I jsut exit?
-				}
-			}
-			_x = x + irandom_range(-200, 200)
-			_y = y + irandom_range(-200, 200)
-			var _nearest_grid_space = instance_nearest(_x, _y, o_grid_box)
-			if (_nearest_grid_space.player_unit_assigned = noone and _open_squad_slot != -1){
-				
-				var _new_ship = instance_create_layer(_nearest_grid_space.x, _nearest_grid_space.y, "Ships", o_alien_interceptor)
-				fleet[_open_squad_slot] = _new_ship
-				show_debug_message("ship_created!")
-				
-				with (_new_ship){
-					assigned_defensive_grid_space = _nearest_grid_space
-				}
-				with (_nearest_grid_space){
-					player_unit_assigned = _new_ship
-					if (recon_square){
-						_new_ship.recon_direction = recon_direction
-						_new_ship.recon = true
-						_new_ship.recon_distance_multiplier = recon_distance_multiplier
-						
-					}
-				}
-			}
-		}
-		
-	}
-}
-#endregion
 
 //move grid boxes with the ship
 if (fleet[0] != 0){
@@ -145,7 +103,7 @@ switch (state){
 	
 	case squad.combat:
 		if(instance_exists(target_squad)){
-			if(distance_to_object(target_squad) < 2100){
+			if(distance_to_object(target_squad) > 2100){
 				//enemy automatically seeks
 				target_beacon = instance_nearest(target_squad.x, target_squad.y, o_spawn_beacon)
 				state = squad.find_enemy
@@ -157,15 +115,16 @@ switch (state){
 					}
 					_k++
 				}
+				combat_switch = false
 			}
 			if (distance_to_object(target_squad) < 1200){
 				var _p_dir = point_direction(x, y, target_squad.x, target_squad.y)
 				turn_to_face_direction_no_correction(_p_dir)
 				direction = image_angle
 				speed-=acceleration_rate
-				limit_speed()
+				
 			}
-			if (distance_to_object(target_squad) < 1300){
+			if (distance_to_object(target_squad) < 1300 and combat_switch = false){
 				//assign the deploy command to all ships in the ship list
 				var size = array_length_1d(fleet)
 				_k = 0
@@ -177,12 +136,12 @@ switch (state){
 					}
 					_k++
 				}
-				speed -= acceleration_rate
-					
+				speed-=acceleration_rate
 			}
 		} else {
 			state = squad.defend_sector
 		}
+	limit_speed()
 	break;
 	
 	case squad.moving:

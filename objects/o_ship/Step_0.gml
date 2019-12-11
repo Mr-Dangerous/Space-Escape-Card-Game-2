@@ -4,6 +4,12 @@ if (deploy){
 	state = ship.deploy
 	
 }
+if (armor < 0){
+	show_debug_message("ship destroyed!")
+	instance_destroy()
+}
+
+
 if (scout_mission){
 	var _scout_beacon_x = assigned_defensive_grid_space.x + lengthdir_x(max_speed * max_scout_range * recon_distance_multiplier, squad_object.image_angle + recon_direction)
 	var _scout_beacon_y = assigned_defensive_grid_space.y + lengthdir_y(max_speed * max_scout_range * recon_distance_multiplier, squad_object.image_angle + recon_direction)
@@ -215,7 +221,7 @@ switch(state){
 			pursue = false
 			strafe = false
 			ship_target = noone
-			var nearest_enemy = instance_nearest(x, y, o_enemy_ship)
+			var nearest_enemy = instance_nearest(x, y, target_ship_team)
 			var _distance_to_nearest_enemy = distance_to_object(nearest_enemy)
 			if (_distance_to_nearest_enemy < 600 and squad_object.combat_switch = false){
 				squad_object.engage_enemy = true
@@ -232,7 +238,7 @@ switch(state){
 		approach_enemy = false
 		//determine target
 		
-		if (ship_target = noone){
+		if (!instance_exists(ship_target)){
 			var nearest_interceptor = noone
 			var nearest_fighter = noone
 			var nearest_frigate = noone
@@ -276,7 +282,7 @@ switch(state){
 				break;
 			}
 		}
-		if (ship_target != noone){
+		if (instance_exists(ship_target)){
 				switch (ship_target.ship_class){
 					case "interceptor":
 						state = ship.attacking_interceptor

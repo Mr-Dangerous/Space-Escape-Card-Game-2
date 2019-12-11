@@ -33,6 +33,26 @@
             "enumb": 0,
             "eventtype": 1,
             "m_owner": "7f8ec612-0baa-4c8c-8230-4d89db34108b"
+        },
+        {
+            "id": "0800299f-6615-4ca0-aec9-aecd3ed5b4d6",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "a884c193-4865-4f79-872a-6eae0d0fa7f9",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "7f8ec612-0baa-4c8c-8230-4d89db34108b"
+        },
+        {
+            "id": "d308555f-afc6-4b0f-a065-0274e209ef5e",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "3989ecb2-cc73-4e68-a599-c600d280549a",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "7f8ec612-0baa-4c8c-8230-4d89db34108b"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -148,7 +168,7 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "damage_type",
-            "varType": 1
+            "varType": 2
         },
         {
             "id": "49faffc2-d243-46bf-9998-6cf6af67d0ff",

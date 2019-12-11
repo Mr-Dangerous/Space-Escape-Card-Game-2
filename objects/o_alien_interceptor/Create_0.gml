@@ -1,7 +1,8 @@
 #region Variable_definitions
 
 #region General Sprite Resources
-image_scale = .057#endregion
+image_scale = .057
+#endregion
 
 #region Behavior
 seek = false
