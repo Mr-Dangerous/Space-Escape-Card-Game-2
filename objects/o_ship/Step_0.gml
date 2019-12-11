@@ -150,7 +150,7 @@ switch(state){
 		}
 		#endregion
 	#region combat manuevers
-	if (combat_timing_counter = 0){
+	if (combat_timing_counter <= 0){
 	combat_timing_counter = (irandom_range(40, 80)-pilot_reflexes)
 	ship_target = instance_nearest(x, y, target_ship_team)
 	if (instance_exists(ship_target)){
@@ -218,7 +218,7 @@ switch(state){
 			var nearest_enemy = instance_nearest(x, y, o_enemy_ship)
 			if (distance_to_object(nearest_enemy) < 600 and squad_object.combat_switch = false){
 				squad_object.engage_enemy = true
-				squad_object.combat_switch = true
+				
 			}
 		} 
 		if(!instance_exists(enemy_squad_target)) state = ship.planning
@@ -333,7 +333,7 @@ switch(state){
 		
 			#endregion
 		#region combat manuevers
-		if (combat_timing_counter = 0){
+		if (combat_timing_counter <= 0){
 		combat_timing_counter = (irandom_range(40, 80)-pilot_reflexes)
 	
 		if (instance_exists(ship_target)){
@@ -419,7 +419,7 @@ switch(state){
 		
 			#endregion
 		#region combat manuevers
-		if (combat_timing_counter = 0){
+		if (combat_timing_counter <= 0){
 		combat_timing_counter = (irandom_range(40, 80)-pilot_reflexes)
 	
 		if (instance_exists(ship_target)){
@@ -505,7 +505,7 @@ switch(state){
 		
 			#endregion
 		#region combat manuevers
-		if (combat_timing_counter = 0){
+		if (combat_timing_counter <= 0){
 		combat_timing_counter = (irandom_range(40, 80)-pilot_reflexes)
 	
 		if (instance_exists(ship_target)){

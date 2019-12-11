@@ -69,6 +69,7 @@ basic_attack_fire_rate_counter = 0
 basic_attack_range = 0
 basic_attack_number = 1 //1 per weapon
 gimbal_fire_angle = 1
+projectile_speed = 0
 
 //Per Weapon
 weapon_1_x_offset = 0

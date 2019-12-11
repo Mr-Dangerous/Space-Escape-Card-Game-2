@@ -34,14 +34,6 @@
             "objectId": "8d76ac5c-c5ae-488c-9168-1544e89d8d6b",
             "propertyId": "5a67aff6-4245-4d3d-825d-3e9212b22439",
             "value": "o_player_squad"
-        },
-        {
-            "id": "27d06d97-78c1-4c9f-9a16-889990801250",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "8d76ac5c-c5ae-488c-9168-1544e89d8d6b",
-            "propertyId": "03a0ea31-cdde-43ae-ac7a-740733e5ae7b",
-            "value": "3"
         }
     ],
     "parentObjectId": "8d76ac5c-c5ae-488c-9168-1544e89d8d6b",

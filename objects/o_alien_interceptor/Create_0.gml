@@ -1,8 +1,7 @@
 #region Variable_definitions
 
 #region General Sprite Resources
-image_scale = .045
-#endregion
+image_scale = .057#endregion
 
 #region Behavior
 seek = false
@@ -93,6 +92,9 @@ weapon_2_length_offset = point_distance(0, 0, (weapon_2_x_offset * image_scale),
 weapon_2_direction_offset = point_direction(0, 0, (weapon_2_x_offset * image_scale), (weapon_2_y_offset* image_scale))
 weapon_2_projectile_flight_time = 200
 
+//weapon_footer (variables that need other variables to function)
+projectile_speed = weapon_1_projectile_speed
+
 #endregion
 
 #region Exhaust variables
@@ -123,6 +125,7 @@ scout_beacon = noone
 
 #region Fleet and positioning info
 squad_object = instance_nearest(x, y, team_squad_type)
+//this is only because of the way that the enemy spawn functions.
 assigned_defensive_grid_space = instance_nearest(x, y, o_grid_box)//temporrary
 #endregion
 #endregion

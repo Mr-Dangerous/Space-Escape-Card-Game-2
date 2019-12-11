@@ -1,11 +1,13 @@
+//player squad
 //variables
-target_squad = instance_nearest(x, y, o_enemy_squad)
+target_squad = instance_nearest(x, y, target_squad_resource)
 
 //move grid boxes with the ship
 if (fleet[0] != 0){
 	fleet_size = array_length_1d(fleet)
 }
-if (engage_enemy = true){
+if (engage_enemy = true and combat_switch = false){
+	combat_switch = true
 	var _k = 0
 	repeat(fleet_size){
 		with(fleet[_k]){
@@ -49,14 +51,14 @@ for (i = 0; i < 25; i++){
 }
 
 //Pre State machine checks
-if(instance_exists(target_squad)){
+if(!instance_exists(target_squad)){
 	target_squad = instance_nearest(x, y, target_squad_resource)
 }
 
 #region State Machine
 switch (state){
 	case squad.defend_sector:
-		var nearest_enemy_squad = instance_nearest(x, y, o_enemy_squad)
+		var nearest_enemy_squad = instance_nearest(x, y, target_squad_resource)
 		if (instance_exists(nearest_enemy_squad)){
 			if (distance_to_object(nearest_enemy_squad) < 2000){
 				_p_dir = point_direction(x, y, nearest_enemy_squad.x, nearest_enemy_squad.y)
