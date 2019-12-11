@@ -120,15 +120,16 @@ switch (state){
 					}
 					_k++
 				}
+				combat_switch = false
 			}
-			if (distance_to_object(target_squad) > 1200){
+			if (distance_to_object(target_squad) < 1200){
 				var _p_dir = point_direction(x, y, target_squad.x, target_squad.y)
 				turn_to_face_direction_no_correction(_p_dir)
 				direction = image_angle
-				speed+=acceleration_rate
-				limit_speed()
+				speed-=acceleration_rate
+				
 			}
-			if (distance_to_object(target_squad) > 1300){
+			if (distance_to_object(target_squad) < 1300 and combat_switch = false){
 				//assign the deploy command to all ships in the ship list
 				var size = array_length_1d(fleet)
 				_k = 0
@@ -140,11 +141,12 @@ switch (state){
 					}
 					_k++
 				}
-					
+				speed-=acceleration_rate
 			}
 		} else {
 			state = squad.defend_sector
 		}
+	limit_speed()
 	break;
 	
 	case squad.moving:

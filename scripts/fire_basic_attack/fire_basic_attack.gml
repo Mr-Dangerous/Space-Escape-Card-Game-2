@@ -16,6 +16,8 @@ repeat(_basic_attack_number){
 	with (_projectile){
 		duration = _basic_attack_array[_i, 6]
 		image_scale = other.image_scale
+		image_xscale = other.image_scale
+		image_yscale = other.image_scale
 		image_angle = other.image_angle
 		direction = image_angle
 		speed = _basic_attack_array[_i, 0]

@@ -130,6 +130,10 @@ switch (state){
 					}
 					_k++
 				}
+				speed -= acceleration_rate
+				if (speed < 0){
+					speed = 0
+				}
 					
 			}
 		} else {

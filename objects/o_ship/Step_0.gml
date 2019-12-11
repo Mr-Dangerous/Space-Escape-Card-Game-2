@@ -216,7 +216,8 @@ switch(state){
 			strafe = false
 			ship_target = noone
 			var nearest_enemy = instance_nearest(x, y, o_enemy_ship)
-			if (distance_to_object(nearest_enemy) < 600 and squad_object.combat_switch = false){
+			var _distance_to_nearest_enemy = distance_to_object(nearest_enemy)
+			if (_distance_to_nearest_enemy < 600 and squad_object.combat_switch = false){
 				squad_object.engage_enemy = true
 				
 			}

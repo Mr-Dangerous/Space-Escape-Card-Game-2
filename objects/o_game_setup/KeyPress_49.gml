@@ -200,8 +200,8 @@ if (!game_created){
 	
 	
 	#endregion
-	var player_start_position = 12//irandom_range(0, 12)
-	var enemy_start_position = 14//irandom_range(14, 24)
+	var player_start_position = 10//irandom_range(0, 12)
+	var enemy_start_position = 11//irandom_range(14, 24)
 	
 	var _player_x = possible_spawn_location[player_start_position, 0]
 	var _player_y = possible_spawn_location[player_start_position, 1]
