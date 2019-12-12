@@ -28,9 +28,6 @@ current_deck = ds_stack_create()
 iron_interceptor_book = array_create(30, o_iron_interceptor_card)
 crystal_interceptor_book = array_create(30, o_crystal_interceptor_card)
 
-//eventually, a script to insert, btu for now, its super simple.  This script
-//will be called everytime the deck is shuffled
-
 shuffle_deck()
 	
 

@@ -229,6 +229,20 @@
             "value": "instance_find(o_camera, 0)",
             "varName": "camera_controller",
             "varType": 4
+        },
+        {
+            "id": "2fabcd04-7c71-467e-98cf-0b1a660ff2ec",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "card_book",
+            "varType": 0
         }
     ],
     "solid": false,

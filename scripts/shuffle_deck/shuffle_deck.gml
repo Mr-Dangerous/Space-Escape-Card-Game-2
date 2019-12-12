@@ -50,15 +50,17 @@ for (var _k = 0; _k < array_length_1d(master_deck); _k++){
 	}
 
 	//check to see if the book has any cards left
-	selected_card = noone
+	selected_card[0, 0] = noone //the card to be assigned
+	selected_card[0, 1] = noone //the book the card is from
 	for(var i=0; i < array_length_1d(selected_book); i++){
 		if (selected_book[i] != noone){
-			selected_card = selected_book[i]
+			selected_card[0, 0] = selected_book[i]
+			selected_card[0, 1] = selected_book
 			selected_book[@ i] = noone
 			break;
 		}
 	}
-	if (selected_card = noone){
+	if (selected_card[0, 0] = noone){
 		_k--
 		break;
 	}

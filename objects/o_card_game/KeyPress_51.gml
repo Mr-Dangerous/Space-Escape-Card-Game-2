@@ -1,3 +1,12 @@
+///@description recycle shop/shuffle deck
+
+//clear the shop slots and put the cards back into their books
+//keep trukcing
+/*	for (var i
+	if (shop_slots[i, 1] != noone){
+		book = shop_slots[i, 1][0, 1]
+		for (var 
+	}*/
 
 
 
@@ -18,12 +27,13 @@ for (var i = 0; i < 5; i++){
 var i = 0
 repeat (5){
 	
-	var _ship = instance_create_layer(0, 0, "Ships", shop_slots[i, 1])
+	var _ship = instance_create_layer(0, 0, "Ships", shop_slots[i, 1][0,0])
 	
 	shop_slots[i, 2] = _ship
 	
 	with (_ship){
 		visible = false
+		card_book = shop_slots[i, 1][0, 1] 
 	}
 	i++
 }
