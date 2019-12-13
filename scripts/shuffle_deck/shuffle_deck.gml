@@ -1,7 +1,8 @@
 for (var _k = 0; _k < array_length_1d(master_deck); _k++){
 //generate the level - eventually, will be a d100 roll
+	randomize()
 	var card_level = 1
-	var card_seed = irandom(1)//selects from the books that exsist
+	var card_seed = irandom_range(0, 1)//selects from the books that exsist
 	var selected_book = noone
 	//select the book
 	switch(card_level){

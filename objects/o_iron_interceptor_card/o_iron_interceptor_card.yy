@@ -39,14 +39,6 @@
             "objectId": "f7a3580c-4afc-4090-9d38-596e5abc38b7",
             "propertyId": "39d5ddf4-8bfb-4b0b-8610-edccff92ed3b",
             "value": "BM-150 Mare"
-        },
-        {
-            "id": "dbe40d71-f95f-497a-a57a-e9042180ee56",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "f7a3580c-4afc-4090-9d38-596e5abc38b7",
-            "propertyId": "2fabcd04-7c71-467e-98cf-0b1a660ff2ec",
-            "value": "iron_interceptor_book"
         }
     ],
     "parentObjectId": "f7a3580c-4afc-4090-9d38-596e5abc38b7",

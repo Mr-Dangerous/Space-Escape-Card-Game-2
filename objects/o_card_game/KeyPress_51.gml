@@ -1,12 +1,25 @@
 ///@description recycle shop/shuffle deck
 
 //clear the shop slots and put the cards back into their books
-//keep trukcing
-/*	for (var i
+
+for (var i = 0; i< 5; i++){
 	if (shop_slots[i, 1] != noone){
-		book = shop_slots[i, 1][0, 1]
-		for (var 
-	}*/
+		var _card = shop_slots[i, 1]
+		var book = _card[0, 0]
+		var book_size = array_length_1d(book)
+		for (var k = 0; k < book_size; k++){
+			if (book[k] = noone){
+				book[k] = _card
+			}
+		}
+		
+		var _current_card = shop_slots [i, 2]
+		instance_destroy(_current_card)
+		shop_slots[i, 1] = noone
+		shop_slots[i, 2] = noone
+	}
+}
+
 
 
 
@@ -21,19 +34,19 @@ for (var i = 0; i < 5; i++){
 	var _card = ds_stack_pop(current_deck)
 	 
 	shop_slots[i, 1] = _card  //card in the slot, or maybe the actual object
+	//create the instances that will go into the shop slots
 
-}
-//create the instances that will go into the shop slots
-var i = 0
-repeat (5){
-	
-	var _ship = instance_create_layer(0, 0, "Ships", shop_slots[i, 1][0,0])
+	var _book = _card[0, 1]
+	var _ship_to_create = _card[0, 0]
+	var _ship = instance_create_layer(0, 0, "Ships", _ship_to_create)
 	
 	shop_slots[i, 2] = _ship
 	
 	with (_ship){
 		visible = false
-		card_book = shop_slots[i, 1][0, 1] 
+		card_book = _book
 	}
-	i++
+
+
 }
+
