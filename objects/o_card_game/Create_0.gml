@@ -27,6 +27,9 @@ current_deck = ds_stack_create()
 //create card references to insert into the deck
 iron_interceptor_book = array_create(30, o_iron_interceptor_card)
 crystal_interceptor_book = array_create(30, o_crystal_interceptor_card)
+alien_interceptor_book = array_create(30, o_alien_interceptor_card)
+solar_interceptor_book = array_create(30, o_solar_interceptor_card)
+imperial_interceptor_book = array_create(30, o_imperial_interceptor_card)
 
 shuffle_deck()
 	

@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "2a443696-025f-4b37-943a-68fa2227e1e2",
+            "Value": {
+                "id": "7c29e9ba-fe25-4243-8f4d-ddda6ec4cbae",
+                "resourcePath": "objects\\o_alien_interceptor\\o_alien_interceptor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2b92f5e8-eea3-4ac7-82ff-774e2cae3036",
             "Value": {
                 "id": "8d7e7dc6-3079-4f06-9258-f4b074974640",
@@ -444,6 +452,14 @@
                 "id": "88c4330c-6f69-4aef-a361-06297516ed61",
                 "resourcePath": "sprites\\s_sector_map\\s_sector_map.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "49778e15-8d11-4f08-ba61-fd207c3f36f2",
+            "Value": {
+                "id": "beaadecc-99a5-4e63-8219-541effd4ccbd",
+                "resourcePath": "objects\\o_imperial_interceptor_card\\o_imperial_interceptor_card.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -927,6 +943,14 @@
             }
         },
         {
+            "Key": "905c9328-3795-4801-b863-c3d1da47c188",
+            "Value": {
+                "id": "08add8b6-25fb-4609-adbc-706154fb7d18",
+                "resourcePath": "objects\\o_solar_interceptor_card\\o_solar_interceptor_card.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "90b9a901-a8a4-410c-bef7-314e4a2a0145",
             "Value": {
                 "id": "c4a9f1ab-3dfc-426f-bd3a-fa6ad9043138",
@@ -940,6 +964,14 @@
                 "id": "ec66c28c-ec4c-42e0-befe-00aad7c7aaf6",
                 "resourcePath": "views\\91130b6b-8a54-4be5-b802-e668f93ae943.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "92905af9-b095-404f-acf8-cc8bf48f9d12",
+            "Value": {
+                "id": "8d09a17f-ac62-4511-8c23-7a9e71d268dd",
+                "resourcePath": "objects\\o_alien_interceptor_card\\o_alien_interceptor_card.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1399,6 +1431,14 @@
             }
         },
         {
+            "Key": "dd7c14d4-0baf-4d3a-8b3c-f57e300eaa95",
+            "Value": {
+                "id": "b07973ec-e834-46eb-b007-4db140b77aeb",
+                "resourcePath": "objects\\o_imperial_interceptor\\o_imperial_interceptor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "dddd6b1c-0865-4200-b775-04dee315d890",
             "Value": {
                 "id": "4c6c48d3-dee4-4f17-a35a-6ec38b0c6590",
@@ -1484,6 +1524,14 @@
                 "id": "c693215b-27bc-4d2a-9909-694871454b69",
                 "resourcePath": "sprites\\s_grid_box_old\\s_grid_box_old.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f1988050-018f-419d-8f71-8a6065dc7de5",
+            "Value": {
+                "id": "6db9df80-75a9-4e02-9d87-f6ae30bf7de2",
+                "resourcePath": "objects\\o_solar_interceptor\\o_solar_interceptor.yy",
+                "resourceType": "GMObject"
             }
         },
         {

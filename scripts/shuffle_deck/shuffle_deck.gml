@@ -2,7 +2,7 @@ for (var _k = 0; _k < array_length_1d(master_deck); _k++){
 //generate the level - eventually, will be a d100 roll
 	randomize()
 	var card_level = 1
-	var card_seed = irandom_range(0, 1)//selects from the books that exsist
+	var card_seed = irandom_range(0, 4)//selects from the books that exsist
 	var selected_book = noone
 	//select the book
 	switch(card_level){
@@ -14,8 +14,17 @@ for (var _k = 0; _k < array_length_1d(master_deck); _k++){
 				case 1://crystal interceptor
 					selected_book = crystal_interceptor_book
 				break;
+				case 2://solar interceptor
+					selected_book = solar_interceptor_book
+				break;
+				case 3://imperial interceptor
+					selected_book = imperial_interceptor_book
+				break;
+				case 4://alien interceptor
+					selected_book = alien_interceptor_book
+				break;
 			}
-		break
+		break;
 	
 		case 2:
 			switch(card_seed){
@@ -51,8 +60,8 @@ for (var _k = 0; _k < array_length_1d(master_deck); _k++){
 	}
 
 	//check to see if the book has any cards left
-	selected_card[0, 0] = noone //the card to be assigned
-	selected_card[0, 1] = noone //the book the card is from
+	var selected_card = array_create(2, noone)
+
 	for(var i=0; i < array_length_1d(selected_book); i++){
 		if (selected_book[i] != noone){
 			selected_card[0, 0] = selected_book[i]

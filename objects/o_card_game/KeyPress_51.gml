@@ -15,6 +15,7 @@ for (var i = 0; i< 5; i++){
 		
 		var _current_card = shop_slots [i, 2]
 		instance_destroy(_current_card)
+		show_debug_message("shop_slot_cleared")
 		shop_slots[i, 1] = noone
 		shop_slots[i, 2] = noone
 	}
