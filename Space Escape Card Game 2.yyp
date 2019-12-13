@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "0a42a0d3-e0a4-40a0-b19f-172b24fb7bbc",
+            "Value": {
+                "id": "34aca47a-2507-4cd7-b66e-e0a98655641f",
+                "resourcePath": "objects\\o_ballistic_bullet_bio\\o_ballistic_bullet_bio.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0b5e2b82-e0f7-4d02-a7cc-fced5a9aafcb",
             "Value": {
                 "id": "ed76b1b6-44f6-4172-814f-7893904e2f5f",
@@ -243,6 +251,14 @@
             "Value": {
                 "id": "7c29e9ba-fe25-4243-8f4d-ddda6ec4cbae",
                 "resourcePath": "objects\\o_alien_interceptor\\o_alien_interceptor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "2b1c9b59-3426-456e-8157-7eda2a5b2c5c",
+            "Value": {
+                "id": "ae4c7190-5c93-44ea-8109-d7c7fe8e34a5",
+                "resourcePath": "objects\\object41\\object41.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1015,6 +1031,14 @@
             }
         },
         {
+            "Key": "90ed226d-41d8-46ff-bf76-a1ead1043982",
+            "Value": {
+                "id": "2c0e1f3c-a4e7-4b53-9442-62d3127ed5f7",
+                "resourcePath": "objects\\o_laser_bullet_blue\\o_laser_bullet_blue.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "91130b6b-8a54-4be5-b802-e668f93ae943",
             "Value": {
                 "id": "ec66c28c-ec4c-42e0-befe-00aad7c7aaf6",
@@ -1132,6 +1156,14 @@
                 "id": "9b3f62d1-4f10-4035-a9cc-0ea4d9e68128",
                 "resourcePath": "sprites\\s_projectile_leader\\s_projectile_leader.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a2a76ec7-b3ad-4857-a0f5-8a48f0c56868",
+            "Value": {
+                "id": "b8e0df4f-8cd2-4bea-bc7c-1cdc73a6c2a4",
+                "resourcePath": "objects\\o_ballistic_bullet_purple\\o_ballistic_bullet_purple.yy",
+                "resourceType": "GMObject"
             }
         },
         {
