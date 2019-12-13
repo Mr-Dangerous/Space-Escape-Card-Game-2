@@ -73,10 +73,10 @@ gimbal_fire_angle = 1
 
 //Per Weapon
 //weapon 1
-weapon_1_x_offset = 45
-weapon_1_y_offset = -121
+weapon_1_x_offset = 463
+weapon_1_y_offset = 81
 weapon_1_projectile_speed = 10
-weapon_1_projectile_resource = o_ballistic_bullet //resource
+weapon_1_projectile_resource = o_ballistic_bullet_blue //resource
 weapon_1_projectile_damage = 10
 weapon_1_projectile_damage_type = "light"
 weapon_1_length_offset = point_distance(0, 0, (weapon_1_x_offset * image_scale), (weapon_1_y_offset * image_scale))
@@ -84,10 +84,10 @@ weapon_1_direction_offset = point_direction(0, 0, (weapon_1_x_offset * image_sca
 weapon_1_projectile_flight_time = 200
 
 //weapon 2
-weapon_2_x_offset = 45
-weapon_2_y_offset = 121
+weapon_2_x_offset = 463
+weapon_2_y_offset = -81
 weapon_2_projectile_speed = 10
-weapon_2_projectile_resource = o_ballistic_bullet //resource
+weapon_2_projectile_resource = o_ballistic_bullet_blue //resource
 weapon_2_projectile_damage = 10
 weapon_2_projectile_damage_type = "light"
 weapon_2_length_offset = point_distance(0, 0, (weapon_2_x_offset * image_scale), (weapon_2_y_offset * image_scale))
@@ -107,7 +107,7 @@ exhaust_type = s_rocket_exhaust_original//resource
 exhaust_ports[0, 0] = 1 //number of exhaust ports
 exhaust_ports[0, 1] = rocket_image_counter //rocket_image_counter_reset
 //exhaust port 1
-exhaust_ports[1, 0] = -317 //exhaust_distance_offset
+exhaust_ports[1, 0] = -329 //exhaust_distance_offset
 exhaust_ports[1, 1] = 0 //exhaust_firection_offset
 
 

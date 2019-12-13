@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "036f8ef2-0b68-43d2-8104-420be6089e25",
+            "Value": {
+                "id": "1cd0fa89-e0fb-4f7b-a87a-448e24d9fc51",
+                "resourcePath": "views\\036f8ef2-0b68-43d2-8104-420be6089e25.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "042c97eb-7285-4ec1-b9bd-7bca51b83760",
             "Value": {
                 "id": "b2154f7f-3e94-44bb-8830-37d160064252",
@@ -1287,14 +1295,6 @@
             }
         },
         {
-            "Key": "bff60429-f11c-438e-9c2a-0f209fafc598",
-            "Value": {
-                "id": "fb84b934-e583-4429-a3b6-1fe76fb11fcd",
-                "resourcePath": "scripts\\scr_parse_ship_resource\\scr_parse_ship_resource.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "c0b80b9c-c9e7-4b6a-9d57-9154ec57f301",
             "Value": {
                 "id": "f60573f0-f01d-4e2e-b4bc-ed7ac00e7441",
@@ -1324,6 +1324,14 @@
                 "id": "ba44e468-b1d8-4e0c-b252-6fe34208b78c",
                 "resourcePath": "sprites\\s_iron_frigate_original\\s_iron_frigate_original.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c8107917-16a8-435d-9612-8adf10ec33d1",
+            "Value": {
+                "id": "1ce9fe41-879c-4261-a85e-8ac9c3951da2",
+                "resourcePath": "objects\\o_ballistic_bullet_blue\\o_ballistic_bullet_blue.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1615,6 +1623,14 @@
             }
         },
         {
+            "Key": "f58a9080-283e-49ac-a450-40bdb1c57628",
+            "Value": {
+                "id": "fed0853e-160f-45a2-aee1-5ec08adcd1d7",
+                "resourcePath": "views\\f58a9080-283e-49ac-a450-40bdb1c57628.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "f6983a44-27f0-4541-bfa0-a0a916efd54e",
             "Value": {
                 "id": "244efbed-a915-4917-99be-0d5a9228923b",
@@ -1681,25 +1697,24 @@
     ],
     "script_order": [
         "7b288659-a9fa-4243-aec7-45df8db0f13d",
-        "3f8dec3a-9faf-4c9c-88f5-d2a1a4a81065",
-        "f1a11f20-d902-4237-9581-de6258bdec16",
-        "487d0051-2867-4fbd-881b-f9b0c22f2e80",
-        "bb23e0b9-38ed-4bbe-bf48-71f7230cdc58",
-        "f6983a44-27f0-4541-bfa0-a0a916efd54e",
         "8e4f91cb-0285-4863-b918-67414f0ef3ca",
-        "167176b3-89f8-44f6-b567-3879bea6a8c2",
-        "27f456b9-2f21-4269-b690-a027f6674141",
         "2d027e21-e538-41e3-bc5d-4d557912ba6f",
-        "dc1a86ad-898c-4c6e-91d3-63e55750dd17",
-        "5eb5ab59-4359-425f-902b-45a0ff61c3bc",
-        "0b5e2b82-e0f7-4d02-a7cc-fced5a9aafcb",
-        "bff60429-f11c-438e-9c2a-0f209fafc598",
         "0c9ca4aa-9404-4a5b-bdb7-a2d0c67139c9",
         "c9906357-6061-4fcf-a41f-b84fb093a8fa",
         "707a780f-d027-4ffb-baf8-bd67018f8f10",
         "59c45a4b-118b-4038-874f-bb029edc4d04",
         "77fcada5-8aea-4e24-adc3-3373eb278db8",
-        "5da88183-6c5b-494e-a8f3-a6f00056c2c0"
+        "5da88183-6c5b-494e-a8f3-a6f00056c2c0",
+        "5eb5ab59-4359-425f-902b-45a0ff61c3bc",
+        "dc1a86ad-898c-4c6e-91d3-63e55750dd17",
+        "3f8dec3a-9faf-4c9c-88f5-d2a1a4a81065",
+        "27f456b9-2f21-4269-b690-a027f6674141",
+        "f1a11f20-d902-4237-9581-de6258bdec16",
+        "f6983a44-27f0-4541-bfa0-a0a916efd54e",
+        "167176b3-89f8-44f6-b567-3879bea6a8c2",
+        "bb23e0b9-38ed-4bbe-bf48-71f7230cdc58",
+        "487d0051-2867-4fbd-881b-f9b0c22f2e80",
+        "0b5e2b82-e0f7-4d02-a7cc-fced5a9aafcb"
     ],
     "tutorial": ""
 }
