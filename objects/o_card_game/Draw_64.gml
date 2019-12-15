@@ -91,3 +91,10 @@ var _cycle_button_y_offset = view_port_height - (110 * _scale)
 draw_sprite(s_button_refresh_resized, 0, _cycle_button_x_offset, _cycle_button_y_offset)
 #endregion
 
+#region upgrade_shop_button
+var _upgrade_button_x_offset = 223 * _scale
+var _upgrade_button_y_offset = view_port_height - (60 * _scale)
+
+draw_sprite(s_button_upgrade_resized, 0, _upgrade_button_x_offset, _upgrade_button_y_offset)
+#endregion
+

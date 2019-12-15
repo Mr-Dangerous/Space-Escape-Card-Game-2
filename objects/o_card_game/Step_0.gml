@@ -20,5 +20,5 @@ if (turn_timer = 0){
 	turn_timer = turn_length
 	scr_change_turn()
 }
-show_debug_message(turn_timer)
+
 

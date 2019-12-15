@@ -16,6 +16,12 @@ var _cycle_button_y_top_left = (view_port_height - 110)* _scale
 var _cycle_button_x_bottom_right = 223 * _scale
 var _cycle_button_y_bottom_right= (view_port_height - 70)* _scale
 
+var _upgrade_button_x_top_left = 183 * _scale
+var _upgrade_button_y_top_left = (view_port_height - 60)* _scale
+var _upgrade_button_x_bottom_right = 223 * _scale
+var _upgrade_button_y_bottom_right= (view_port_height - 20)* _scale
+
+
 
 
 //check card slot 
@@ -82,9 +88,16 @@ if (selected_card_slot != -1){
 }
 
 //cycle button
-//not working in zoomed out mode!  TODO
+
 if (point_in_rectangle(_x, _y,
 _cycle_button_x_top_left, _cycle_button_y_top_left,
 _cycle_button_x_bottom_right, _cycle_button_y_bottom_right)){
 	scr_cycle_shop()
+}
+
+//upgrade button
+if (point_in_rectangle(_x, _y,
+_upgrade_button_x_top_left, _upgrade_button_y_top_left,
+_upgrade_button_x_bottom_right, _upgrade_button_y_bottom_right)){
+	show_debug_message("upgraded!")
 }

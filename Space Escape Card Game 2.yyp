@@ -1631,6 +1631,14 @@
             }
         },
         {
+            "Key": "da386009-cb0d-4a5e-a704-8460c0a4abe2",
+            "Value": {
+                "id": "c7e4129a-41bd-4113-9216-0ec957345f1c",
+                "resourcePath": "sprites\\s_button_upgrade_resized\\s_button_upgrade_resized.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "da9abd75-c676-4f54-a5bf-30434cb3736c",
             "Value": {
                 "id": "8473b1d9-91ef-4e3b-a451-640aed8044c1",
