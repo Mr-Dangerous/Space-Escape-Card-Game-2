@@ -39,6 +39,22 @@
             "objectId": "f7a3580c-4afc-4090-9d38-596e5abc38b7",
             "propertyId": "39d5ddf4-8bfb-4b0b-8610-edccff92ed3b",
             "value": "Dualback 5"
+        },
+        {
+            "id": "496b9b03-ce10-41cb-8dc9-b515e2bda632",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "563e1f25-1c41-477e-8faa-04cd28c8c234",
+            "propertyId": "271f795f-6432-4db1-8755-46c687399cc7",
+            "value": "1"
+        },
+        {
+            "id": "186bb797-3bfb-46a4-be3e-f62a8209146d",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "563e1f25-1c41-477e-8faa-04cd28c8c234",
+            "propertyId": "0df40dfb-67b2-4221-b164-1d5f7d065c91",
+            "value": "Solar Spike"
         }
     ],
     "parentObjectId": "f7a3580c-4afc-4090-9d38-596e5abc38b7",

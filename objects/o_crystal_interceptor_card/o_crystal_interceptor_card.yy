@@ -39,6 +39,14 @@
             "objectId": "f7a3580c-4afc-4090-9d38-596e5abc38b7",
             "propertyId": "9c2cb7a8-6e3c-405b-ab82-2a9a4cb9535a",
             "value": "Crystal"
+        },
+        {
+            "id": "cf4cddb2-8c48-4231-980d-d3524e6535a4",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "563e1f25-1c41-477e-8faa-04cd28c8c234",
+            "propertyId": "0df40dfb-67b2-4221-b164-1d5f7d065c91",
+            "value": "Prismite"
         }
     ],
     "parentObjectId": "f7a3580c-4afc-4090-9d38-596e5abc38b7",

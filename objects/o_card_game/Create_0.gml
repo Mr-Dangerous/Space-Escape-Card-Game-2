@@ -9,6 +9,8 @@ repeat (5){
 	shop_slots[i, 0] = ((227/1280)*view_port_width) + (_card_width*i) //x position
 	shop_slots[i, 1] = noone  //card in the slot, or maybe the actual object
 	shop_slots[i, 2] = noone //the actual object in the slot
+	shop_slots[i, 3] = "" //the class of card- ship or spell
+	shop_slots[i, 4] = false //locked state
 	//visual check
 	
 	i++
@@ -30,6 +32,9 @@ crystal_interceptor_book = array_create(30, o_crystal_interceptor_card)
 alien_interceptor_book = array_create(30, o_alien_interceptor_card)
 solar_interceptor_book = array_create(30, o_solar_interceptor_card)
 imperial_interceptor_book = array_create(30, o_imperial_interceptor_card)
+
+//create card references for spells
+hyper_jump_book = array_create(15, o_hyper_jump_card)
 
 shuffle_deck()
 	

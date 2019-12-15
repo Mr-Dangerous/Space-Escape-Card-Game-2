@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "o_iron_interceptor",
     "eventList": [
-        {
-            "id": "a75b367c-fe38-4ecb-ade3-b45093f1d78e",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 52,
-            "eventtype": 9,
-            "m_owner": "81909101-3c99-433a-8879-4e7fbf02a5ee"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
@@ -40,7 +31,9 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        
+    ],
     "solid": false,
     "spriteId": "e95513a8-3351-49f9-9b33-c173e133d211",
     "visible": true

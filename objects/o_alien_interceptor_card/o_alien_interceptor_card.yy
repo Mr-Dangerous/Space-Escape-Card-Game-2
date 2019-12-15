@@ -47,6 +47,22 @@
             "objectId": "f7a3580c-4afc-4090-9d38-596e5abc38b7",
             "propertyId": "1675cf7e-8af8-42fe-98b5-27b0fba82497",
             "value": "0.08"
+        },
+        {
+            "id": "54302c16-e283-4844-b1bb-7312fbfc35be",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "563e1f25-1c41-477e-8faa-04cd28c8c234",
+            "propertyId": "0df40dfb-67b2-4221-b164-1d5f7d065c91",
+            "value": "Kerver"
+        },
+        {
+            "id": "dae8c0fd-2b40-4c26-ae2f-7c929d470416",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "563e1f25-1c41-477e-8faa-04cd28c8c234",
+            "propertyId": "271f795f-6432-4db1-8755-46c687399cc7",
+            "value": "1"
         }
     ],
     "parentObjectId": "f7a3580c-4afc-4090-9d38-596e5abc38b7",

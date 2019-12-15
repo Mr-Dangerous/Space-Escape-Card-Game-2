@@ -11,12 +11,12 @@ var _origin_offset_x = (11/1280) * view_port_width * _scale
 var _origin_offset_y = (25/768) * view_port_height * _scale
 var _name_offset_x = (11/1280) * view_port_width * _scale
 var _name_offset_y = (75/768) * view_port_height * _scale
-var _cost_offset_x = (150/1280) * view_port_width * _scale
+var _cost_offset_x = (130/1280) * view_port_width * _scale
 var _cost_offset_y = (4/768) * view_port_height * _scale
 var _shop_offset_x = (227/1280) * view_port_width * _scale
 
 var _shop_offset_y_top = (110/768) * view_port_height 
-var _econ_text_offset_y = (138/768)*view_port_height 
+
 
 
 i = 0
@@ -24,20 +24,30 @@ i = 0
 repeat(5){
 	//draw the card if it exsists
 	var _card = shop_slots[i, 2]
+	var _card_class = shop_slots[i, 3]
 	if (_card != noone){
-		draw_sprite_ext(_card.card_border, 0, shop_slots[i, 0], view_port_height - _shop_offset_y_top, 1, 1, 0, c_white, 1)
-		draw_sprite_ext(_card.sprite_index, 0, shop_slots[i,0] + _card_offset_x, (view_port_height - _shop_offset_y_top)+_card_offset_y, _card.image_scale*_scale, _card.image_scale*_scale, 0, c_white, 1)
-		//card text
-		//origin
-		draw_text_color(shop_slots[i, 0] + _origin_offset_x, view_port_height - _shop_offset_y_top +_origin_offset_y, _card.origin, c_white, c_white, c_white, c_white, 1)
-		//class
+		if (_card_class = "ship"){
+			draw_sprite_ext(_card.card_border, 0, shop_slots[i, 0], view_port_height - _shop_offset_y_top, 1, 1, 0, c_white, 1)
+			draw_sprite_ext(_card.sprite_index, 0, shop_slots[i,0] + _card_offset_x, (view_port_height - _shop_offset_y_top)+_card_offset_y, _card.image_scale*_scale, _card.image_scale*_scale, 0, c_white, 1)
+			//card text
+			//origin
+			draw_text_color(shop_slots[i, 0] + _origin_offset_x, view_port_height - _shop_offset_y_top +_origin_offset_y, _card.origin, c_white, c_white, c_white, c_white, 1)
+			//class
 		
-		draw_text_color(shop_slots[i, 0] + _class_offset_x, view_port_height - _shop_offset_y_top +_class_offset_y, _card.ship_class, c_white, c_white, c_white, c_white, 1)
-		//name
-		draw_text_color(shop_slots[i, 0] + _name_offset_x, view_port_height - _shop_offset_y_top +_name_offset_y, _card.name, c_white, c_white, c_white, c_white, 1)
-		//cost
-		draw_text_color(shop_slots[i, 0] + _cost_offset_x, view_port_height - _shop_offset_y_top + _cost_offset_y, _card.cost, c_white, c_white, c_white, c_white, 1)
-		
+			draw_text_color(shop_slots[i, 0] + _class_offset_x, view_port_height - _shop_offset_y_top +_class_offset_y, _card.ship_class, c_white, c_white, c_white, c_white, 1)
+			//name
+			draw_text_color(shop_slots[i, 0] + _name_offset_x, view_port_height - _shop_offset_y_top +_name_offset_y, _card.name, c_white, c_white, c_white, c_white, 1)
+			//cost
+			draw_text_color(shop_slots[i, 0] + _cost_offset_x, view_port_height - _shop_offset_y_top + _cost_offset_y, _card.cost, c_white, c_white, c_white, c_white, 1)
+		}
+		if (_card_class = "spell"){
+			//TODO
+			draw_sprite_ext(_card.card_border, 0, shop_slots[i, 0], view_port_height - _shop_offset_y_top, 1, 1, 0, c_white, 1)
+			//name
+			draw_text_color(shop_slots[i, 0] + _name_offset_x, view_port_height - _shop_offset_y_top +_name_offset_y, _card.name, c_white, c_white, c_white, c_white, 1)
+			//cost
+			draw_text_color(shop_slots[i, 0] + _cost_offset_x, view_port_height - _shop_offset_y_top + _cost_offset_y, _card.cost, c_white, c_white, c_white, c_white, 1)
+		}
 	}
 	if (_card == noone){
 		draw_sprite(s_card_placeholder, 0, shop_slots[i, 0], view_port_height - _shop_offset_y_top)
@@ -48,11 +58,38 @@ repeat(5){
 #endregion
 
 #region Econ GUI
+
+var _econ_text_offset_y = (168/768)*view_port_height 
+
 //Draw the econ assests, resources, energy
 var _econ_asset_y = view_port_height -_econ_text_offset_y
 //Energy
 var energy_string = "Energy: " + string(energy_current) + "/" + string(energy_maximum)
 draw_text_color(shop_slots[0,0], _econ_asset_y, energy_string, c_white, c_white, c_white, c_white, .9)
+
+var resource_string = "Resources: " + string(resources) 
+draw_text_color(shop_slots[2,0], _econ_asset_y, resource_string, c_white, c_white, c_white, c_white, .9)
+
+//Draw the turn timer
+var _turn_timer_offset_y = view_port_height - ((114/768)*view_port_height)
+//outerbar
+draw_sprite_ext(s_turn_timer_outer, 0, shop_slots[0,0], _turn_timer_offset_y, 1, 1, 0, c_white, 1)
+//inner bars
+var timer_tick_duration = turn_length/49  //number of 16 pixel spaces in the bar
+var time_passed = turn_length - turn_timer
+var number_of_time_ticks = round(time_passed/timer_tick_duration)
+for (var i = 0; i < number_of_time_ticks; i++){
+	draw_sprite_ext(s_turn_timer_bar_inner, 0, (shop_slots[0,0]+18)+(i*16), _turn_timer_offset_y - 3, 1, 1, 0, c_white, 1)
+}
+#endregion
+
+#region cycle_shop_button
+var _cycle_button_x_offset = (223/1280) * view_port_width * _scale
+var _cycle_button_y_offset = view_port_height - ((110/768) * view_port_height)
+
+draw_sprite(s_button_refresh_resized, 0, _cycle_button_x_offset, _cycle_button_y_offset)
+
+
 
 #endregion
 

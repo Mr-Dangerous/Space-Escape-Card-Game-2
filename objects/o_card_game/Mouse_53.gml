@@ -28,9 +28,13 @@ if (mouse_x >= ((_shop_offset_x*_camera_zoom) + camera_x + (_card_width*i*_camer
 //will do more checks, such as if there is hangar space or not, btu for now...
 
 if (selected_card_slot != -1){
-	if (shop_slots[selected_card_slot, 2] != noone){
+	if (shop_slots[selected_card_slot, 2] != noone 
+	and shop_slots[selected_card_slot, 3] = "ship"
+	and resources >= shop_slots[selected_card_slot, 2].cost){
 		var purchased_ship = shop_slots[selected_card_slot, 2]
 		//scan hangar slots for an open slot
+		resources -= shop_slots[selected_card_slot, 2].cost
+		show_debug_message(resources)
 		selected_hangar_slot = -1
 		for (j = 0; j < 10; j++){
 			if (hangar_slots[j] = noone){
@@ -51,7 +55,21 @@ if (selected_card_slot != -1){
 			//clear data in the shop IF purchased (remeber to nest this later!)
 			shop_slots[selected_card_slot, 1] = noone
 			shop_slots[selected_card_slot, 2] = noone
+			shop_slots[selected_card_slot, 3] = ""
+			shop_slots[selected_card_slot, 4] = false
 		}
+	}
+	if (shop_slots[selected_card_slot, 2] != noone 
+	and shop_slots[selected_card_slot, 3] = "spell"
+	and energy_current >= shop_slots[selected_card_slot, 2].cost){
+		//cast spell
+		energy_current -= shop_slots[selected_card_slot, 2].cost
+		show_debug_message("spell cast")
+		//clear the shop
+		shop_slots[selected_card_slot, 1] = noone
+		shop_slots[selected_card_slot, 2] = noone
+		shop_slots[selected_card_slot, 3] = ""
+		shop_slots[selected_card_slot, 4] = false
 	}
 	
 	

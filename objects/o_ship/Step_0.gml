@@ -607,6 +607,8 @@ switch(state){
 			state = ship.planning
 		}
 	break;
+	
+	
 #endregion
 	
 }
