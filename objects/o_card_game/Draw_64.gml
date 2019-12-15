@@ -65,11 +65,29 @@ var _econ_text_offset_y = 168 * _scale
 //Draw the econ assests, resources, energy
 var _econ_asset_y = view_port_height -_econ_text_offset_y
 //Energy
+draw_sprite_ext(s_window_original_2, 0, shop_slots[0, 0]+10, _econ_asset_y + 20, 1, 1, 0, c_white, 1)
 var energy_string = "Energy: " + string(energy_current) + "/" + string(energy_maximum)
-draw_text_color(shop_slots[0,0], _econ_asset_y, energy_string, c_white, c_white, c_white, c_white, .9)
+draw_text_color(shop_slots[0,0] + 30, _econ_asset_y, energy_string, c_white, c_white, c_white, c_white, .9)
 
 var resource_string = "Resources: " + string(resources) 
-draw_text_color(shop_slots[2,0], _econ_asset_y, resource_string, c_white, c_white, c_white, c_white, .9)
+draw_sprite_ext(s_window_original_2, 0, shop_slots[1, 0]+50, _econ_asset_y + 20, 1, 1, 0, c_white, 1)
+draw_text_color(shop_slots[1,0] + 70, _econ_asset_y, resource_string, c_white, c_white, c_white, c_white, .9)
+
+
+#region messages
+message = ""
+if (gathering_resources){
+	message = "Gathering Resources"
+}
+if (engaging_enemy){
+	message = "Engaging Enemy"
+}
+
+draw_sprite_ext(s_window_original_2, 0, shop_slots[3, 0]+10, _econ_asset_y + 20, 1.2, 1, 0, c_white, 1)
+draw_text_ext_transformed_color(shop_slots[3, 0]+30, _econ_asset_y, message,20, 200, 1, 1, 0, c_red, c_red, c_red, c_red, 1)
+
+
+
 
 //Draw the turn timer
 var _turn_timer_offset_y = view_port_height - (114 * _scale)

@@ -36,6 +36,7 @@ for (var i = 0; i < number_of_asteroids;i++){
 		break;
 	}
 	#endregion
+	if (i > 0){
 	resource_array[i, 0] = irandom_range(-300, 300)
 	resource_array[i, 1] = irandom_range(-300, 300)
 	resource_array[i, 2] = random_range(.02, .2)
@@ -43,4 +44,14 @@ for (var i = 0; i < number_of_asteroids;i++){
 	resource_array[i, 4] = random_range(-.5, .5)
 	resource_array[i, 5] = irandom(359)
 	resource_array[i, 6] = random_range(.05, .2)
+	}
+	if (i = 0){
+	resource_array[i, 0] = 0
+	resource_array[i, 1] = 0
+	resource_array[i, 2] = random_range(.9, 1.1)
+	resource_array[i, 3] = asteroid_sprite 
+	resource_array[i, 4] = random_range(-.005, .005)
+	resource_array[i, 5] = 0
+	resource_array[i, 6] = random_range(.9, 1.1)
+	}
 }

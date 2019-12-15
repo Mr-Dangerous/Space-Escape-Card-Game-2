@@ -251,6 +251,48 @@
             "value": "0",
             "varName": "combat_switch",
             "varType": 3
+        },
+        {
+            "id": "805a0699-766e-4a5a-841d-5e57283baee4",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "10",
+            "varName": "drones",
+            "varType": 1
+        },
+        {
+            "id": "950f1085-13cc-4f3a-aa46-048234cfd8d1",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "drone_release_counter",
+            "varType": 0
+        },
+        {
+            "id": "ec756a5d-f498-4285-95fe-652e134551de",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "20",
+            "varName": "drone_release_rate",
+            "varType": 0
         }
     ],
     "solid": false,

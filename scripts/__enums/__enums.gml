@@ -4,6 +4,13 @@ enum card {
 	moving
 }
 
+enum drone {
+	deploy,
+	approaching,
+	gathering,
+	returning
+}
+
 enum ship {
 	planning, //ship can be moved about
 	idle, //ship cna't be moved, but flies in formation

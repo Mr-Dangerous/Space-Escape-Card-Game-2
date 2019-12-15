@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "1c0e5cf9-f89b-4869-a8b4-9529ea4f32e3",
+            "Value": {
+                "id": "9e79b124-4865-4836-a380-f3944b3ee59d",
+                "resourcePath": "sprites\\s_window_original_2\\s_window_original_2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1d20a9b5-f0a0-4baf-ab9c-d54a798bc601",
             "Value": {
                 "id": "a9692c07-ea46-45b3-89e4-302b66f917bc",
@@ -255,10 +263,26 @@
             }
         },
         {
+            "Key": "22d93ab1-6aa2-492e-991a-5dd55e789568",
+            "Value": {
+                "id": "b653cfdb-1b78-44c4-9fe4-053ffe04a6b6",
+                "resourcePath": "sprites\\s_laser_red_test_endpoint\\s_laser_red_test_endpoint.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2672df78-26ec-44b5-b86f-ecacede585ce",
             "Value": {
                 "id": "82bdc469-ce92-4861-80d9-3c10e2f11720",
                 "resourcePath": "objects\\o_scout_beacon\\o_scout_beacon.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "27bcbd4c-2831-4fc0-bc47-8a2714aae820",
+            "Value": {
+                "id": "5ccff84b-8c38-457b-90c9-aada6de3763a",
+                "resourcePath": "objects\\o_resource_drone\\o_resource_drone.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -436,6 +460,14 @@
                 "id": "8daa04f4-564a-41bc-8421-c0adeee4d47d",
                 "resourcePath": "objects\\o_enemy_ship\\o_enemy_ship.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3a4b64f5-ee95-45c7-a976-f057fb211773",
+            "Value": {
+                "id": "d52a3a52-9559-4a77-baef-8afe63cec41c",
+                "resourcePath": "sprites\\s_resource_drone\\s_resource_drone.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -732,6 +764,14 @@
                 "id": "1a47adf2-060d-4ea8-a065-7553dc21a084",
                 "resourcePath": "scripts\\scr_movement_manager_2\\scr_movement_manager_2.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "61ad6458-26e1-487a-940f-3ef8238738f4",
+            "Value": {
+                "id": "b392ed71-c7c9-40ec-8b8d-f6ad4ea7cacc",
+                "resourcePath": "sprites\\s_mining_laser_test_origin\\s_mining_laser_test_origin.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1707,6 +1747,14 @@
             "Value": {
                 "id": "86c1695d-083e-40c8-a8c0-75b36edd8f82",
                 "resourcePath": "sprites\\s_enemy_squad_placeholder\\s_enemy_squad_placeholder.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d356df0d-ac2f-4000-aea8-3cdedc4a1575",
+            "Value": {
+                "id": "6d23cca7-b40f-4776-bf3c-e7c5ff4f0213",
+                "resourcePath": "sprites\\s_laser_red_test_body\\s_laser_red_test_body.yy",
                 "resourceType": "GMSprite"
             }
         },

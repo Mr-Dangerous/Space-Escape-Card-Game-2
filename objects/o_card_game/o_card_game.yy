@@ -197,6 +197,48 @@
             "value": "0",
             "varName": "current_turn",
             "varType": 1
+        },
+        {
+            "id": "aef0e108-8adb-40db-9321-0c4a79a66467",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "\"\"",
+            "varName": "message",
+            "varType": 2
+        },
+        {
+            "id": "17e3cf22-2a3e-46c7-8d45-c54d9daa37aa",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "gathering_resources",
+            "varType": 3
+        },
+        {
+            "id": "c2a1a822-e4de-4250-bc22-eaf676cef1fd",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "engaging_enemy",
+            "varType": 3
         }
     ],
     "solid": false,

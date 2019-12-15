@@ -167,10 +167,36 @@ switch (state){
 #endregion
 
 //drag resources in
-var nearest_resource = instance_nearest(x, y, o_resource)
-
-if (distance_to_object(nearest_resource) < 600){
-	//gather the resource!
+if (in_combat = false){
+	var nearest_resource = instance_nearest(x, y, o_resource)
+	//this needs to be a list of booleans, and it determine which to display by priority
+	card_game_controller.gathering_resources = true
+	if (distance_to_object(nearest_resource) < 600 and 
+	nearest_resource.resources > 0){
+		resource_gather_counter--
+		if (resource_gather_counter = 0){
+			nearest_resource.resources -= 1
+			card_game_controller.resources += 1
+			resource_gather_counter = 360
+		}
+		if (drones > 0){
+			drone_release_counter++
+			if (drone_release_counter >= drone_release_rate){
+				var mining_drone = instance_create_layer(x, y, "ships", o_resource_drone)
+				drones--
+				drone_release_counter = 0
+				with (mining_drone){
+					parent_squad = other
+					resource = nearest_resource
+					direction = other.direction
+				}
+			}
+		}
+	
+	} else {
+		resource_gather_counter = 360
+		card_game_controller.gathering_resources = false
+	}
 }
 
 //post state machine
