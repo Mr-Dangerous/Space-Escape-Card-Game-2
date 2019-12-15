@@ -166,6 +166,13 @@ switch (state){
 }
 #endregion
 
+//drag resources in
+var nearest_resource = instance_nearest(x, y, o_resource)
+
+if (distance_to_object(nearest_resource) < 600){
+	//gather the resource!
+}
+
 //post state machine
 scout_timer--
 if (scout_timer = 0){

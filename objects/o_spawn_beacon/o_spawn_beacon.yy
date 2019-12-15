@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "o_spawn_beacon",
     "eventList": [
-        
+        {
+            "id": "b99933b0-d2fd-4294-9388-e65c516cbe12",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "7892d91d-938b-4030-9b8b-10379620d10b"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
