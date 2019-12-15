@@ -1,3 +1,5 @@
+view_port_height = view_hport[0]
+view_port_width = view_wport[0]
 //advance the energy coutner if you have less than max energy
 if (energy_current < energy_maximum){
 	energy_counter++
@@ -19,3 +21,4 @@ if (turn_timer = 0){
 	scr_change_turn()
 }
 show_debug_message(turn_timer)
+

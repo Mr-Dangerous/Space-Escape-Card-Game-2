@@ -1,22 +1,23 @@
 /// @description draw cards in the shop
 #region shop GUI
 
-var _shop_offset_x = (227/1280) * view_port_width * _scale
-var _card_width = (166/1280) * view_port_width * _scale
-var _card_offset_x = (122/1280) * view_port_width * _scale
-var _card_offset_y = (51/768) * view_port_height * _scale
-var _class_offset_x = (11/1280) * view_port_width * _scale
-var _class_offset_y = (5/768) * view_port_height * _scale
-var _origin_offset_x = (11/1280) * view_port_width * _scale
-var _origin_offset_y = (25/768) * view_port_height * _scale
-var _name_offset_x = (11/1280) * view_port_width * _scale
-var _name_offset_y = (75/768) * view_port_height * _scale
-var _cost_offset_x = (130/1280) * view_port_width * _scale
-var _cost_offset_y = (4/768) * view_port_height * _scale
-var _shop_offset_x = (227/1280) * view_port_width * _scale
+_scale = view_port_width/1280
 
-var _shop_offset_y_top = (110/768) * view_port_height 
+var _shop_offset_x = 227 * _scale
+var _card_width = 166* _scale
+var _card_offset_x = 122*_scale
+var _card_offset_y = 51 * _scale
+var _class_offset_x = 11 * _scale
+var _class_offset_y = 5* _scale
+var _origin_offset_x = 11* _scale
+var _origin_offset_y = 25 * _scale
+var _name_offset_x = 11* _scale
+var _name_offset_y = 75 * _scale
+var _cost_offset_x = 130 * _scale
+var _cost_offset_y = 4 * _scale
+var _shop_offset_x = 227* _scale
 
+var _shop_offset_y_top = 110 * _scale
 
 
 i = 0
@@ -59,7 +60,7 @@ repeat(5){
 
 #region Econ GUI
 
-var _econ_text_offset_y = (168/768)*view_port_height 
+var _econ_text_offset_y = 168 * _scale
 
 //Draw the econ assests, resources, energy
 var _econ_asset_y = view_port_height -_econ_text_offset_y
@@ -71,7 +72,7 @@ var resource_string = "Resources: " + string(resources)
 draw_text_color(shop_slots[2,0], _econ_asset_y, resource_string, c_white, c_white, c_white, c_white, .9)
 
 //Draw the turn timer
-var _turn_timer_offset_y = view_port_height - ((114/768)*view_port_height)
+var _turn_timer_offset_y = view_port_height - (114 * _scale)
 //outerbar
 draw_sprite_ext(s_turn_timer_outer, 0, shop_slots[0,0], _turn_timer_offset_y, 1, 1, 0, c_white, 1)
 //inner bars
@@ -84,12 +85,9 @@ for (var i = 0; i < number_of_time_ticks; i++){
 #endregion
 
 #region cycle_shop_button
-var _cycle_button_x_offset = (223/1280) * view_port_width * _scale
-var _cycle_button_y_offset = view_port_height - ((110/768) * view_port_height)
+var _cycle_button_x_offset = 223 * _scale
+var _cycle_button_y_offset = view_port_height - (110 * _scale)
 
 draw_sprite(s_button_refresh_resized, 0, _cycle_button_x_offset, _cycle_button_y_offset)
-
-
-
 #endregion
 

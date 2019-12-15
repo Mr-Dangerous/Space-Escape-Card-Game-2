@@ -1,31 +1,34 @@
 /// @description buy a ship!
+var _scale = view_port_width/1280
 
 var selected_card_slot = -1
-var camera_x = camera_get_view_x(view_camera[0])
-var camera_y = camera_get_view_y(view_camera[0])
-var _camera_controller = instance_find(o_camera, 0)
-var _camera_zoom = _camera_controller.camera_zoom
-var _shop_offset_x = (227/1280) * view_port_width * _scale
-var _shop_offset_x_far_side = (385/1280) * view_port_width * _scale
-var _shop_offset_y_bottom = (8/768) * view_port_height 
-var _shop_offset_y_top = (110/768) * view_port_height
-var _card_width = (158/1280) * view_port_width *_scale
+var _shop_offset_x = 227* _scale
+var _shop_offset_x_far_side = 385* _scale
+var _shop_offset_y_bottom = view_port_height - (8 * _scale)
+var _shop_offset_y_top = view_port_height -(110 * _scale)
+var _card_width = 158 *_scale
 
-var _cycle_button_x_top_left = ((183/1280) * view_port_width) * _scale
-var _cycle_button_y_top_left = ((view_port_height - (110/768)) * view_port_height) * _scale
-var _cycle_button_x_bottom_right = ((223/1280) * view_port_width) * _scale
-var _cycle_button_y_bottom_right= ((view_port_height - (70/768) * view_port_height)) * _scale
+var _x = device_mouse_x_to_gui(0)
+var _y = device_mouse_y_to_gui(0)
+
+var _cycle_button_x_top_left = 183 * _scale
+var _cycle_button_y_top_left = (view_port_height - 110)* _scale
+var _cycle_button_x_bottom_right = 223 * _scale
+var _cycle_button_y_bottom_right= (view_port_height - 70)* _scale
 
 
-_view_port_height = camera_get_view_height(view_camera[0])
+
 //check card slot 
 i=0
 
+
 repeat(5){
-if (mouse_x >= ((_shop_offset_x*_camera_zoom) + camera_x + (_card_width*i*_camera_zoom)) and mouse_x <= ((_shop_offset_x_far_side*_camera_zoom) + camera_x + (_card_width*i*_camera_zoom))){
-	if (mouse_y <= _view_port_height - (_shop_offset_y_bottom*_camera_zoom) + camera_y and mouse_y >= _view_port_height -(_shop_offset_y_top*_camera_zoom) + camera_y){
+	var _top_x = _shop_offset_x + (_card_width*i)
+	var _top_y = _shop_offset_y_top
+	var _bot_x = _shop_offset_x_far_side + (_card_width*i)
+	var _bot_y = _shop_offset_y_bottom
+	if(point_in_rectangle(_x, _y, _top_x, _top_y, _bot_x, _bot_y)){
 		selected_card_slot = i
-		}
 	}
 	i++
 }
@@ -80,8 +83,8 @@ if (selected_card_slot != -1){
 
 //cycle button
 //not working in zoomed out mode!  TODO
-if (point_in_rectangle(mouse_x - camera_x, mouse_y - camera_y,
-_cycle_button_x_top_left*_camera_zoom, _cycle_button_y_top_left*_camera_zoom,
-_cycle_button_x_bottom_right*_camera_zoom, _cycle_button_y_bottom_right*_camera_zoom)){
+if (point_in_rectangle(_x, _y,
+_cycle_button_x_top_left, _cycle_button_y_top_left,
+_cycle_button_x_bottom_right, _cycle_button_y_bottom_right)){
 	scr_cycle_shop()
 }
