@@ -1856,6 +1856,7 @@
         }
     ],
     "script_order": [
+        "7b288659-a9fa-4243-aec7-45df8db0f13d",
         "0c9ca4aa-9404-4a5b-bdb7-a2d0c67139c9",
         "c9906357-6061-4fcf-a41f-b84fb093a8fa",
         "707a780f-d027-4ffb-baf8-bd67018f8f10",
@@ -1874,7 +1875,6 @@
         "0b5e2b82-e0f7-4d02-a7cc-fced5a9aafcb",
         "cd4b42ef-f039-4173-a25b-02ff2c79666f",
         "628ae0ff-f440-4da9-8b41-2e54a2e72b89",
-        "7b288659-a9fa-4243-aec7-45df8db0f13d",
         "8e4f91cb-0285-4863-b918-67414f0ef3ca",
         "2d027e21-e538-41e3-bc5d-4d557912ba6f"
     ],

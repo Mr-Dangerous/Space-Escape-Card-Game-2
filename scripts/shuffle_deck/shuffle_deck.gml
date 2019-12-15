@@ -2,7 +2,7 @@ for (var _k = 0; _k < array_length_1d(master_deck); _k++){
 //generate the level - eventually, will be a d100 roll
 	randomize()
 	var card_level = 1
-	var card_seed = irandom(5)//selects from the books that exsist
+	var card_seed = irandom(5)//selects from the books that exist
 	var selected_book = noone
 	var card_class = ""
 	//select the book
@@ -89,34 +89,21 @@ for (var _k = 0; _k < array_length_1d(master_deck); _k++){
 	master_deck[@ _k] = selected_card
 }
 
-//copy the master deck into the stack
-var master_deck_empty = false
-var _master_deck_size = array_length_1d(master_deck)-1
+//shuffle master deck into stack data structure
+repeat(70){
+	var random_number_1 = irandom(29)
+	var random_number_2 = irandom(29)
 
-
-while(!master_deck_empty){
-	//put a random card from the deck into the stack
-	valid_card_slot = false
-	while(!valid_card_slot){
-		var _random_card_position = irandom(_master_deck_size)
-		if(master_deck[_random_card_position] != noone){
-			var _card = master_deck[_random_card_position]
-			ds_stack_push(current_deck, _card)
-			master_deck[@ _random_card_position] = noone
-			valid_card_slot = true
-		}
+	while (random_number_1 = random_number_2){
+		random_number_2 = irandom(29)
 	}
-		//check to see if the deck is empty
-	
-	
-	master_deck_empty = true
-	var _i = 0
-	repeat (_master_deck_size){
-		if (master_deck[_i] != noone){
-			master_deck_empty = false
-			break;
-		}
-		_i++
-	}
+	var card_1 = master_deck[random_number_1]
+	var card_2 = master_deck[random_number_2]
 
+	master_deck[@ random_number_1] = card_2
+	master_deck[@ random_number_2] = card_1
+}
+
+for(var i = 0; i < array_length_1d(master_deck); i++){
+	ds_stack_push(current_deck, master_deck[i])
 }

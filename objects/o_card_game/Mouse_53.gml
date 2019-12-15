@@ -11,6 +11,11 @@ var _shop_offset_y_bottom = (8/768) * view_port_height
 var _shop_offset_y_top = (110/768) * view_port_height
 var _card_width = (158/1280) * view_port_width *_scale
 
+var _cycle_button_x_top_left = ((183/1280) * view_port_width) * _scale
+var _cycle_button_y_top_left = ((view_port_height - (110/768)) * view_port_height) * _scale
+var _cycle_button_x_bottom_right = ((223/1280) * view_port_width) * _scale
+var _cycle_button_y_bottom_right= ((view_port_height - (70/768) * view_port_height)) * _scale
+
 
 _view_port_height = camera_get_view_height(view_camera[0])
 //check card slot 
@@ -71,7 +76,12 @@ if (selected_card_slot != -1){
 		shop_slots[selected_card_slot, 3] = ""
 		shop_slots[selected_card_slot, 4] = false
 	}
-	
-	
-	
+}
+
+//cycle button
+//not working in zoomed out mode!  TODO
+if (point_in_rectangle(mouse_x - camera_x, mouse_y - camera_y,
+_cycle_button_x_top_left*_camera_zoom, _cycle_button_y_top_left*_camera_zoom,
+_cycle_button_x_bottom_right*_camera_zoom, _cycle_button_y_bottom_right*_camera_zoom)){
+	scr_cycle_shop()
 }
