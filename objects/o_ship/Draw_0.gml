@@ -1,5 +1,16 @@
 draw_self()
 
+//shield effect
+if (generate_shields){
+	var shield_alpha = generate_shields * .1
+	draw_sprite_ext(s_shield, 0, x, y, 1, 1, image_angle, c_white, shield_alpha)
+	if (generate_shields > 0){
+		generate_shields--
+	}
+	
+}
+
+
 //exhaust effect
 //should be from an array called exhaust ports, for each exhaust port
 exhaust_number = exhaust_ports[0,0]

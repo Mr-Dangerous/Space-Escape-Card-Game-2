@@ -94,7 +94,7 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "variable_loading_script",
-            "varType": 0
+            "varType": 5
         },
         {
             "id": "01414026-25dc-4edb-ae3b-e287432826a8",
@@ -108,7 +108,7 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "ability_script_1",
-            "varType": 0
+            "varType": 5
         },
         {
             "id": "722d6b75-ac85-4194-b735-9a0372875483",
@@ -122,7 +122,7 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "ability_script_2",
-            "varType": 0
+            "varType": 5
         }
     ],
     "solid": false,

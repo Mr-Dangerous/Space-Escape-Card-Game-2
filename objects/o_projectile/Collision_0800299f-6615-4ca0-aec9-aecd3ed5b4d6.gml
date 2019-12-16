@@ -1,6 +1,9 @@
 if (!player_attack){
 	var damage_array = calculate_damage(damage_type, damage, other)
 	with(other){
+		if (shields > 0){
+			generate_shields = 9
+		}
 		armor -= damage_array[0]
 		shields -= damage_array[1]
 		if (shields < 0){

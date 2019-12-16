@@ -279,6 +279,14 @@
             }
         },
         {
+            "Key": "26998dfa-e16e-47fc-8145-bef427a9f0d5",
+            "Value": {
+                "id": "9d23782a-9f96-438c-82b9-d19721d04937",
+                "resourcePath": "objects\\o_alien_interceptor_enemy\\o_alien_interceptor_enemy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "27bcbd4c-2831-4fc0-bc47-8a2714aae820",
             "Value": {
                 "id": "5ccff84b-8c38-457b-90c9-aada6de3763a",
@@ -1335,6 +1343,14 @@
             }
         },
         {
+            "Key": "96b73050-359c-4082-b7ed-fb3dae4f679a",
+            "Value": {
+                "id": "e593f291-95d0-4615-8a0c-9cfbabed71c5",
+                "resourcePath": "notes\\jotpad.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "98104c4d-47a5-4857-be71-2dc9e3276105",
             "Value": {
                 "id": "ba8c94aa-9ecc-46b5-91d4-2b0e44d61971",
@@ -1711,14 +1727,6 @@
             }
         },
         {
-            "Key": "d0f0ca73-eba8-446b-91ce-66ee37774f91",
-            "Value": {
-                "id": "2ce62435-4416-4bf7-9154-96066b84b931",
-                "resourcePath": "objects\\o_alien_interceptor_enemy\\o_alien_interceptor_enemy.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "d1173272-ac01-4fe1-8005-4835e0ed0e29",
             "Value": {
                 "id": "68b07d08-4df6-43ae-ba5b-12512fdb4bb5",
@@ -1940,6 +1948,14 @@
                 "id": "988ffad1-05f5-4ff2-bcc9-37279fb21386",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f5111969-4b99-4678-921d-ce9388b11a3f",
+            "Value": {
+                "id": "2df641be-9371-4ee9-9bff-21bab7d5b9f1",
+                "resourcePath": "sprites\\s_shield\\s_shield.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

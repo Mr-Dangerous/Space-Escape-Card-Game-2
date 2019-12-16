@@ -1,3 +1,16 @@
+//determine if enemy or ally ship
+
+var _object_name = object_get_name(object_index)
+var team = ""
+if (_object_name = "o_alien_interceptor"){
+	team = "player"
+}
+if (_object_name = "o_alien_interceptor_enemy"){
+	team = "enemy"
+}
+
+
+
 #region Variable_definitions
 
 #region General Sprite Resources
@@ -48,10 +61,30 @@ target_x = 0
 target_y = 0
 ship_target = noone
 scout_beacon = noone
+
+
+target_ship_team = noone
+allied_ship_team = noone
+team_squad_type = noone
+enemy_squad_type = noone
+
+
+if (team = "player"){
 target_ship_team = o_enemy_ship //resource
 allied_ship_team = o_player_ship//resource
 team_squad_type = o_player_squad//resource
 enemy_squad_type = o_enemy_squad
+}
+
+if (team = "enemy"){
+target_ship_team = o_player_ship //resource
+allied_ship_team = o_enemy_ship//resource
+team_squad_type = o_enemy_squad//resource
+enemy_squad_type = o_player_squad
+}
+
+
+
 scan_range= 600
 can_attack = true
 deploy = false 
