@@ -1,10 +1,10 @@
 
-
-
 if (instance_exists(resource)){
-	target_x = resource.x
-	target_y = resource.y
+	target_x = resource.x + x_offset
+	target_y = resource.y + y_offset
 }
+
+
 
 if (!instance_exists(resource)){
 	state = drone.returning
@@ -38,8 +38,7 @@ switch (state){
 	break;
 	
 	case drone.gathering:
-		target_x = resource.x
-		target_y = resource.y
+		
 		_travel_dir = point_direction(x, y, target_x, target_y) + 90
 		_image_dir = point_direction(x, y, target_x, target_y)
 		speed += acceleration_rate
