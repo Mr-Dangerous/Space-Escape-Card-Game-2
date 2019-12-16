@@ -3,8 +3,10 @@ for (var _k = 0; _k < array_length_1d(master_deck); _k++){
 	randomize()
 	var card_level = 1
 	var card_seed = irandom(6)//selects from the books that exist
-	var selected_book = noone
+	var selected_book = 0
 	var card_class = ""
+	var selected_card = array_create(2, 0)
+
 	//select the book
 	switch(card_level){
 		case 1:
@@ -72,24 +74,24 @@ for (var _k = 0; _k < array_length_1d(master_deck); _k++){
 			}
 		break;
 	}
-
 	//check to see if the book has any cards left
-	var selected_card = array_create(3, noone)
-
-	for(var i=0; i < array_length_1d(selected_book); i++){
-		if (selected_book[i] != noone){
-			selected_card[0, 0] = selected_book[i]
-			selected_card[0, 1] = selected_book
-			selected_card[0, 2] = card_class
-			selected_book[@ i] = noone
-			break;
-		}
-	}
-	if (selected_card[0, 0] = noone){
+	if (selected_book[0, 0] <= 0){
 		_k--
-		break;
+		
+		continue
 	}
+
+	
+	selected_card[0, 0] = selected_book[0, 1] //add the object
+	selected_card[0, 1] = selected_book // give a reference to the book
+	selected_card[0, 2] = card_class // attach the card class for future reference
+
+	
+	
 	master_deck[@ _k] = selected_card
+	selected_book[@ 0, 0]--
+	
+	selected_book = noone
 }
 
 //shuffle master deck into stack data structure

@@ -3,14 +3,7 @@ for (var i = 0; i< 5; i++){
 	if (shop_slots[i, 1] != noone and shop_slots[i, 4] = false){
 		var _card = shop_slots[i, 1]
 		var book = _card[0, 1]
-		var book_size = array_length_1d(book)
-		for (var k = 0; k < book_size; k++){
-			if (book[k] = noone){
-				book[@ k] = _card[0,0]
-				break;
-			}
-		}
-		
+		book[@ 0, 0]++
 		var _current_card = shop_slots [i, 2]
 		instance_destroy(_current_card)
 		show_debug_message("shop_slot_cleared")

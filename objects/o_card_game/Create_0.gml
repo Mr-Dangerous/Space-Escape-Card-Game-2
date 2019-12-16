@@ -27,15 +27,22 @@ master_deck = array_create(30, noone)
 current_deck = ds_stack_create()
 
 //create card references to insert into the deck
-iron_interceptor_book = array_create(30, o_iron_interceptor_card)
-crystal_interceptor_book = array_create(30, o_crystal_interceptor_card)
-alien_interceptor_book = array_create(30, o_alien_interceptor_card)
-solar_interceptor_book = array_create(30, o_solar_interceptor_card)
-imperial_interceptor_book = array_create(30, o_imperial_interceptor_card)
+iron_interceptor_book[0,0] = 30
+iron_interceptor_book[0,1] = o_iron_interceptor_card
+crystal_interceptor_book[0, 0] = 30
+crystal_interceptor_book[0, 1] = o_crystal_interceptor_card
+alien_interceptor_book[0, 0] = 30
+alien_interceptor_book[0, 1] = o_alien_interceptor_card
+solar_interceptor_book[0, 0] = 30
+solar_interceptor_book[0, 1] = o_solar_interceptor_card
+imperial_interceptor_book[0, 0] = 30
+imperial_interceptor_book[0, 1] = o_imperial_interceptor_card
 
 //create card references for spells
-hyper_jump_book = array_create(15, o_hyper_jump_card)
-mining_drone_book = array_create(6, o_mining_drone_card)
+hyper_jump_book[0, 0] = 15
+hyper_jump_book[0, 1] = o_hyper_jump_card
+mining_drone_book[0, 0] = 6
+mining_drone_book[0, 1] = o_mining_drone_card
 shuffle_deck()
 	
 
