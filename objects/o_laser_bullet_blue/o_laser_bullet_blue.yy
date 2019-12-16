@@ -14,7 +14,7 @@
             "mvc": "1.0",
             "objectId": "7f8ec612-0baa-4c8c-8230-4d89db34108b",
             "propertyId": "40e83629-3663-4b58-963a-43729f2e6f3f",
-            "value": "s_bullet_original"
+            "value": "s_blue_beam_original"
         },
         {
             "id": "0bb33e63-c08d-4a13-9ccf-c70579d555eb",

@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "06f8a4e3-077a-4d57-bed8-106173684d8b",
+            "Value": {
+                "id": "54b2fea6-d8bd-4175-aea2-25306be673a9",
+                "resourcePath": "scripts\\scr_hyper_jump\\scr_hyper_jump.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "08536d5b-6935-43a6-9aa6-e43d93de9346",
             "Value": {
                 "id": "c17f08ca-4be0-4878-af91-6ad7226e05b7",
@@ -388,6 +396,14 @@
                 "id": "5227de88-0453-4127-a7eb-2d2bec4f7509",
                 "resourcePath": "objects\\o_game_setup\\o_game_setup.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "314067c4-0ffe-46b1-b83b-3f1023902a39",
+            "Value": {
+                "id": "09726873-4376-429c-9f20-f546eec458de",
+                "resourcePath": "scripts\\scr_mining_drone\\scr_mining_drone.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -772,6 +788,14 @@
                 "id": "1a47adf2-060d-4ea8-a065-7553dc21a084",
                 "resourcePath": "scripts\\scr_movement_manager_2\\scr_movement_manager_2.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "60e94618-2164-4521-ac96-49a8a3dcc0c7",
+            "Value": {
+                "id": "97cebd7e-b171-4d95-8a1c-77c9f136dd03",
+                "resourcePath": "views\\60e94618-2164-4521-ac96-49a8a3dcc0c7.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1815,6 +1839,14 @@
             }
         },
         {
+            "Key": "dc6b84b6-89b5-45d2-a5ad-b5c9660427eb",
+            "Value": {
+                "id": "85031311-4a86-4e3b-90e3-e924be35ccb3",
+                "resourcePath": "objects\\o_mining_drone_card\\o_mining_drone_card.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "dc8d0eec-9814-47b0-a2cb-ea21e81c1186",
             "Value": {
                 "id": "09d6e4cf-fad2-4fb9-a5f4-0650e05b6040",
@@ -2068,7 +2100,9 @@
         "cd4b42ef-f039-4173-a25b-02ff2c79666f",
         "628ae0ff-f440-4da9-8b41-2e54a2e72b89",
         "8e4f91cb-0285-4863-b918-67414f0ef3ca",
-        "2d027e21-e538-41e3-bc5d-4d557912ba6f"
+        "2d027e21-e538-41e3-bc5d-4d557912ba6f",
+        "06f8a4e3-077a-4d57-bed8-106173684d8b",
+        "314067c4-0ffe-46b1-b83b-3f1023902a39"
     ],
     "tutorial": ""
 }

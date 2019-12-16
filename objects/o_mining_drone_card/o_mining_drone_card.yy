@@ -1,39 +1,39 @@
 {
-    "id": "0a42a0d3-e0a4-40a0-b19f-172b24fb7bbc",
+    "id": "dc6b84b6-89b5-45d2-a5ad-b5c9660427eb",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_ballistic_bullet_bio",
+    "name": "o_mining_drone_card",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "d49d0521-a85d-4756-a60d-217a808d4d68",
+            "id": "d8319cdf-9de6-416f-be34-23cde2f466e4",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
-            "objectId": "7f8ec612-0baa-4c8c-8230-4d89db34108b",
-            "propertyId": "40e83629-3663-4b58-963a-43729f2e6f3f",
-            "value": "s_bio_ball_original"
+            "objectId": "563e1f25-1c41-477e-8faa-04cd28c8c234",
+            "propertyId": "271f795f-6432-4db1-8755-46c687399cc7",
+            "value": "1"
         },
         {
-            "id": "8c56a27a-6adb-445c-abb4-30e410389df5",
+            "id": "46cecdc8-5865-41bc-a09b-b7d3a5bbed09",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
-            "objectId": "7f8ec612-0baa-4c8c-8230-4d89db34108b",
-            "propertyId": "96c72199-4346-4c02-90f4-c9278c500d9e",
-            "value": "2"
+            "objectId": "563e1f25-1c41-477e-8faa-04cd28c8c234",
+            "propertyId": "0df40dfb-67b2-4221-b164-1d5f7d065c91",
+            "value": "Mining Drone"
         },
         {
-            "id": "918138f4-f35c-4bed-9fd1-54f3daa96432",
+            "id": "04370143-e21b-4acf-9bc1-8539b852c3d3",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
-            "objectId": "7f8ec612-0baa-4c8c-8230-4d89db34108b",
-            "propertyId": "121119cd-9eb9-421e-bd9f-ed7fbe83b8a1",
-            "value": "3"
+            "objectId": "cf3665b0-f12e-4f26-ad8d-4c0a9e15ca68",
+            "propertyId": "1f94e379-8b49-4d1b-a717-ee2f653d769c",
+            "value": "scr_mining_drone"
         }
     ],
-    "parentObjectId": "7f8ec612-0baa-4c8c-8230-4d89db34108b",
+    "parentObjectId": "cf3665b0-f12e-4f26-ad8d-4c0a9e15ca68",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -49,6 +49,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "87cb3b36-7f3b-4d4e-8ad9-bd224fbfd1e5",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }

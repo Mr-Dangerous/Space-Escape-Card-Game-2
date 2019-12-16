@@ -51,6 +51,10 @@ switch (state){
 		} else {
 			generate_laser = false
 		}
+		if (!instance_exists(resource)){
+			state = drone.returning
+		}
+			
 	break;
 	
 	case drone.returning:
@@ -60,6 +64,7 @@ switch (state){
 		speed += acceleration_rate
 		_p_dir = point_direction(x, y, target_x, target_y)
 		turn_to_face_direction(_p_dir)
+		direction = image_angle
 		limit_speed()
 		if (distance_to_object(parent_squad) < 10){
 			parent_squad.drones += 1//need to add this

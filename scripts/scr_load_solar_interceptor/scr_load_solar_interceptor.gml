@@ -80,7 +80,7 @@ approach_enemy = false
 //Weapon Variable Header
 basic_attack_fire_rate = 10 //counts up
 basic_attack_fire_rate_counter = 0
-basic_attack_range = 150
+basic_attack_range = 250
 basic_attack_number = 2 //1 per weapon
 gimbal_fire_angle = 1
 
@@ -89,7 +89,7 @@ gimbal_fire_angle = 1
 //weapon 1
 weapon_1_x_offset = 45
 weapon_1_y_offset = -121
-weapon_1_projectile_speed = 10
+weapon_1_projectile_speed = 5
 weapon_1_projectile_resource = o_ballistic_bullet //resource
 weapon_1_projectile_damage = 10
 weapon_1_projectile_damage_type = "light"
@@ -100,7 +100,7 @@ weapon_1_projectile_flight_time = 200
 //weapon 2
 weapon_2_x_offset = 45
 weapon_2_y_offset = 121
-weapon_2_projectile_speed = 10
+weapon_2_projectile_speed = 5
 weapon_2_projectile_resource = o_ballistic_bullet //resource
 weapon_2_projectile_damage = 10
 weapon_2_projectile_damage_type = "light"

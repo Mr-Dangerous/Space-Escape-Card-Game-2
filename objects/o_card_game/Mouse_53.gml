@@ -78,7 +78,7 @@ if (selected_card_slot != -1){
 	and energy_current >= shop_slots[selected_card_slot, 2].cost){
 		//cast spell
 		energy_current -= shop_slots[selected_card_slot, 2].cost
-		show_debug_message("spell cast")
+		script_execute(shop_slots[selected_card_slot, 2].spell_script)
 		//clear the shop
 		shop_slots[selected_card_slot, 1] = noone
 		shop_slots[selected_card_slot, 2] = noone

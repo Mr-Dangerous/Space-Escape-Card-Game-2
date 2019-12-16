@@ -9,7 +9,7 @@
         "7b5e2b89-e3f5-4c34-ae7b-9e9913594e4c"
     ],
     "filterType": "GMObject",
-    "folderName": "Ship Cards",
+    "folderName": "Cards",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

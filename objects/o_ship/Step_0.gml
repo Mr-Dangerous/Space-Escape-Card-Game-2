@@ -9,6 +9,10 @@ if (armor < 0){
 	instance_destroy()
 }
 
+if (dodge_reset_counter > 0){
+	dodge_reset_counter--
+}
+
 
 if (scout_mission){
 	var _scout_beacon_x = assigned_defensive_grid_space.x + lengthdir_x(max_speed * max_scout_range * recon_distance_multiplier, squad_object.image_angle + recon_direction)

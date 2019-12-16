@@ -2,7 +2,10 @@ draw_self()
 
 //shield effect
 if (generate_shields){
-	var shield_alpha = generate_shields * .1
+	shield_alpha = 1
+	if (!reinforced_shields){
+		var shield_alpha = generate_shields * .1
+	}
 	draw_sprite_ext(s_shield, 0, x, y, 1, 1, image_angle, shield_color, shield_alpha)
 	if (generate_shields > 0){
 		generate_shields--

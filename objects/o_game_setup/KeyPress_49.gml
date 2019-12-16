@@ -209,8 +209,8 @@ if (!game_created){
 	var _enemy_x = possible_spawn_location[enemy_start_position, 0]
 	var _enemy_y = possible_spawn_location[enemy_start_position, 1]
 	
-	var player_squad = instance_create_layer(_player_x, _player_y, "Instances", o_player_squad)
-	var enemy_squad = instance_create_layer(_enemy_x, _enemy_y, "Instances", o_enemy_squad)
+	var player_squad = instance_create_layer(_player_x, _player_y, "Ships", o_player_squad)
+	var enemy_squad = instance_create_layer(_enemy_x, _enemy_y, "Ships", o_enemy_squad)
 	
 	
 	var _camera = instance_find(o_camera, 0)

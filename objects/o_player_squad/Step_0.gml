@@ -173,8 +173,8 @@ if (in_combat = false){
 	card_game_controller.gathering_resources = true
 	if (distance_to_object(nearest_resource) < 600 and 
 	nearest_resource.resources > 0){
-		resource_gather_counter--
-		if (resource_gather_counter = 0){
+		resource_gather_counter-= max_drones
+		if (resource_gather_counter <= 0){
 			nearest_resource.resources -= 1
 			card_game_controller.resources += 1
 			resource_gather_counter = 360
@@ -182,7 +182,7 @@ if (in_combat = false){
 		if (drones > 0){
 			drone_release_counter++
 			if (drone_release_counter >= drone_release_rate){
-				var mining_drone = instance_create_layer(x, y, "ships", o_resource_drone)
+				var mining_drone = instance_create_layer(x, y, "Sub_Ship", o_resource_drone)
 				drones--
 				drone_release_counter = 0
 				with (mining_drone){

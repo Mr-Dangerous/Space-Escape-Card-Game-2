@@ -293,6 +293,20 @@
             "value": "20",
             "varName": "drone_release_rate",
             "varType": 0
+        },
+        {
+            "id": "81d32fa3-267e-4cf5-8d47-9908102a266b",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "max_drones",
+            "varType": 0
         }
     ],
     "solid": false,

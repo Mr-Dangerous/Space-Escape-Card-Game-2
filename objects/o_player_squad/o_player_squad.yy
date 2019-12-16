@@ -23,6 +23,16 @@
             "enumb": 0,
             "eventtype": 3,
             "m_owner": "690341ed-fe2b-4d57-8a1b-94cbc1f2a9ba"
+        },
+        {
+            "id": "4ecc699b-aba0-4995-801c-f6d0aab4124e",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 55,
+            "eventtype": 9,
+            "m_owner": "690341ed-fe2b-4d57-8a1b-94cbc1f2a9ba"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -57,6 +67,14 @@
             "mvc": "1.0",
             "objectId": "8d76ac5c-c5ae-488c-9168-1544e89d8d6b",
             "propertyId": "805a0699-766e-4a5a-841d-5e57283baee4",
+            "value": "4"
+        },
+        {
+            "id": "31da815b-5c13-4d99-b8ac-63079dac556b",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "8d76ac5c-c5ae-488c-9168-1544e89d8d6b",
+            "propertyId": "81d32fa3-267e-4cf5-8d47-9908102a266b",
             "value": "4"
         }
     ],
@@ -113,7 +131,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "360",
+            "value": "3600",
             "varName": "resource_gather_counter",
             "varType": 1
         }

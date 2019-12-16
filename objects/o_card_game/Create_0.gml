@@ -35,7 +35,7 @@ imperial_interceptor_book = array_create(30, o_imperial_interceptor_card)
 
 //create card references for spells
 hyper_jump_book = array_create(15, o_hyper_jump_card)
-
+mining_drone_book = array_create(6, o_mining_drone_card)
 shuffle_deck()
 	
 
