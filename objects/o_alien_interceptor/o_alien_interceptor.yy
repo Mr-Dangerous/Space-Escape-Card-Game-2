@@ -23,7 +23,7 @@
             "mvc": "1.0",
             "objectId": "7726de57-54b0-427c-916b-3f724804ae49",
             "propertyId": "6d4b2e76-54b5-4c12-9363-64ca36881bbd",
-            "value": "scr_load_alien_inerceptor()"
+            "value": "scr_load_alien_interceptor()"
         }
     ],
     "parentObjectId": "16f4c503-51ef-485a-8115-26eac71611d1",

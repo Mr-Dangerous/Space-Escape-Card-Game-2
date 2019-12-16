@@ -1,5 +1,19 @@
 #region Variable_definitions
 
+//determine if enemy or ally ship
+
+var _object_name = object_get_name(object_index)
+var team = ""
+if (_object_name = "o_alien_interceptor"){
+	team = "player"
+}
+if (_object_name = "o_alien_interceptor_enemy"){
+	team = "enemy"
+}
+
+shield_color = c_red
+
+
 #region General Sprite Resources
 image_scale = .064
 #endregion

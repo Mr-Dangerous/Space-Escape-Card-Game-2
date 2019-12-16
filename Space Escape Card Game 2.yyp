@@ -762,7 +762,7 @@
             "Key": "5da88183-6c5b-494e-a8f3-a6f00056c2c0",
             "Value": {
                 "id": "8caf6165-2cfd-44b7-8309-20f5d4654827",
-                "resourcePath": "scripts\\scr_load_alien_inerceptor\\scr_load_alien_inerceptor.yy",
+                "resourcePath": "scripts\\scr_load_alien_interceptor\\scr_load_alien_interceptor.yy",
                 "resourceType": "GMScript"
             }
         },

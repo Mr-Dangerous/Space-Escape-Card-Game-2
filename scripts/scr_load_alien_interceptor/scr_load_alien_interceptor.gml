@@ -9,6 +9,8 @@ if (_object_name = "o_alien_interceptor_enemy"){
 	team = "enemy"
 }
 
+shield_color = c_yellow
+
 
 
 #region Variable_definitions
