@@ -15,7 +15,7 @@ shield_color = c_white
 
 
 #region General Sprite Resources
-image_scale = .045
+image_scale = .038
 #endregion
 
 #region Behavior
