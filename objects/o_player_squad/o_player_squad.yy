@@ -33,6 +33,16 @@
             "enumb": 55,
             "eventtype": 9,
             "m_owner": "690341ed-fe2b-4d57-8a1b-94cbc1f2a9ba"
+        },
+        {
+            "id": "83003a25-6e11-4796-9f3d-d485dae377f6",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 53,
+            "eventtype": 6,
+            "m_owner": "690341ed-fe2b-4d57-8a1b-94cbc1f2a9ba"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -134,6 +144,20 @@
             "value": "3600",
             "varName": "resource_gather_counter",
             "varType": 1
+        },
+        {
+            "id": "78475088-45fa-49ac-9170-1c0e34b713f5",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "instance_find(o_camera, 0)",
+            "varName": "camera_controller",
+            "varType": 4
         }
     ],
     "solid": false,
