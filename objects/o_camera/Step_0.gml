@@ -8,6 +8,12 @@ Currently, on freeform scrolling
 if (locked_camera_zoom > max_zoom){
 	locked_camera_zoom = max_zoom
 }
+
+if (battle_camera = true){
+	state = camera.battle
+	battle_camera = false
+}
+
 var view_x_position = camera_get_view_x(view_camera[0])
 var view_y_position = camera_get_view_y(view_camera[0])
 var view_width = camera_get_view_width(view_camera[0])
@@ -107,11 +113,40 @@ switch(state){
 	_camera_x = _player_squad.x - (view_width/2)
 	_camera_y = _player_squad.y - (view_height/2) + 75
 	camera_set_view_pos(view_camera[0], _camera_x, _camera_y)
+	break;
+	
+	case camera.battle:
+	var _player_squad = instance_find(o_player_squad, 0)
+	var _enemy_squad = instance_nearest(_player_squad.x, _player_squad.y, o_enemy_squad)
+	var x_difference = abs (_player_squad.x - _enemy_squad.x)
+	var y_difference = abs (_player_squad.y - _enemy_squad.y)
+	var left_unit = 0
+	var top_unit = 0
+	if(_player_squad.x < _enemy_squad.x){
+		left_unit = _player_squad
+	} else {
+		left_unit = _enemy_squad
+	}
+	if(_player_squad.y < _enemy_squad.y){
+		top_unit = _player_squad
+	} else {
+		top_unit = _enemy_squad
+	}
+	var x_ratio = x_difference/780
+	var y_ratio = y_difference/786
+	
+	var _center_camera_x = abs((_player_squad.x + _enemy_squad.x)/2) 
+	var _center_camera_y = _player_squad.y//thats the offset height to avoid the shop
+	
+	camera_set_view_size(view_camera[0], base_camera_width*x_ratio, base_camera_height*x_ratio)
+	camera_set_view_pos(view_camera[0], _center_camera_x - (base_camera_width*x_ratio)/2, _center_camera_y - ((base_camera_height*x_ratio) / 2))
+	
+	break;
 	
 	
 	
 		
-	break;
+	
 	
 	case camera.all_encompassing:
 		var _squad_object = instance_find(o_player_squad, 0)

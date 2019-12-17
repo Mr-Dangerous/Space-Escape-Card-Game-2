@@ -40,7 +40,8 @@ enum interceptor_combat{
 enum camera {
 	free_look,
 	locked,
-	all_encompassing
+	all_encompassing,
+	battle
 }
 
 enum squad {

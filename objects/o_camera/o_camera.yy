@@ -43,6 +43,16 @@
             "enumb": 61,
             "eventtype": 6,
             "m_owner": "6308b7b3-a191-407a-8fab-9426a55e05fa"
+        },
+        {
+            "id": "b5bcc7ea-31a1-429d-a480-946cd1097d92",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 56,
+            "eventtype": 9,
+            "m_owner": "6308b7b3-a191-407a-8fab-9426a55e05fa"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -243,6 +253,20 @@
             "value": "4",
             "varName": "max_zoom",
             "varType": 0
+        },
+        {
+            "id": "e60edeb6-dd45-4ed4-84d8-f9aa58c0e559",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "battle_camera",
+            "varType": 3
         }
     ],
     "solid": false,
