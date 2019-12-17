@@ -6,6 +6,7 @@ if (instance_exists(resource)){
 
 
 
+
 if (!instance_exists(resource)){
 	state = drone.returning
 }
@@ -39,9 +40,9 @@ switch (state){
 	
 	case drone.gathering:
 		
-		_travel_dir = point_direction(x, y, target_x, target_y) + 90
+		_travel_dir = point_direction(x, y, target_x, target_y) + 90*resource_gather_spin
 		_image_dir = point_direction(x, y, target_x, target_y)
-		speed += acceleration_rate
+		speed = gathering_movement_speed
 		direction = _travel_dir
 		
 		limit_speed()

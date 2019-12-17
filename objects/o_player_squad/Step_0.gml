@@ -186,8 +186,8 @@ if (in_combat = false){
 				drones--
 				drone_release_counter = 0
 				with (mining_drone){
-					image_xscale = .6
-					image_yscale = .6
+					image_xscale = .3
+					image_yscale = .3
 					parent_squad = other
 					resource = nearest_resource
 					direction = other.direction
