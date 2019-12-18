@@ -9,7 +9,8 @@
         "905c9328-3795-4801-b863-c3d1da47c188",
         "49778e15-8d11-4f08-ba61-fd207c3f36f2",
         "f7a3580c-4afc-4090-9d38-596e5abc38b7",
-        "10cc1469-1e37-4abe-948e-bde225c24471"
+        "10cc1469-1e37-4abe-948e-bde225c24471",
+        "42d9269e-1570-46a6-9b71-5656453042a7"
     ],
     "filterType": "GMObject",
     "folderName": "Ship Cards",

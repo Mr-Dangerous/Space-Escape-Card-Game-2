@@ -2,7 +2,7 @@ for (var _k = 0; _k < array_length_1d(master_deck); _k++){
 //generate the level - eventually, will be a d100 roll
 	randomize()
 	var card_level = 1
-	var card_seed = irandom(6)//selects from the books that exist
+	var card_seed = irandom(7)//selects from the books that exist
 	var selected_book = 0
 	var card_class = ""
 	var selected_card = array_create(2, 0)
@@ -39,6 +39,9 @@ for (var _k = 0; _k < array_length_1d(master_deck); _k++){
 					selected_book = mining_drone_book
 					card_class = "spell"
 				break;
+				case 7:  //iron frigate - temporary
+					selected_book = iron_frigate_book
+					card_class = "ship"
 			}
 		break;
 	

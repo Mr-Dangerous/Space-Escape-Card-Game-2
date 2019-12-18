@@ -4,10 +4,10 @@
 
 var _object_name = object_get_name(object_index)
 var team = ""
-if (_object_name = "o_alien_interceptor"){
+if (_object_name = "o_crystal_interceptor"){
 	team = "player"
 }
-if (_object_name = "o_alien_interceptor_enemy"){
+if (_object_name = "o_crystal_interceptor_enemy"){
 	team = "enemy"
 }
 

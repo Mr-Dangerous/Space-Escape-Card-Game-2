@@ -4,18 +4,18 @@
 
 var _object_name = object_get_name(object_index)
 var team = ""
-if (_object_name = "o_imperial_interceptor"){
+if (_object_name = "o_iron_frigate"){
 	team = "player"
 }
-if (_object_name = "o_imperial_interceptor_enemy"){
+if (_object_name = "o_iron_frigate_enemy"){
 	team = "enemy"
 }
 
-shield_color = c_red
+shield_color = c_white
 
 
 #region General Sprite Resources
-image_scale = .032
+image_scale = .09
 #endregion
 
 #region Behavior
@@ -29,28 +29,28 @@ strafe = false
 #endregion
 
 #region Ship information
-ship_class = "interceptor"
-ship_origin = "Imperial Armada"
-ship_subclass = "Gunner"
+ship_class = "frigate"
+ship_origin = "Iron Fleet"
+ship_subclass = "Corvette"
 #endregion
 
 #region Movement
-turn_speed = 2
-max_speed = 3
-acceleration_rate = .05
+turn_speed = 1
+max_speed = 1
+acceleration_rate = .01
 pilot_reflexes = 10
 vector_locked = false
 combat_timing_counter = 0
 formation_locked = false
 movement_locked = false
-dodge_chance = 10
+dodge_chance = 0
 #endregion
 
 #region Armor and shield and movement Stats
-armor = 200
-max_armor = 200
-shields = 100
-max_shields = 100
+armor = 900
+max_armor = 900
+shields = 900
+max_shields = 900
 reinforced_shields = false
 armor_damage_reduction = 0
 ship_ok = true
@@ -78,11 +78,11 @@ approach_enemy = false
 
 #region Weapon variables
 //Weapon Variable Header
-basic_attack_fire_rate = 10 //counts up
+basic_attack_fire_rate = 100 //counts up
 basic_attack_fire_rate_counter = 0
-basic_attack_range = 250
+basic_attack_range = 750
 basic_attack_number = 2 //1 per weapon
-gimbal_fire_angle = 1
+gimbal_fire_angle = 45
 
 
 //Per Weapon
@@ -91,8 +91,8 @@ weapon_1_x_offset = 45
 weapon_1_y_offset = -121
 weapon_1_projectile_speed = 5
 weapon_1_projectile_resource = o_ballistic_bullet //resource
-weapon_1_projectile_damage = 10
-weapon_1_projectile_damage_type = "light"
+weapon_1_projectile_damage = 100
+weapon_1_projectile_damage_type = "heavy"
 weapon_1_length_offset = point_distance(0, 0, (weapon_1_x_offset * image_scale), (weapon_1_y_offset * image_scale))
 weapon_1_direction_offset = point_direction(0, 0, (weapon_1_x_offset * image_scale), (weapon_1_y_offset* image_scale))
 weapon_1_projectile_flight_time = 200
@@ -102,8 +102,8 @@ weapon_2_x_offset = 45
 weapon_2_y_offset = 121
 weapon_2_projectile_speed = 5
 weapon_2_projectile_resource = o_ballistic_bullet //resource
-weapon_2_projectile_damage = 10
-weapon_2_projectile_damage_type = "light"
+weapon_2_projectile_damage = 100
+weapon_2_projectile_damage_type = "heavy"
 weapon_2_length_offset = point_distance(0, 0, (weapon_2_x_offset * image_scale), (weapon_2_y_offset * image_scale))
 weapon_2_direction_offset = point_direction(0, 0, (weapon_2_x_offset * image_scale), (weapon_2_y_offset* image_scale))
 weapon_2_projectile_flight_time = 200
@@ -116,7 +116,7 @@ projectile_speed = weapon_1_projectile_speed
 #region Exhaust variables
 //1 per exhaust, refer to draw event
 rocket_image_counter = 30
-exhaust_type = s_rocket_exhaust_original//resource  
+exhaust_type = s_rocket_exhaust_original//resource
 //exhaust port header
 exhaust_ports[0, 0] = 1 //number of exhaust ports
 exhaust_ports[0, 1] = rocket_image_counter //rocket_image_counter_reset

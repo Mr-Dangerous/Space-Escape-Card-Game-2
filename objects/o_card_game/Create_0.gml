@@ -35,6 +35,8 @@ solar_interceptor_book[0, 0] = 30
 solar_interceptor_book[0, 1] = o_solar_interceptor_card
 imperial_interceptor_book[0, 0] = 30
 imperial_interceptor_book[0, 1] = o_imperial_interceptor_card
+iron_frigate_book[0,0] = 5
+iron_frigate_book[0, 1] = o_iron_frigate_card
 
 //create card references for spells
 hyper_jump_book[0, 0] = 15
