@@ -24,11 +24,38 @@ switch(state){
 	case camera.free_look:
 	camera_moving_x = false
 	camera_moving_y = false
+	var _mouse_x = device_mouse_x_to_gui(0)
+	var _mouse_y = device_mouse_y_to_gui(0)
+	
+	camera_set_view_size(view_camera[0], base_camera_width*locked_camera_zoom, base_camera_height*locked_camera_zoom)
+	
+	var _gui_width = display_get_gui_width()
+	var _gui_height = display_get_gui_height()
+	scroll_direction_h = ""
+	scroll_direction_v = ""
+	if (_mouse_x < 64){
+		scroll_timer_h++
+		scroll_direction_h = "left"
+	}
+	
+	if (_gui_width - 64 < _mouse_x){
+		scroll_timer_h++
+		scroll_direction_h = "right"
+	}
+	if (_mouse_y <64){
+		scroll_timer_v++
+		scroll_direction_v = "top"
+	}
+	if (_gui_height - 64 < _mouse_y){
+		scroll_timer_v++
+		scroll_direction_v = "bottom"
+	}
+
 
 	//scroll left
-	if ((mouse_x) < view_x_position+64){
+	if (scroll_direction_h = "left"){
 		camera_speed_x += -1
-		if ((mouse_x) < view_x_position+8){
+		if (8 < _mouse_x){
 			camera_speed_x += -1
 			fast_camera = true
 		}
@@ -36,27 +63,27 @@ switch(state){
 	}
 
 	//scroll right
-	if ((mouse_x) > view_x_position+view_width-64){
+	if (scroll_direction_h = "right"){
 		camera_speed_x += 1
-		if ((mouse_x) > view_x_position+view_width-8){
+		if (_gui_width - 8 < _mouse_x){
 			camera_speed_x += 1
 			fast_camera = true
 		}
 		camera_moving_x = true
 	}
 	//scroll up
-	if ((mouse_y) < view_y_position+64){
+	if (scroll_direction_v = "top"){
 		camera_speed_y += -1
-		if ((mouse_y) < view_y_position+8){
+		if (8 < _mouse_y){
 			camera_speed_y += -1
 			fast_camera = true
 		}
 		camera_moving_y = true
 	}
 	//scroll down
-	if ((mouse_y) > view_y_position+view_height-64){
+	if (scroll_direction_v = "bottom"){
 		camera_speed_y += 1
-		if ((mouse_y) > view_y_position+view_height-8){
+		if (_gui_height - 8 < _mouse_y){
 			camera_speed_y += 1
 			fast_camera = true
 		}
@@ -88,15 +115,17 @@ switch(state){
 
 	camera_x = camera_get_view_x(view_camera[0])
 	camera_y = camera_get_view_y(view_camera[0])
-	if ((camera_x + camera_speed_x) < 0 or (camera_x + camera_speed_x) > room_width-view_width){
+	//prevent the camera from leaving the room
+	if ((camera_x + camera_speed_x) < (-view_width/2) or (camera_x + camera_speed_x) > room_width-(view_width)){
 		camera_speed_x = 0
 	}
 	if ((camera_y + camera_speed_y) < 0 or (camera_y + camera_speed_y) > room_height-view_height){
 		camera_speed_y = 0
 	}
-
+	//camera set position
 	camera_set_view_pos(view_camera[0], camera_x+camera_speed_x, camera_y+camera_speed_y)
-
+	
+	//reset variables
 	fast_camera = false
 	max_camera_speed = 4
 	break;
@@ -123,23 +152,34 @@ switch(state){
 	scroll_direction_h = ""
 	scroll_direction_v = ""
 	if (_mouse_x <64){
-		scroll_timer++
+		scroll_timer_h++
 		scroll_direction_h = "left"
 	}
 	
-	if (_gui_width - _mouse_x > 64){
-		scroll_timer++
+	if (_gui_width - 64 < _mouse_x){
+		scroll_timer_h++
 		scroll_direction_h = "right"
 	}
 	if (_mouse_y <64){
-		scroll_timer++
+		scroll_timer_v++
 		scroll_direction_v = "bottom"
 	}
-	if (_gui_height - _mouse_y > 64){
-		scroll_timer++
+	if (_gui_height - 64 < _mouse_y){
+		scroll_timer_v++
 		scroll_direction_v = "top"
 	}
-	if (scroll_direction_h = "" and scroll_direction_v = "")
+	if (scroll_direction_h = ""){
+		scroll_timer_h = 0
+	}
+	if (scroll_direction_v = ""){
+		scroll_timer_v = 0
+	}
+	if (scroll_timer_h >= 30 or scroll_timer_v >= 30){
+		state = camera.free_look
+		scroll_direction_h = 0
+		scroll_timer_v = 0
+		show_debug_message("camera.free_look")
+	}
 	
 	break;
 	

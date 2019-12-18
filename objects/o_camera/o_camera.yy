@@ -279,7 +279,7 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "0",
-            "varName": "scroll_timer",
+            "varName": "scroll_timer_h",
             "varType": 1
         },
         {
@@ -309,6 +309,20 @@
             "value": "0",
             "varName": "scroll_direction_v",
             "varType": 2
+        },
+        {
+            "id": "2b1b077c-7e90-496c-8ae0-d85eb7c20094",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "scroll_timer_v",
+            "varType": 0
         }
     ],
     "solid": false,
