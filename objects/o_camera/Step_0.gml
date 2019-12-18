@@ -113,6 +113,34 @@ switch(state){
 	_camera_x = _player_squad.x - (view_width/2)
 	_camera_y = _player_squad.y - (view_height/2) + 75
 	camera_set_view_pos(view_camera[0], _camera_x, _camera_y)
+	
+	//check edges to see if player is attempting to scroll
+	var _mouse_x = device_mouse_x_to_gui(0)
+	var _mouse_y = device_mouse_y_to_gui(0)
+	
+	var _gui_width = display_get_gui_width()
+	var _gui_height = display_get_gui_height()
+	scroll_direction_h = ""
+	scroll_direction_v = ""
+	if (_mouse_x <64){
+		scroll_timer++
+		scroll_direction_h = "left"
+	}
+	
+	if (_gui_width - _mouse_x > 64){
+		scroll_timer++
+		scroll_direction_h = "right"
+	}
+	if (_mouse_y <64){
+		scroll_timer++
+		scroll_direction_v = "bottom"
+	}
+	if (_gui_height - _mouse_y > 64){
+		scroll_timer++
+		scroll_direction_v = "top"
+	}
+	if (scroll_direction_h = "" and scroll_direction_v = "")
+	
 	break;
 	
 	case camera.battle:

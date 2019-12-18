@@ -267,6 +267,48 @@
             "value": "0",
             "varName": "battle_camera",
             "varType": 3
+        },
+        {
+            "id": "9fccadab-2d05-478e-88f6-931ece3aa384",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "scroll_timer",
+            "varType": 1
+        },
+        {
+            "id": "46511537-8aae-44de-8609-56adaadf0ccb",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "scroll_direction_h",
+            "varType": 2
+        },
+        {
+            "id": "11755787-f1bc-43df-8d33-effec5632173",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "scroll_direction_v",
+            "varType": 2
         }
     ],
     "solid": false,
