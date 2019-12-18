@@ -15,6 +15,14 @@
             "objectId": "7726de57-54b0-427c-916b-3f724804ae49",
             "propertyId": "6d4b2e76-54b5-4c12-9363-64ca36881bbd",
             "value": "scr_load_iron_interceptor()"
+        },
+        {
+            "id": "34f258f9-4558-4084-a9ab-5ca0f4d4fe44",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "7726de57-54b0-427c-916b-3f724804ae49",
+            "propertyId": "9b0b4edf-493a-49d0-97fd-c305db0a2e3c",
+            "value": "o_iron_interceptor_card"
         }
     ],
     "parentObjectId": "16f4c503-51ef-485a-8115-26eac71611d1",

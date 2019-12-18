@@ -24,6 +24,14 @@
             "objectId": "7726de57-54b0-427c-916b-3f724804ae49",
             "propertyId": "6d4b2e76-54b5-4c12-9363-64ca36881bbd",
             "value": "scr_load_crystal_interceptor()"
+        },
+        {
+            "id": "05462764-9514-4816-867c-c69b109d9167",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "7726de57-54b0-427c-916b-3f724804ae49",
+            "propertyId": "9b0b4edf-493a-49d0-97fd-c305db0a2e3c",
+            "value": "o_crystal_interceptor_card"
         }
     ],
     "parentObjectId": "16f4c503-51ef-485a-8115-26eac71611d1",

@@ -34,6 +34,14 @@
             "objectId": "7726de57-54b0-427c-916b-3f724804ae49",
             "propertyId": "6d4b2e76-54b5-4c12-9363-64ca36881bbd",
             "value": "scr_load_solar_interceptor()"
+        },
+        {
+            "id": "e0a05b11-acee-4a19-a48c-0f2f714c4cee",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "7726de57-54b0-427c-916b-3f724804ae49",
+            "propertyId": "9b0b4edf-493a-49d0-97fd-c305db0a2e3c",
+            "value": "o_solar_interceptor_card"
         }
     ],
     "parentObjectId": "16f4c503-51ef-485a-8115-26eac71611d1",
@@ -50,7 +58,9 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        
+    ],
     "solid": false,
     "spriteId": "9523f9ae-d86e-4c8b-8cf6-b3bff9217bce",
     "visible": true

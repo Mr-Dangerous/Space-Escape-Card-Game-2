@@ -16,11 +16,9 @@ repeat (5){
 	i++
 }
 
-i = 0
-repeat (10){
-	hangar_slots[i] = noone
-	i++
-}
+
+hangar_slots = array_create(10, noone)
+
 
 //create the deck
 master_deck = array_create(30, noone)

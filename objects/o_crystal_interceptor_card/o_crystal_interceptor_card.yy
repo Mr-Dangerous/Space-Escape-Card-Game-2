@@ -17,14 +17,6 @@
             "value": "o_crystal_interceptor"
         },
         {
-            "id": "e2eb9320-0e5a-473c-b837-c0be595dfa52",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "f7a3580c-4afc-4090-9d38-596e5abc38b7",
-            "propertyId": "39d5ddf4-8bfb-4b0b-8610-edccff92ed3b",
-            "value": "Prismite"
-        },
-        {
             "id": "603a1f8a-192a-4c0f-b938-deec500edd0a",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",

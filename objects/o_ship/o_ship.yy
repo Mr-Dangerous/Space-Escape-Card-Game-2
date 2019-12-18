@@ -50,7 +50,7 @@
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
+            "enumb": 4,
             "eventtype": 6,
             "m_owner": "7726de57-54b0-427c-916b-3f724804ae49"
         },
@@ -122,6 +122,20 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "ability_script_2",
+            "varType": 5
+        },
+        {
+            "id": "9b0b4edf-493a-49d0-97fd-c305db0a2e3c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "card_reference",
             "varType": 5
         }
     ],
