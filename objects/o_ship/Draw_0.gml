@@ -35,4 +35,16 @@ if (speed != 0){
 	}
 }
 
+//hp and armor
+
+//armor bar
+var armor_y_offset = y+18
+var armor_x_offset = x-16
+var armor_x_end_offset = x+((armor/max_armor) *32)-16
+draw_line_width_color(armor_x_offset, armor_y_offset, armor_x_end_offset, armor_y_offset, 4, c_green, c_green)
+//shield bar
+var shield_y_offset = y+14
+var shield_x_offset = x-16
+var shield_x_end_offset = x+((shields/max_shields) *32)-16
+draw_line_width_color(shield_x_offset, shield_y_offset, shield_x_end_offset, shield_y_offset, 4, c_blue, c_blue)
 //

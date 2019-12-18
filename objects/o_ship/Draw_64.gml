@@ -26,3 +26,7 @@ var seek_string = "seek: " + string(seek)
 draw_text(view_port_width - 100, 8 + (i*16), seek_string)
 i++
 
+
+
+
+
