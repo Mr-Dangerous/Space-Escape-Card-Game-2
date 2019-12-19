@@ -174,7 +174,7 @@ switch(state){
 	if (scroll_direction_v = ""){
 		scroll_timer_v = 0
 	}
-	if (scroll_timer_h >= 30 or scroll_timer_v >= 30){
+	if (scroll_timer_h >= 120 or scroll_timer_v >= 120){
 		state = camera.free_look
 		scroll_direction_h = 0
 		scroll_timer_v = 0

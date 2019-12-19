@@ -43,6 +43,21 @@ hyper_jump_book[0, 0] = 15
 hyper_jump_book[0, 1] = o_hyper_jump_card
 mining_drone_book[0, 0] = 6
 mining_drone_book[0, 1] = o_mining_drone_card
+
+//assign books by level
+level_1_ship_books[0] = iron_interceptor_book
+level_1_ship_books[1] = crystal_interceptor_book
+level_1_ship_books[2] = solar_interceptor_book 
+level_1_ship_books[3] = imperial_interceptor_book
+level_1_ship_books[4] = alien_interceptor_book
+
+level_1_spell_book[0] = mining_drone_book
+level_1_spell_book[1] = hyper_jump_book
+
+level_3_ship_book[0] = iron_frigate_book
+
+
+
 shuffle_deck()
 	
 

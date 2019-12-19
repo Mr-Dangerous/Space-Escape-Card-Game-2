@@ -115,3 +115,12 @@ repeat(70){
 for(var i = 0; i < array_length_1d(master_deck); i++){
 	ds_stack_push(current_deck, master_deck[i])
 }
+
+//needs to be restructed
+//new method will be to shuffle each level of each book into a deck, and then 
+//populate the new stack with a specific amount of cards.
+//each level up will shuffle the deck.
+
+
+
+
