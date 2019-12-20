@@ -120,6 +120,50 @@ for(var i = 0; i < array_length_1d(master_deck); i++){
 //new method will be to shuffle each level of each book into a deck, and then 
 //populate the new stack with a specific amount of cards.
 //each level up will shuffle the deck.
+/*
+var ship_master_deck_by_level = array_create(30, 0)
+//push 10 level 1 cards into the deck
+var selected_card = 0
+var _selected_card_level = 0
+
+var card_level_distribution = scr_return_card_distribution_array(level)
+var _r_seed = irandom(100)
+
+for (i = 0; i < array_length_1d(card_level_distribution); i++){
+	if (_r_seed > card_level_distribution[i]) _selected_card_level = i
+}
+
+var leveled_ship_books = books_by_level_array[_selected_card_level]
+
+for (var i =0; i < 10; i++){
+	var _random_seed = irandom(array_length_1d(leveled_ship_books)-1)
+	var selected_book = leveled_ship_books[_random_seed]
+	if (selected_book[0,0] <= 0){
+		i--
+		continue
+	}
+	selected_book[@ 0,0]--
+	selected_card = selected_book[0, 1]
+	
+}
+*/
+/*
+var level_1_ship_stack = ds_stack_create()
+level_1_ship_master_deck[0] = 0
+var _number_of_level_1_books = array_length_1d(level_1_ship_books)
+for(var i = 0; i < _number_of_level_1_books; i++){
+	var number_of_cards_in_book = level_1_ship_books[i, 0]
+	for (var j = 0; j < number_of_cards_in_book; j++){
+		ds_stack_push(level_1_ship_stack)
+	}	
+}
+*/
+
+
+
+
+
+
 
 
 
